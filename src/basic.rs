@@ -22,7 +22,7 @@ impl Component for Basic {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <div>{ "NAVBAR" }</div>
+            <div>{ "BASIC" }</div>
         }
     }
 }
