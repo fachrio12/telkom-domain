@@ -1,14 +1,14 @@
 use yew::prelude::*;
-use yew::{
-    Component, Context, html, Html, NodeRef,
-};
+// use yew::{
+//     Component, Context, html, Html, NodeRef,
+// };
 use yew_router::prelude::*;
 
 use router::{
     Route,
     switch,
 };
-use navbar::Navbar;
+use navtop::Navtop;
 
 
 pub struct App {}
@@ -23,18 +23,18 @@ impl Component for App {
         App {}
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+    fn update(&mut self, _ctx: &Context<Self>, _msg: Self::Message) -> bool {
         true
     }
 
-    fn changed(&mut self, ctx: &Context<Self>) -> bool {
+    fn changed(&mut self, _ctx: &Context<Self>) -> bool {
         false
     }
 
-    fn view(&self, ctx: &Context<Self>) -> Html {
+    fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <BrowserRouter>
-                <Navbar/>
+                <Navtop/>
                 <Switch<Route> render={Switch::render(switch)} />
             </BrowserRouter>
         }

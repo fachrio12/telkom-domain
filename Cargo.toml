@@ -14,12 +14,14 @@ yew = "0.19"
 yew-router = "0.16"
 
 router = { path = "./src/router" }
-navbar = { path = "./src/components/navbar" }
+navtop = { path = "./src/components/navtop" }
 
 
 [workspace]
 
 members = [
     "src/router",
-    "src/components/navbar"
+    "src/components/navtop",
+    "src/components/logo",
+    "src/pages/home"
 ]

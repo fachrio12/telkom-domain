@@ -1,6 +1,8 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
+use home::Home;
+
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
     #[at("/")]
@@ -26,18 +28,18 @@ fn secure() -> Html {
     }
 }
 
-#[function_component(Home)]
-fn home() -> Html {
-    let history = use_history().unwrap();
+// #[function_component(Home)]
+// fn home() -> Html {
+//     let history = use_history().unwrap();
 
-    let onclick = Callback::once(move |_| history.push(Route::Secure));
-    html! {
-        <div>
-            <h1>{ "Home" }</h1>
-            <button {onclick}>{ "Go Secure" }</button>
-        </div>
-    }
-}
+//     let onclick = Callback::once(move |_| history.push(Route::Secure));
+//     html! {
+//         <div>
+//             <h1>{ "Home" }</h1>
+//             <button {onclick}>{ "Go Secure" }</button>
+//         </div>
+//     }
+// }
 
 pub fn switch(routes: &Route) -> Html {
     match routes {

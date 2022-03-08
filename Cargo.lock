@@ -183,6 +183,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ab5ef0d4909ef3724cc8cce6ccc8572c5c817592e9285f5464f8e86f8bd3726e"
 
 [[package]]
+name = "home"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "indexmap"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -223,15 +230,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "logo"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "matches"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a3e378b66a060d48947b590737b30a1be76706c8dd7b8ba0f2fe3989c68a853f"
 
 [[package]]
-name = "navbar"
+name = "navtop"
 version = "0.1.0"
 dependencies = [
+ "logo",
  "yew",
 ]
 
@@ -293,6 +308,7 @@ checksum = "afab94fb28594581f62d981211a9a4d53cc8130bbcbbb89a0440d9b8e81a7746"
 name = "router"
 version = "0.1.0"
 dependencies = [
+ "home",
  "yew",
  "yew-router",
 ]
@@ -385,7 +401,7 @@ dependencies = [
 name = "telkom-domain-docs"
 version = "0.1.0"
 dependencies = [
- "navbar",
+ "navtop",
  "router",
  "wasm-bindgen",
  "yew",
