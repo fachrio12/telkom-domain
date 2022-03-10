@@ -15,6 +15,7 @@ yew-router = "0.16"
 
 router = { path = "./src/router" }
 navtop = { path = "./src/components/navtop" }
+footer = { path = "./src/components/footer" }
 
 
 [workspace]
@@ -23,5 +24,6 @@ members = [
     "src/router",
     "src/components/navtop",
     "src/components/logo",
-    "src/pages/home"
+    "src/pages/home",
+    "src/components/footer"
 ]

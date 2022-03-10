@@ -9,6 +9,7 @@ use router::{
     switch,
 };
 use navtop::Navtop;
+use footer::Footer;
 
 
 pub struct App {}
@@ -36,6 +37,7 @@ impl Component for App {
             <BrowserRouter>
                 <Navtop/>
                 <Switch<Route> render={Switch::render(switch)} />
+                <Footer/>
             </BrowserRouter>
         }
     }

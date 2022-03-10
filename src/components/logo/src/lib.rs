@@ -61,7 +61,7 @@ impl Component for Logo {
                         left: 50%;
                         transform: translate(-50%,-50%);
                         opacity: .9;
-                    ", self.width*19/20)}
+                    ", self.width*16/20)}
                 />
                 <img
                     src="/assets/logo/lock3.png"
@@ -73,7 +73,7 @@ impl Component for Logo {
                         transform: translate(-50%,-50%);
                         filter: grayscale(100%);
                         opacity: 1;
-                    ", self.width*9/20)}
+                    ", self.width*7/20)}
                 />
                 <div
                     style={format!("
