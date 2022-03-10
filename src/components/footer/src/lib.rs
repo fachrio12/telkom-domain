@@ -28,40 +28,44 @@ impl Component for Footer {
                 style="border-top: .5px solid rgba(0,0,0,.2);"
             >
 
-                <div class="uk-navbar-left">
-
+                <div class="uk-navbar-left uk-text-muted">
                     <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="#">{ "Active" }</a></li>
-                        <li>
-                            <a href="#">{ "Parent" }</a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-active"><a href="#">{ "Active" }</a></li>
-                                    <li><a href="#">{ "Item" }</a></li>
-                                    <li><a href="#">{ "Item" }</a></li>
-                                </ul>
-                            </div>
+                        <li class="uk-navbar-item" style="font-size: 17px;">
+                            { "© 2022 Telkom Domain® Inc. All Rights Reserved." }
                         </li>
-                        <li><a href="#">{ "Item" }</a></li>
                     </ul>
-
                 </div>
 
                 <div class="uk-navbar-right">
 
                     <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="#">{ "Active" }</a></li>
-                        <li>
-                            <a href="#">{ "Parent" }</a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-active"><a href="#">{ "Active" }</a></li>
-                                    <li><a href="#">{ "Item" }</a></li>
-                                    <li><a href="#">{ "Item" }</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="#">{ "Item" }</a></li>
+                        <li><a href="#">
+                            { "Status" }
+                        </a></li>
+                        <span
+                            class="uk-align-center"
+                        >
+                            { "•" }
+                        </span>
+                        <li><a href="#">
+                            { "Legal" }
+                        </a></li>
+                        <span
+                            class="uk-align-center"
+                        >
+                            { "•" }
+                        </span>
+                        <li><a href="#">
+                            { "Privacy" }
+                        </a></li>
+                        <span
+                            class="uk-align-center"
+                        >
+                            { "•" }
+                        </span>
+                        <li><a href="#">
+                            { "Terms" }
+                        </a></li>
                     </ul>
 
                 </div>
