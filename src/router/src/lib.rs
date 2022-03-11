@@ -2,11 +2,15 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 use home::Home;
+use articles_home::ArticlesHome;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
     #[at("/")]
     Home,
+    #[at("/articles")]
+    Articles,
+
     #[at("/secure")]
     Secure,
     #[not_found]
@@ -44,10 +48,13 @@ fn secure() -> Html {
 pub fn switch(routes: &Route) -> Html {
     match routes {
         Route::Home => html! {
-            <Home />
+            <Home/>
+        },
+        Route::Articles => html! {
+            <ArticlesHome/>
         },
         Route::Secure => html! {
-            <Secure />
+            <Secure/>
         },
         Route::NotFound => html! { <h1>{ "404" }</h1> },
     }

@@ -3,6 +3,14 @@
 version = 3
 
 [[package]]
+name = "articles-home"
+version = "0.1.0"
+dependencies = [
+ "sidebar-articles",
+ "yew",
+]
+
+[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -244,6 +252,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "logo-icon"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "matches"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -254,7 +269,9 @@ name = "navtop"
 version = "0.1.0"
 dependencies = [
  "logo",
+ "router",
  "yew",
+ "yew-router",
 ]
 
 [[package]]
@@ -315,6 +332,7 @@ checksum = "afab94fb28594581f62d981211a9a4d53cc8130bbcbbb89a0440d9b8e81a7746"
 name = "router"
 version = "0.1.0"
 dependencies = [
+ "articles-home",
  "home",
  "yew",
  "yew-router",
@@ -385,6 +403,14 @@ dependencies = [
  "itoa",
  "ryu",
  "serde",
+]
+
+[[package]]
+name = "sidebar-articles"
+version = "0.1.0"
+dependencies = [
+ "logo-icon",
+ "yew",
 ]
 
 [[package]]

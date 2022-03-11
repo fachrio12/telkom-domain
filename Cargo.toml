@@ -24,6 +24,10 @@ members = [
     "src/router",
     "src/components/navtop",
     "src/components/logo",
+    "src/components/logo-icon",
     "src/pages/home",
-    "src/components/footer"
+    "src/components/footer",
+
+    "src/pages/articles/articles-home",
+    "src/pages/articles/sidebar-articles",
 ]

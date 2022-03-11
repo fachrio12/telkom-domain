@@ -1,5 +1,7 @@
 use yew::prelude::*;
+use yew_router::prelude::*;
 use logo::Logo;
+use router::Route;
 
 pub struct Navtop {}
 
@@ -22,6 +24,10 @@ impl Component for Navtop {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
+        // let history = use_history().unwrap();
+
+        // let onclick = Callback::once(move |_| history.push(Route::Secure));
+
         html! {
             <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
                 <nav
@@ -47,7 +53,15 @@ impl Component for Navtop {
 
                         <ul class="uk-navbar-nav">
                             <li class="uk-active">
-                                <a href="#">{ "Articles" }</a>
+                                <Link<Route> to={Route::Articles}>
+                                    { "Articles" }
+                                </Link<Route>>
+                                // <a
+                                //     href="javascript:void(0)"
+                                //     // {onclick}
+                                // >
+                                //     { "Articles" }
+                                // </a>
                             </li>
                             <li>
                                 <a href="#">{ "Quickstart" }</a>

@@ -55,13 +55,10 @@ impl Component for Home {
 
                 <div
                     class="
-                        uk-grid-column-small
-                        uk-grid-row-large
-                        uk-child-width-1-1@s
-                        uk-child-width-1-2@m
-                        uk-child-width-1-3@l
-                        uk-grid-small
-                        uk-child-width-expand@s
+                        uk-child-width-1-2@s
+                        uk-child-width-1-3@m
+                        uk-child-width-1-4@l
+                        uk-grid-match
                         uk-text-center
                     "
                     uk-grid="true"
@@ -196,6 +193,7 @@ impl Component for Home {
                 <div
                     class="
                         uk-grid
+                        uk-grid-match
                         uk-grid-row-large
                         uk-child-width-1-1@s
                         uk-child-width-1-2@m
@@ -221,9 +219,7 @@ impl Component for Home {
                                         class="uk-form-icon uk-text-large uk-position-center uk-text-primary"
                                         style="font-size: 39px;"
                                     >
-                                        <i
-                                            class="fa-solid fa-bolt"
-                                        ></i>
+                                        <i class="fa-solid fa-bolt"></i>
                                     </span>
                                 </div>
                             </div>

@@ -1,0 +1,27 @@
+
+
+.td-bg-primary-light {
+    background: hsl(210, 88%, 93%);
+}
+
+.td-border-left-light {
+    border-left: .5px solid rgba(0,0,0,.15);
+}
+.td-border-right-light {
+    border-right: .5px solid rgba(0,0,0,.15);
+}
+.td-border-top-light {
+    border-top: .5px solid rgba(0,0,0,.15);
+}
+.td-border-bottom-light {
+    border-bottom: .5px solid rgba(0,0,0,.15);
+}
+
+.td-text-size-big {
+    font-size: 21px;
+}
+
+.td-text-weight-bold {
+    font-weight: 600;
+}
+

@@ -1,5 +1,5 @@
 [package]
-name = "router"
+name = "articles-home"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,4 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
-yew-router = "0.16"
-home = { path = "../pages/home" }
-articles-home = { path = "../pages/articles/articles-home" }
+sidebar-articles = { path = "../sidebar-articles" }
