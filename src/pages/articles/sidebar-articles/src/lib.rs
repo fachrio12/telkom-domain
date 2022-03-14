@@ -23,7 +23,7 @@ impl Component for SidebarArticles {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-            <div class="uk-width-1-2@s uk-width-2-5@m uk-padding">
+            <div class="uk-width-1-2@s uk-width-2-5@m uk-padding-small">
                 <ul
                     class="uk-nav uk-nav-default uk-margin-medium-top"
                     style="opacity: .8;"
