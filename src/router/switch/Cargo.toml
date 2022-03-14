@@ -1,0 +1,13 @@
+[package]
+name = "switch"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = "0.19"
+route = { path = "../route" }
+home = { path = "../../pages/home" }
+articles-home = { path = "../../pages/articles/articles-home" }
+get-started-home = { path = "../../pages/articles/get-started/get-started-home" }

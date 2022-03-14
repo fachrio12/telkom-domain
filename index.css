@@ -20,6 +20,9 @@
 .td-text-size-big {
     font-size: 20px;
 }
+.td-text-size-large {
+    font-size: 33px;
+}
 
 .td-text-weight-bold {
     font-weight: 600;

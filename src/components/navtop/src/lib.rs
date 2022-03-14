@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 use logo::Logo;
-use router::Route;
+use route::Route;
 
 pub struct Navtop {}
 

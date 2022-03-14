@@ -1,5 +1,7 @@
 use yew::prelude::*;
+use yew_router::prelude::*;
 use logo_icon::LogoIcon;
+use route::Route;
 
 pub struct SidebarArticles {}
 
@@ -59,7 +61,11 @@ impl Component for SidebarArticles {
                         <span
                             class="uk-text-secondary td-text-size-big td-text-weight-bold"
                         >
-                            { "Get Started" }
+                            <Link<Route> to={Route::GetStartedHome}
+                                classes="uk-text-emphasis"
+                            >
+                                { "Get Started" }
+                            </Link<Route>>
                         </span>
                     </a></li>
                     <li><a href="#" class="uk-padding-remove-top">

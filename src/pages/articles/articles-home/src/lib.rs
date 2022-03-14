@@ -33,6 +33,7 @@ impl Component for ArticlesHome {
                     <div class="uk-width-1-4@m td-border-right-light">
                         <div>
                             <SidebarArticles/>
+                            // {"SIDEBAR"}
                         </div>
                     </div>
 
@@ -64,8 +65,6 @@ impl Component for ArticlesHome {
                                         </td>
                                         <td>{ "About how to get started using Auth0, including the basics of identity and access management, an overview of Auth0 services and tenant settings, how to register applications and APIs with Auth0, how to give team members access to your Auth0 Dashboard, the flows used for authentication and authorization, and common Auth0 architecture scenarios that you can use to solve your authorization and authentication problems." }</td>
                                     </tr>
-                                </tbody>
-                                <tbody>
                                     <tr>
                                         <td>
                                             <a class="uk-link-text uk-text-primary" href="#">{ "Authenticate" }</a>

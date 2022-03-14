@@ -1,5 +1,5 @@
 [package]
-name = "sidebar-articles"
+name = "get-started-home"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,4 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
-yew-router = "0.16"
-route = { path = "../../../router/route" }
-logo-icon = { path = "../../../components/logo-icon" }
+sidebar-articles = { path = "../../sidebar-articles" }

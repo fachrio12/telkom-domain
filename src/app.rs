@@ -4,10 +4,12 @@ use yew::prelude::*;
 // };
 use yew_router::prelude::*;
 
-use router::{
-    Route,
-    switch,
-};
+use route::Route;
+use switch::switch;
+// use router::{
+//     Route,
+//     switch,
+// };
 use navtop::Navtop;
 use footer::Footer;
 

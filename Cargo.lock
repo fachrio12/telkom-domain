@@ -83,6 +83,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c09fd04b7e4073ac7156a9539b57a484a8ea920f79c7c675d05d289ab6110d3"
 
 [[package]]
+name = "get-started-home"
+version = "0.1.0"
+dependencies = [
+ "sidebar-articles",
+ "yew",
+]
+
+[[package]]
 name = "gloo"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -269,7 +277,7 @@ name = "navtop"
 version = "0.1.0"
 dependencies = [
  "logo",
- "router",
+ "route",
  "yew",
  "yew-router",
 ]
@@ -323,20 +331,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "route"
+version = "0.1.0"
+dependencies = [
+ "yew-router",
+]
+
+[[package]]
 name = "route-recognizer"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "afab94fb28594581f62d981211a9a4d53cc8130bbcbbb89a0440d9b8e81a7746"
-
-[[package]]
-name = "router"
-version = "0.1.0"
-dependencies = [
- "articles-home",
- "home",
- "yew",
- "yew-router",
-]
 
 [[package]]
 name = "ryu"
@@ -410,7 +415,9 @@ name = "sidebar-articles"
 version = "0.1.0"
 dependencies = [
  "logo-icon",
+ "route",
  "yew",
+ "yew-router",
 ]
 
 [[package]]
@@ -418,6 +425,17 @@ name = "slab"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9def91fd1e018fe007022791f865d0ccc9b3a0d5001e01aabb8b40e46000afb5"
+
+[[package]]
+name = "switch"
+version = "0.1.0"
+dependencies = [
+ "articles-home",
+ "get-started-home",
+ "home",
+ "route",
+ "yew",
+]
 
 [[package]]
 name = "syn"
@@ -436,7 +454,8 @@ version = "0.1.0"
 dependencies = [
  "footer",
  "navtop",
- "router",
+ "route",
+ "switch",
  "wasm-bindgen",
  "yew",
  "yew-router",
