@@ -86,7 +86,7 @@ checksum = "0c09fd04b7e4073ac7156a9539b57a484a8ea920f79c7c675d05d289ab6110d3"
 name = "get-started-home"
 version = "0.1.0"
 dependencies = [
- "sidebar-articles",
+ "sidebar-get-started",
  "yew",
 ]
 
@@ -421,6 +421,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "sidebar-get-started"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "slab"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -457,6 +464,7 @@ dependencies = [
  "route",
  "switch",
  "wasm-bindgen",
+ "wasm-logger",
  "yew",
  "yew-router",
 ]
@@ -560,6 +568,17 @@ name = "wasm-bindgen-shared"
 version = "0.2.79"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3d958d035c4438e28c70e4321a2911302f10135ce78a9c7834c0cab4123d06a2"
+
+[[package]]
+name = "wasm-logger"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "074649a66bb306c8f2068c9016395fa65d8e08d2affcbf95acf3c24c3ab19718"
+dependencies = [
+ "log",
+ "wasm-bindgen",
+ "web-sys",
+]
 
 [[package]]
 name = "web-sys"

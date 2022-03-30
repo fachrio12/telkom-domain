@@ -1,5 +1,5 @@
 [package]
-name = "get-started-home"
+name = "sidebar-get-started"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,4 +7,3 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
-sidebar-get-started = { path = "../sidebar-get-started" }

@@ -1,5 +1,6 @@
 use yew::prelude::*;
-use sidebar_articles::SidebarArticles;
+use sidebar_get_started::SidebarGetStarted;
+
 
 pub struct GetStartedHome {}
 
@@ -32,7 +33,7 @@ impl Component for GetStartedHome {
 
                     <div class="uk-width-1-4@m td-border-right-light">
                         <div>
-                            <SidebarArticles/>
+                            <SidebarGetStarted/>
                         </div>
                     </div>
 
