@@ -1,5 +1,5 @@
 [package]
-name = "sidebar-get-started"
+name = "sidebar-main-menu"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,5 +7,6 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
-log = "0.4.6"
-sidebar-main-menu = { path = "../../sidebar-main-menu" }
+yew-router = "0.16"
+route = { path = "../../../router/route" }
+logo-icon = { path = "../../../components/logo-icon" }

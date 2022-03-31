@@ -8,5 +8,6 @@ edition = "2021"
 [dependencies]
 yew = "0.19"
 yew-router = "0.16"
+sidebar-main-menu = { path = "../sidebar-main-menu" }
 route = { path = "../../../router/route" }
 logo-icon = { path = "../../../components/logo-icon" }

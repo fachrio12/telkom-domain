@@ -416,6 +416,7 @@ version = "0.1.0"
 dependencies = [
  "logo-icon",
  "route",
+ "sidebar-main-menu",
  "yew",
  "yew-router",
 ]
@@ -424,7 +425,19 @@ dependencies = [
 name = "sidebar-get-started"
 version = "0.1.0"
 dependencies = [
+ "log",
+ "sidebar-main-menu",
  "yew",
+]
+
+[[package]]
+name = "sidebar-main-menu"
+version = "0.1.0"
+dependencies = [
+ "logo-icon",
+ "route",
+ "yew",
+ "yew-router",
 ]
 
 [[package]]
@@ -460,6 +473,7 @@ name = "telkom-domain-docs"
 version = "0.1.0"
 dependencies = [
  "footer",
+ "log",
  "navtop",
  "route",
  "switch",

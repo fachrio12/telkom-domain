@@ -13,6 +13,7 @@ wasm-bindgen = "^0.2"
 yew = "0.19"
 yew-router = "0.16"
 wasm-logger = "0.2.0"
+log = "0.4.6"
 
 route = { path = "./src/router/route" }
 switch = { path = "./src/router/switch" }
@@ -32,6 +33,7 @@ members = [
     "src/components/footer",
 
     "src/pages/articles/articles-home",
+    "src/pages/articles/sidebar-main-menu",
     "src/pages/articles/sidebar-articles",
 
     "src/pages/articles/get-started/get-started-home",

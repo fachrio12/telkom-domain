@@ -1,8 +1,9 @@
 use yew::prelude::*;
+use sidebar_main_menu::SidebarMainMenu;
 
-#[derive(Clone, PartialEq)]
+#[derive(Clone, PartialEq, Debug)]
 pub enum SidebarGetStartedState {
-    Articles,
+    MainMenu,
     GetStarted,
 }
 
@@ -10,7 +11,7 @@ fn create_default_state() -> SidebarGetStartedState {
     SidebarGetStartedState::GetStarted
 }
 
-#[derive(Properties, PartialEq)]
+#[derive(Properties, PartialEq, Debug)]
 pub struct SidebarGetStartedProps {
     /// The link must have a target.
     #[prop_or_else(create_default_state)]
@@ -18,40 +19,102 @@ pub struct SidebarGetStartedProps {
     
 }
 
-pub struct SidebarGetStarted {}
+pub struct SidebarGetStarted {
+    state: SidebarGetStartedState,
+}
 
-pub enum Msg {}
+pub enum Msg {
+    UpdateState(SidebarGetStartedState),
+}
 
 impl Component for SidebarGetStarted {
     type Message = Msg;
-    type Properties = ();
+    type Properties = SidebarGetStartedProps;
 
-    fn create(_ctx: &Context<Self>) -> Self {
+    fn create(ctx: &Context<Self>) -> Self {
         // log::info!("asdfasdfasdf");
+        log::info!("This is log from sidebar get started");
+        let data_test = ctx.props();
+        log::info!("sidebar state ====== {:?}", data_test);
 
-        SidebarGetStarted {}
+        SidebarGetStarted {
+            state: ctx.props().state.to_owned(),
+        }
     }
 
-    fn update(&mut self, _ctx: &Context<Self>, _msg: Self::Message) -> bool {
-        true
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+        match msg {
+            Msg::UpdateState(state) => {
+                self.state = state;
+                true
+            }
+        }
     }
 
     fn changed(&mut self, _ctx: &Context<Self>) -> bool {
         false
     }
 
-    fn view(&self, _ctx: &Context<Self>) -> Html {
+    fn view(&self, ctx: &Context<Self>) -> Html {
+        log::info!("component state === {:?}", self.state);
+        let is_main_menu = if self.state == SidebarGetStartedState::MainMenu {true} else {false};
         html! {
             <div class="uk-padding-small">
-                <div class="uk-text-primary">
-                    <span uk-icon="icon: arrow-left"></span>
-                    <span
-                        class="td-text-weight-bold"
-                    >
-                        { "Main Menu" }
-                    </span>
-                </div>
+                {
+                    if is_main_menu {
+                        html! {
+                            <div
+                                class="uk-text-primary"
+                                style="cursor: pointer;"
+                                onclick={ ctx.link().callback(|_| Msg::UpdateState(SidebarGetStartedState::GetStarted)) }
+                            >
+                                <span
+                                    class="td-text-weight-bold"
+                                >
+                                    { "Back" }
+                                </span>
+                                <span uk-icon="icon: arrow-right"></span>
+                            </div>
+                        }
+                    } else {
+                        html! {
+                            <div
+                                class="uk-text-primary"
+                                style="cursor: pointer;"
+                                onclick={ ctx.link().callback(|_| Msg::UpdateState(SidebarGetStartedState::MainMenu)) }
+                            >
+                                <span uk-icon="icon: arrow-left"></span>
+                                <span
+                                    class="td-text-weight-bold"
+                                >
+                                    { "Main Menu" }
+                                </span>
+                            </div>
+                        }
+                    }
+                }
 
+                {
+                    if is_main_menu {
+                        html! {
+                            <SidebarMainMenu/>
+                        }
+                    } else {
+                        self.view_get_started_menu()
+                    }
+                }
+
+
+            </div>
+        }
+    }
+}
+
+
+impl SidebarGetStarted {
+    fn view_get_started_menu (&self) -> Html {
+        html! {
+            <>
                 <ul
                     class="uk-nav uk-nav-default uk-margin-medium-top uk-margin-medium-bottom"
                     style="opacity: .8;"
@@ -124,9 +187,7 @@ impl Component for SidebarGetStarted {
                         </div>
                     </div>
                 </div>
-
-
-            </div>
+            </>
         }
     }
 }
