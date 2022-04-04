@@ -139,7 +139,7 @@ impl SidebarGetStarted {
                 </ul>
 
                 <div
-                    class="uk-margin-medium-bottom uk-text-small td-text-weight-400"
+                    class="uk-margin-medium-bottom uk-text-small td-text-weight-500"
                 >
                     <div
                         class="uk-margin-small-bottom"
@@ -158,7 +158,7 @@ impl SidebarGetStarted {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom uk-text-small td-text-weight-400"
+                    class="uk-margin-medium-bottom uk-text-small td-text-weight-500"
                 >
                     <div
                         class="uk-margin-small-bottom"

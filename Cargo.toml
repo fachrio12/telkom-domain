@@ -36,6 +36,8 @@ members = [
     "src/pages/articles/sidebar-main-menu",
     "src/pages/articles/sidebar-articles",
 
+    "src/pages/articles/get-started/get-started-main",
+    "src/pages/articles/get-started/get-started-content",
     "src/pages/articles/get-started/get-started-home",
     "src/pages/articles/get-started/sidebar-get-started",
 ]

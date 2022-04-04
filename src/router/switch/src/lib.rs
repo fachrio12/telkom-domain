@@ -3,7 +3,7 @@ use route::Route;
 
 use home::Home;
 use articles_home::ArticlesHome;
-use get_started_home::GetStartedHome;
+use get_started_main::GetStartedMain;
 
 
 // #[function_component(Secure)]
@@ -29,8 +29,7 @@ pub fn switch(routes: &Route) -> Html {
             <ArticlesHome/>
         },
         Route::GetStartedHome => html! {
-            <GetStartedHome/>
-            // <div>{ "Get started home" }</div>
+            <GetStartedMain topic={ String::from("Home") } sub_topic={ String::from("Home") } />
         },
         Route::Secure => html! {
             <div>{"SECURE"}</div>

@@ -1,0 +1,11 @@
+[package]
+name = "get-started-main"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = "0.19"
+sidebar-get-started = { path = "../sidebar-get-started" }
+get-started-home = { path = "../get-started-home" }

@@ -1,5 +1,6 @@
 use yew_router::prelude::*;
 
+
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
     #[at("/")]
@@ -15,3 +16,8 @@ pub enum Route {
     #[at("/404")]
     NotFound,
 }
+
+// #[derive(Clone, Routable, PartialEq)]
+// pub enum RouteGetStarted {
+//     #[at("/get-started/")]
+// }

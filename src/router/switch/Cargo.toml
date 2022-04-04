@@ -10,4 +10,4 @@ yew = "0.19"
 route = { path = "../route" }
 home = { path = "../../pages/home" }
 articles-home = { path = "../../pages/articles/articles-home" }
-get-started-home = { path = "../../pages/articles/get-started/get-started-home" }
+get-started-main = { path = "../../pages/articles/get-started/get-started-main" }
