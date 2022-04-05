@@ -1,5 +1,9 @@
 use yew::prelude::*;
-use route::Route;
+use yew_router::prelude::*;
+use route::{
+    Route,
+    RouteGetStarted,
+};
 
 use home::Home;
 use articles_home::ArticlesHome;
@@ -28,12 +32,35 @@ pub fn switch(routes: &Route) -> Html {
         Route::Articles => html! {
             <ArticlesHome/>
         },
+        Route::GetStarted => html! {
+            <Switch<RouteGetStarted> render={Switch::render(switch_get_started)} />
+        },
         Route::GetStartedHome => html! {
             <GetStartedMain topic={ String::from("Home") } sub_topic={ String::from("Home") } />
         },
         Route::Secure => html! {
             <div>{"SECURE"}</div>
         },
-        Route::NotFound => html! { <h1>{ "404" }</h1> },
+        Route::NotFound => {
+            log::info!("not found from main router");
+            html! { <h1>{ "404" }</h1> }
+        },
+    }
+}
+
+
+
+
+pub fn switch_get_started(routes: &RouteGetStarted) -> Html {
+    match routes {
+        RouteGetStarted::Home => html! {
+            <GetStartedMain topic={ String::from("Home") } sub_topic={ String::from("Home") } />
+        },
+        RouteGetStarted::NotFound => {
+            log::info!("not found from get started router");
+            html! {
+                <Redirect<Route> to={Route::NotFound} />
+            }
+        }
     }
 }

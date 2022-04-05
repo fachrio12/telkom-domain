@@ -7,7 +7,9 @@ pub enum Route {
     Home,
     #[at("/articles")]
     Articles,
-    #[at("/get-started")]
+    #[at("/get-started/:s")]
+    GetStarted,
+    #[at("/get-started/")]
     GetStartedHome,
 
     #[at("/secure")]
@@ -17,7 +19,11 @@ pub enum Route {
     NotFound,
 }
 
-// #[derive(Clone, Routable, PartialEq)]
-// pub enum RouteGetStarted {
-//     #[at("/get-started/")]
-// }
+#[derive(Clone, Routable, PartialEq)]
+pub enum RouteGetStarted {
+    #[at("/get-started/")]
+    Home,
+    #[not_found]
+    #[at("get-started/404")]
+    NotFound,
+}

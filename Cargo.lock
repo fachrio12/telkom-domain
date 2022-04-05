@@ -471,8 +471,10 @@ dependencies = [
  "articles-home",
  "get-started-main",
  "home",
+ "log",
  "route",
  "yew",
+ "yew-router",
 ]
 
 [[package]]

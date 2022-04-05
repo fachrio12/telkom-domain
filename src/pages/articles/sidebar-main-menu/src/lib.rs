@@ -1,7 +1,10 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 use logo_icon::LogoIcon;
-use route::Route;
+use route::{
+    Route,
+    RouteGetStarted,
+};
 
 pub struct SidebarMainMenu {}
 
@@ -60,7 +63,9 @@ impl Component for SidebarMainMenu {
                     <span
                         class="uk-text-secondary td-text-size-big td-text-weight-bold"
                     >
-                        <Link<Route> to={Route::GetStartedHome}
+                        <Link<Route>
+                            to={Route::GetStartedHome}
+                            // to={RouteGetStarted::Home}
                             classes="uk-text-emphasis"
                         >
                             { "Get Started" }

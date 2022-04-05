@@ -7,6 +7,8 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
+yew-router = "0.16"
+log = "0.4.6"
 route = { path = "../route" }
 home = { path = "../../pages/home" }
 articles-home = { path = "../../pages/articles/articles-home" }
