@@ -2,21 +2,25 @@ use yew::prelude::*;
 use sidebar_get_started::SidebarGetStarted;
 use get_started_home::GetStartedHome;
 
+mod topics;
 
+use crate::topics::identity_fundamentals::IdentityFundamentals;
 
-fn create_default_state_topic () -> String {
-    String::from("Home")
-}
+// fn create_default_state_topic () -> String {
+//     String::from("Home")
+// }
 
-fn create_default_state_subtopic () -> String {
-    String::from("Home")
-}
+// fn create_default_state_subtopic () -> String {
+//     String::from("Home")
+// }
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
-    #[prop_or_else(create_default_state_topic)]
+    // #[prop_or_else(create_default_state_topic)]
+    #[prop_or("Home".to_string())]
     pub topic: String,
-    #[prop_or_else(create_default_state_subtopic)]
+    // #[prop_or_else(create_default_state_subtopic)]
+    #[prop_or("Home".to_string())]
     pub sub_topic: String,
 }
 
@@ -48,47 +52,33 @@ impl Component for GetStartedContent {
         true
     }
 
-    fn changed(&mut self, _ctx: &Context<Self>) -> bool {
-        false
+    fn changed(&mut self, ctx: &Context<Self>) -> bool {
+        if self.topic != ctx.props().topic {
+            self.topic = ctx.props().topic.to_owned();
+            true
+        } else {
+            false
+        }
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        html! {
-            <div>
-
-                <div
-                    class="uk-grid-collapse"
-                    uk-grid="true"
-                >
-
-                    <div class="uk-width-1-4@m td-border-right-light">
-                        <div>
-                            <SidebarGetStarted/>
-                        </div>
-                    </div>
-
-                    <div class="uk-width-expand@m">
-                        <div
-                            class="uk-padding-large"
-                        >
-                            { self.view_content() }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-    }
-}
-
-
-impl GetStartedContent {
-    fn view_content (&self) -> Html {
-        match self.topic {
+        match self.topic.as_str() {
+            "Home" => {
+                html! {
+                    <GetStartedHome/>
+                }
+            }
+            "Identity Fundamentals" => {
+                html! {
+                    <IdentityFundamentals/>
+                }
+            }
             _ => {
                 html! {
-                    <div>{ "GET STARTED CONTENT" }</div>
+                    <GetStartedHome/>
                 }
             }
         }
     }
 }
+

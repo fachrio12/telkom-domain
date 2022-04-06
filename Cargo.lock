@@ -3,6 +3,14 @@
 version = 3
 
 [[package]]
+name = "articles-breadcrumb"
+version = "0.1.0"
+dependencies = [
+ "log",
+ "yew",
+]
+
+[[package]]
 name = "articles-home"
 version = "0.1.0"
 dependencies = [
@@ -103,7 +111,9 @@ dependencies = [
 name = "get-started-main"
 version = "0.1.0"
 dependencies = [
- "get-started-home",
+ "articles-breadcrumb",
+ "get-started-content",
+ "log",
  "sidebar-get-started",
  "yew",
 ]
@@ -444,8 +454,10 @@ name = "sidebar-get-started"
 version = "0.1.0"
 dependencies = [
  "log",
+ "route",
  "sidebar-main-menu",
  "yew",
+ "yew-router",
 ]
 
 [[package]]

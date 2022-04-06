@@ -1,5 +1,10 @@
 use yew::prelude::*;
+use yew_router::prelude::*;
 use sidebar_main_menu::SidebarMainMenu;
+use route::{
+    Route,
+    RouteGetStarted,
+};
 
 #[derive(Clone, PartialEq, Debug)]
 pub enum SidebarGetStartedState {
@@ -169,12 +174,24 @@ impl SidebarGetStarted {
                     <div
                         class="uk-text-muted uk-margin-small-bottom"
                     >
-                        <div>
+                        // <div>
+                        //     { "Identity Fundamentals" }
+                        //     <span
+                        //         style="float: right; padding-top: 4px;"
+                        //         uk-icon="icon: chevron-right;  ratio: 0.85">
+                        //     </span>
+                        // </div>
+                        <Link<Route>
+                            to={Route::GetStartedIdentityFundamentals}
+                            // to={RouteGetStarted::Home}
+                            classes="uk-text-muted"
+                        >
                             { "Identity Fundamentals" }
                             <span
                                 style="float: right; padding-top: 4px;"
-                                uk-icon="icon: chevron-right;  ratio: 0.85"></span>
-                        </div>
+                                uk-icon="icon: chevron-right;  ratio: 0.85">
+                            </span>
+                        </Link<Route>>
                     </div>
                     <div
                         class="uk-text-muted uk-margin-small-bottom"

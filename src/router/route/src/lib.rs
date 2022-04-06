@@ -9,6 +9,8 @@ pub enum Route {
     Articles,
     #[at("/get-started/:s")]
     GetStarted,
+    #[at("/get-started/identity-fundamentals")]
+    GetStartedIdentityFundamentals,
     #[at("/get-started/")]
     GetStartedHome,
 

@@ -26,11 +26,6 @@ impl Component for GetStartedHome {
         html! {
             <>
 
-                <ul class="uk-breadcrumb">
-                    <li><a href="#">{ "Docs" }</a></li>
-                    <li><span>{ "Get Started" }</span></li>
-                </ul>
-
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Get Started" }</h1>
                 <p>
                     { "Welcome! If you are new to Auth0, you are in the right place. Here we will cover how to get started using Auth0." }

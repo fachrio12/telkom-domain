@@ -1,6 +1,8 @@
 use yew::prelude::*;
 use sidebar_get_started::SidebarGetStarted;
-use get_started_home::GetStartedHome;
+
+use articles_breadcrumb::ArticlesBreadcrumb;
+use get_started_content::GetStartedContent;
 
 
 
@@ -48,8 +50,13 @@ impl Component for GetStartedMain {
         true
     }
 
-    fn changed(&mut self, _ctx: &Context<Self>) -> bool {
-        false
+    fn changed(&mut self, ctx: &Context<Self>) -> bool {
+        if self.topic != ctx.props().topic {
+            self.topic = ctx.props().topic.to_owned();
+            true
+        } else {
+            false
+        }
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
@@ -86,17 +93,26 @@ impl GetStartedMain {
         match self.topic.as_str() {
             "Home" => {
                 html! {
-                    <GetStartedHome/>
+                    <>
+                        <ArticlesBreadcrumb/>
+                        <GetStartedContent/>
+                    </>
                 }
             }
             "Identity Fundamentals" => {
                 html! {
-                    <div>{ "IDENTITY FUNDAMENTALS" }</div>
+                    <>
+                        <ArticlesBreadcrumb/>
+                        <GetStartedContent topic={ String::from("Identity Fundamentals") } />
+                    </>
                 }
             }
             _ => {
                 html! {
-                    <GetStartedHome/>
+                    <>
+                        <ArticlesBreadcrumb/>
+                        <GetStartedContent/>
+                    </>
                 }
             }
         }

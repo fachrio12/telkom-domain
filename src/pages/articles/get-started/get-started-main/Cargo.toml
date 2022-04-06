@@ -7,5 +7,7 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
+log = "0.4.6"
 sidebar-get-started = { path = "../sidebar-get-started" }
-get-started-home = { path = "../get-started-home" }
+get-started-content = { path = "../get-started-content" }
+articles-breadcrumb = { path = "../../articles-breadcrumb" }

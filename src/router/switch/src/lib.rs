@@ -35,6 +35,9 @@ pub fn switch(routes: &Route) -> Html {
         Route::GetStarted => html! {
             <Switch<RouteGetStarted> render={Switch::render(switch_get_started)} />
         },
+        Route::GetStartedIdentityFundamentals => html! {
+            <GetStartedMain topic={ String::from("Identity Fundamentals") } sub_topic={ String::from("Home") } />
+        },
         Route::GetStartedHome => html! {
             <GetStartedMain topic={ String::from("Home") } sub_topic={ String::from("Home") } />
         },
