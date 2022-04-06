@@ -62,7 +62,6 @@ impl Component for GetStartedMain {
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <div>
-
                 <div
                     class="uk-grid-collapse"
                     uk-grid="true"
@@ -70,7 +69,7 @@ impl Component for GetStartedMain {
 
                     <div class="uk-width-1-4@m td-border-right-light">
                         <div>
-                            <SidebarGetStarted/>
+                            <SidebarGetStarted topic={ self.topic.to_owned() } />
                         </div>
                     </div>
 
@@ -103,7 +102,7 @@ impl GetStartedMain {
                 html! {
                     <>
                         <ArticlesBreadcrumb/>
-                        <GetStartedContent topic={ String::from("Identity Fundamentals") } />
+                        <GetStartedContent topic={ self.topic.to_owned() } />
                     </>
                 }
             }

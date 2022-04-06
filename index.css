@@ -35,3 +35,18 @@
 .td-text-weight-500 {
     font-weight: 400;
 }
+
+
+
+
+
+
+/* SIDEBAR */
+
+.td-sidebar-subtopic {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 4px 8px 4px 0px;
+}

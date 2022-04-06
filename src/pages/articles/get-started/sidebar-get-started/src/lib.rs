@@ -16,16 +16,23 @@ fn create_default_state() -> SidebarGetStartedState {
     SidebarGetStartedState::GetStarted
 }
 
+
 #[derive(Properties, PartialEq, Debug)]
 pub struct SidebarGetStartedProps {
-    /// The link must have a target.
     #[prop_or_else(create_default_state)]
     state: SidebarGetStartedState,
-    
+    // #[prop_or_else(create_default_state_topic)]
+    #[prop_or("Home".to_string())]
+    pub topic: String,
+    // #[prop_or_else(create_default_state_subtopic)]
+    #[prop_or("Home".to_string())]
+    pub sub_topic: String,
 }
 
 pub struct SidebarGetStarted {
     state: SidebarGetStartedState,
+    topic: String,
+    sub_topic: String,
 }
 
 pub enum Msg {
@@ -44,6 +51,8 @@ impl Component for SidebarGetStarted {
 
         SidebarGetStarted {
             state: ctx.props().state.to_owned(),
+            topic: ctx.props().topic.to_owned(),
+            sub_topic: ctx.props().sub_topic.to_owned(),
         }
     }
 
@@ -56,8 +65,13 @@ impl Component for SidebarGetStarted {
         }
     }
 
-    fn changed(&mut self, _ctx: &Context<Self>) -> bool {
-        false
+    fn changed(&mut self, ctx: &Context<Self>) -> bool {
+        if self.topic != ctx.props().topic {
+            self.topic = ctx.props().topic.to_owned();
+            true
+        } else {
+            false
+        }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
@@ -109,7 +123,6 @@ impl Component for SidebarGetStarted {
                     }
                 }
 
-
             </div>
         }
     }
@@ -118,6 +131,8 @@ impl Component for SidebarGetStarted {
 
 impl SidebarGetStarted {
     fn view_get_started_menu (&self) -> Html {
+        let topic = self.topic.to_owned();
+        let sub_topic = self.sub_topic.to_owned();
         html! {
             <>
                 <ul
@@ -125,22 +140,27 @@ impl SidebarGetStarted {
                     style="opacity: .8;"
                 >
                     
-                    <li><a href="#" class="uk-padding-remove-top">
-                        <span
-                            class="uk-text-center"
-                            style="width: 45px; margin-top: 3px;"
+                    <li>
+                        <Link<Route>
+                            to={Route::GetStartedHome}
+                            // classes="uk-text-muted"
                         >
-                            <i
-                                class="fa-solid fa-bolt uk-text-primary uk-text-default"
+                            <span
+                                class="uk-text-center"
+                                style="width: 45px; margin-top: 3px;"
                             >
-                            </i>
-                        </span>
-                        <span
-                            class="uk-text-secondary td-text-size-big td-text-weight-bold"
-                        >
-                            { "Get Started" }
-                        </span>
-                    </a></li>
+                                <i
+                                    class="fa-solid fa-bolt uk-text-primary uk-text-default"
+                                >
+                                </i>
+                            </span>
+                            <span
+                                class="uk-text-secondary td-text-size-big td-text-weight-bold"
+                            >
+                                { "Get Started" }
+                            </span>
+                        </Link<Route>>
+                    </li>
                 </ul>
 
                 <div
@@ -174,24 +194,63 @@ impl SidebarGetStarted {
                     <div
                         class="uk-text-muted uk-margin-small-bottom"
                     >
-                        // <div>
-                        //     { "Identity Fundamentals" }
-                        //     <span
-                        //         style="float: right; padding-top: 4px;"
-                        //         uk-icon="icon: chevron-right;  ratio: 0.85">
-                        //     </span>
-                        // </div>
-                        <Link<Route>
-                            to={Route::GetStartedIdentityFundamentals}
-                            // to={RouteGetStarted::Home}
-                            classes="uk-text-muted"
-                        >
-                            { "Identity Fundamentals" }
-                            <span
-                                style="float: right; padding-top: 4px;"
-                                uk-icon="icon: chevron-right;  ratio: 0.85">
-                            </span>
-                        </Link<Route>>
+                        {
+                            if topic == "Identity Fundamentals".to_string() {
+                                html! {
+                                    <div>
+                                        <div
+                                            class="uk-text-muted"
+                                        >
+                                            { "Identity Fundamentals" }
+                                            <span
+                                                style="float: right; padding-top: 4px;"
+                                                uk-icon="icon: chevron-right;  ratio: 0.85">
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::GetStartedIdentityFundamentals}
+                                                    classes="uk-text-muted"
+                                                    >
+                                                    <span>
+                                                        { "Introduction to Identity and Access Management (IAM)" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::GetStartedIdentityFundamentals}
+                                                    classes="uk-text-muted"
+                                                    >
+                                                    <span>
+                                                        { "Authentication vs. Authorization" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            } else {
+                                html! {
+                                    <Link<Route>
+                                        to={Route::GetStartedIdentityFundamentals}
+                                        // to={RouteGetStarted::Home}
+                                        classes="uk-text-muted"
+                                    >
+                                        { "Identity Fundamentals" }
+                                        <span
+                                            style="float: right; padding-top: 4px;"
+                                            uk-icon="icon: chevron-right;  ratio: 0.85">
+                                        </span>
+                                    </Link<Route>>
+                                }
+                            }
+                        }
                     </div>
                     <div
                         class="uk-text-muted uk-margin-small-bottom"
