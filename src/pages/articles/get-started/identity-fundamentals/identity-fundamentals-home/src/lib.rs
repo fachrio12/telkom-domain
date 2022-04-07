@@ -1,15 +1,15 @@
 use yew::prelude::*;
 
-pub struct IdentityFundamentals {}
+pub struct IdentityFundamentalsHome {}
 
 pub enum Msg {}
 
-impl Component for IdentityFundamentals {
+impl Component for IdentityFundamentalsHome {
     type Message = Msg;
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        IdentityFundamentals {}
+        IdentityFundamentalsHome {}
     }
 
     fn update(&mut self, _ctx: &Context<Self>, _msg: Self::Message) -> bool {

@@ -1,18 +1,9 @@
 use yew::prelude::*;
 use sidebar_get_started::SidebarGetStarted;
 use get_started_home::GetStartedHome;
+use identity_fundamentals_home::IdentityFundamentalsHome;
 
-mod topics;
 
-use crate::topics::identity_fundamentals::IdentityFundamentals;
-
-// fn create_default_state_topic () -> String {
-//     String::from("Home")
-// }
-
-// fn create_default_state_subtopic () -> String {
-//     String::from("Home")
-// }
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
@@ -69,8 +60,18 @@ impl Component for GetStartedContent {
                 }
             }
             "Identity Fundamentals" => {
-                html! {
-                    <IdentityFundamentals/>
+                match self.sub_topic.as_str() {
+                    "Home" => {
+                        html! {
+                            <IdentityFundamentalsHome/>
+                        }
+                    }
+                    _ => {
+                        // CHANGE TO REDIRECT TO HOME
+                        html! {
+                            <div>{ "PAGE NOT FOUND" }</div>
+                        }
+                    }
                 }
             }
             _ => {
