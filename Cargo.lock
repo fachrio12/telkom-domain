@@ -96,6 +96,7 @@ version = "0.1.0"
 dependencies = [
  "get-started-home",
  "identity-fundamentals-home",
+ "introduction-to-iam",
  "sidebar-get-started",
  "yew",
 ]
@@ -256,6 +257,13 @@ checksum = "282a6247722caba404c065016bbfa522806e51714c34f5dfc3e4a3a46fcb4223"
 dependencies = [
  "autocfg",
  "hashbrown",
+]
+
+[[package]]
+name = "introduction-to-iam"
+version = "0.1.0"
+dependencies = [
+ "yew",
 ]
 
 [[package]]

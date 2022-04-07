@@ -43,5 +43,7 @@ members = [
     "src/pages/articles/get-started/get-started-home",
     "src/pages/articles/get-started/sidebar-get-started",
 
+
     "src/pages/articles/get-started/identity-fundamentals/identity-fundamentals-home",
+    "src/pages/articles/get-started/identity-fundamentals/introduction-to-iam",
 ]

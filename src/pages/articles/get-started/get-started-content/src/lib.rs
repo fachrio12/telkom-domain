@@ -2,6 +2,7 @@ use yew::prelude::*;
 use sidebar_get_started::SidebarGetStarted;
 use get_started_home::GetStartedHome;
 use identity_fundamentals_home::IdentityFundamentalsHome;
+use introduction_to_iam::IntroductionToIAM;
 
 
 
@@ -47,6 +48,9 @@ impl Component for GetStartedContent {
         if self.topic != ctx.props().topic {
             self.topic = ctx.props().topic.to_owned();
             true
+        } else if self.sub_topic != ctx.props().sub_topic {
+            self.sub_topic = ctx.props().sub_topic.to_owned();
+            true
         } else {
             false
         }
@@ -64,6 +68,11 @@ impl Component for GetStartedContent {
                     "Home" => {
                         html! {
                             <IdentityFundamentalsHome/>
+                        }
+                    }
+                    "Introduction To IAM" => {
+                        html! {
+                            <IntroductionToIAM/>
                         }
                     }
                     _ => {

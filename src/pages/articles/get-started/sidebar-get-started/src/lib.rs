@@ -3,7 +3,6 @@ use yew_router::prelude::*;
 use sidebar_main_menu::SidebarMainMenu;
 use route::{
     Route,
-    RouteGetStarted,
 };
 
 #[derive(Clone, PartialEq, Debug)]
@@ -68,6 +67,9 @@ impl Component for SidebarGetStarted {
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
         if self.topic != ctx.props().topic {
             self.topic = ctx.props().topic.to_owned();
+            true
+        } else if self.sub_topic != ctx.props().sub_topic {
+            self.sub_topic = ctx.props().sub_topic.to_owned();
             true
         } else {
             false
@@ -212,7 +214,7 @@ impl SidebarGetStarted {
                                                 class="uk-margin-left td-sidebar-subtopic"
                                             >
                                                 <Link<Route>
-                                                    to={Route::GetStartedIdentityFundamentals}
+                                                    to={Route::IntroductionToIAM}
                                                     classes="uk-text-muted"
                                                     >
                                                     <span>

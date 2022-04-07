@@ -10,3 +10,4 @@ yew = "0.19"
 sidebar-get-started = { path = "../sidebar-get-started" }
 get-started-home = { path = "../get-started-home" }
 identity-fundamentals-home = { path = "../identity-fundamentals/identity-fundamentals-home" }
+introduction-to-iam = { path = "../identity-fundamentals/introduction-to-iam" }

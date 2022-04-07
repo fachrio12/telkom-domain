@@ -54,6 +54,9 @@ impl Component for GetStartedMain {
         if self.topic != ctx.props().topic {
             self.topic = ctx.props().topic.to_owned();
             true
+        } else if self.sub_topic != ctx.props().sub_topic {
+            self.sub_topic = ctx.props().sub_topic.to_owned();
+            true
         } else {
             false
         }
@@ -69,7 +72,7 @@ impl Component for GetStartedMain {
 
                     <div class="uk-width-1-4@m td-border-right-light">
                         <div>
-                            <SidebarGetStarted topic={ self.topic.to_owned() } />
+                            <SidebarGetStarted topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
                         </div>
                     </div>
 
@@ -89,11 +92,12 @@ impl Component for GetStartedMain {
 
 impl GetStartedMain {
     fn view_content (&self) -> Html {
+        log::info!("get started main, sub topic ====== {:?}", self.sub_topic);
         match self.topic.as_str() {
             "Home" => {
                 html! {
                     <>
-                        <ArticlesBreadcrumb/>
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
                         <GetStartedContent/>
                     </>
                 }
@@ -101,15 +105,15 @@ impl GetStartedMain {
             "Identity Fundamentals" => {
                 html! {
                     <>
-                        <ArticlesBreadcrumb/>
-                        <GetStartedContent topic={ self.topic.to_owned() } />
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
                     </>
                 }
             }
             _ => {
                 html! {
                     <>
-                        <ArticlesBreadcrumb/>
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
                         <GetStartedContent/>
                     </>
                 }

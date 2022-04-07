@@ -3,7 +3,6 @@ use yew_router::prelude::*;
 use logo_icon::LogoIcon;
 use route::{
     Route,
-    RouteGetStarted,
 };
 
 pub struct SidebarMainMenu {}
