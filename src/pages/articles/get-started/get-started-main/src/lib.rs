@@ -75,7 +75,7 @@ impl Component for GetStartedMain {
                 >
 
                     <div class="uk-width-1-4@m td-border-right-light">
-                        <div>
+                        <div class="uk-position-fixed">
                             <SidebarGetStarted topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
                         </div>
                     </div>
