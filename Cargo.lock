@@ -6,6 +6,7 @@ version = 3
 name = "articles-breadcrumb"
 version = "0.1.0"
 dependencies = [
+ "get-started-topics",
  "log",
  "yew",
 ]
@@ -95,9 +96,9 @@ name = "get-started-content"
 version = "0.1.0"
 dependencies = [
  "get-started-home",
+ "get-started-topics",
  "identity-fundamentals-home",
  "introduction-to-iam",
- "sidebar-get-started",
  "yew",
 ]
 
@@ -115,10 +116,15 @@ version = "0.1.0"
 dependencies = [
  "articles-breadcrumb",
  "get-started-content",
+ "get-started-topics",
  "log",
  "sidebar-get-started",
  "yew",
 ]
+
+[[package]]
+name = "get-started-topics"
+version = "0.1.0"
 
 [[package]]
 name = "gloo"
@@ -469,6 +475,7 @@ dependencies = [
 name = "sidebar-get-started"
 version = "0.1.0"
 dependencies = [
+ "get-started-topics",
  "log",
  "route",
  "sidebar-main-menu",
@@ -498,6 +505,7 @@ version = "0.1.0"
 dependencies = [
  "articles-home",
  "get-started-main",
+ "get-started-topics",
  "home",
  "log",
  "route",

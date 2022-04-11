@@ -1,5 +1,8 @@
 use yew::prelude::*;
-use sidebar_get_started::SidebarGetStarted;
+use get_started_topics::{
+    Topic,
+    SubTopic,
+};
 use get_started_home::GetStartedHome;
 use identity_fundamentals_home::IdentityFundamentalsHome;
 use introduction_to_iam::IntroductionToIAM;
@@ -9,17 +12,17 @@ use introduction_to_iam::IntroductionToIAM;
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
     // #[prop_or_else(create_default_state_topic)]
-    #[prop_or("Home".to_string())]
-    pub topic: String,
+    #[prop_or(Topic::Home)]
+    pub topic: Topic,
     // #[prop_or_else(create_default_state_subtopic)]
-    #[prop_or("Home".to_string())]
-    pub sub_topic: String,
+    #[prop_or(SubTopic::Home)]
+    pub sub_topic: SubTopic,
 }
 
 
 pub struct GetStartedContent {
-    topic: String,
-    sub_topic: String,
+    topic: Topic,
+    sub_topic: SubTopic,
 }
 
 pub enum Msg {}
@@ -57,20 +60,20 @@ impl Component for GetStartedContent {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        match self.topic.as_str() {
-            "Home" => {
+        match self.topic {
+            Topic::Home => {
                 html! {
                     <GetStartedHome/>
                 }
             }
-            "Identity Fundamentals" => {
-                match self.sub_topic.as_str() {
-                    "Home" => {
+            Topic::IdentityFundamentals => {
+                match self.sub_topic {
+                    SubTopic::Home => {
                         html! {
                             <IdentityFundamentalsHome/>
                         }
                     }
-                    "Introduction To IAM" => {
+                    SubTopic::IntroductionToIAM => {
                         html! {
                             <IntroductionToIAM/>
                         }

@@ -13,3 +13,4 @@ route = { path = "../route" }
 home = { path = "../../pages/home" }
 articles-home = { path = "../../pages/articles/articles-home" }
 get-started-main = { path = "../../pages/articles/get-started/get-started-main" }
+get-started-topics = { path = "../../pages/articles/get-started/get-started-topics" }

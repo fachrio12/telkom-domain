@@ -4,6 +4,10 @@ use sidebar_main_menu::SidebarMainMenu;
 use route::{
     Route,
 };
+use get_started_topics::{
+    Topic,
+    SubTopic,
+};
 
 #[derive(Clone, PartialEq, Debug)]
 pub enum SidebarGetStartedState {
@@ -21,17 +25,17 @@ pub struct SidebarGetStartedProps {
     #[prop_or_else(create_default_state)]
     state: SidebarGetStartedState,
     // #[prop_or_else(create_default_state_topic)]
-    #[prop_or("Home".to_string())]
-    pub topic: String,
+    #[prop_or(Topic::Home)]
+    pub topic: Topic,
     // #[prop_or_else(create_default_state_subtopic)]
-    #[prop_or("Home".to_string())]
-    pub sub_topic: String,
+    #[prop_or(SubTopic::Home)]
+    pub sub_topic: SubTopic,
 }
 
 pub struct SidebarGetStarted {
     state: SidebarGetStartedState,
-    topic: String,
-    sub_topic: String,
+    topic: Topic,
+    sub_topic: SubTopic,
 }
 
 pub enum Msg {
@@ -43,10 +47,8 @@ impl Component for SidebarGetStarted {
     type Properties = SidebarGetStartedProps;
 
     fn create(ctx: &Context<Self>) -> Self {
-        // log::info!("asdfasdfasdf");
-        log::info!("This is log from sidebar get started");
         let data_test = ctx.props();
-        log::info!("sidebar state ====== {:?}", data_test);
+        // log::info!("sidebar state ====== {:?}", data_test);
 
         SidebarGetStarted {
             state: ctx.props().state.to_owned(),
@@ -196,19 +198,20 @@ impl SidebarGetStarted {
                     <div
                         class="uk-text-muted uk-margin-small-bottom"
                     >
-                        {
-                            if topic == "Identity Fundamentals".to_string() {
-                                html! {
-                                    <div>
-                                        <div
-                                            class="uk-text-muted"
-                                        >
-                                            { "Identity Fundamentals" }
-                                            <span
-                                                style="float: right; padding-top: 4px;"
-                                                uk-icon="icon: chevron-right;  ratio: 0.85">
-                                            </span>
-                                        </div>
+                        <div>
+                            <Link<Route>
+                                to={Route::GetStartedIdentityFundamentals}
+                                classes="uk-text-muted"
+                            >
+                                { "Identity Fundamentals" }
+                                <span
+                                    style="float: right; padding-top: 4px;"
+                                    uk-icon="icon: chevron-right;  ratio: 0.85">
+                                </span>
+                            </Link<Route>>
+                            {
+                                if topic == Topic::IdentityFundamentals {
+                                    html! {
                                         <div>
                                             <div
                                                 class="uk-margin-left td-sidebar-subtopic"
@@ -235,24 +238,12 @@ impl SidebarGetStarted {
                                                 </Link<Route>>
                                             </div>
                                         </div>
-                                    </div>
-                                }
-                            } else {
-                                html! {
-                                    <Link<Route>
-                                        to={Route::GetStartedIdentityFundamentals}
-                                        // to={RouteGetStarted::Home}
-                                        classes="uk-text-muted"
-                                    >
-                                        { "Identity Fundamentals" }
-                                        <span
-                                            style="float: right; padding-top: 4px;"
-                                            uk-icon="icon: chevron-right;  ratio: 0.85">
-                                        </span>
-                                    </Link<Route>>
+                                    }
+                                } else {
+                                    html! {}
                                 }
                             }
-                        }
+                        </div>
                     </div>
                     <div
                         class="uk-text-muted uk-margin-small-bottom"

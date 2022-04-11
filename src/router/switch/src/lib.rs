@@ -7,6 +7,10 @@ use route::{
 use home::Home;
 use articles_home::ArticlesHome;
 use get_started_main::GetStartedMain;
+use get_started_topics::{
+    Topic,
+    SubTopic,
+};
 
 
 pub fn switch(routes: &Route) -> Html {
@@ -21,13 +25,13 @@ pub fn switch(routes: &Route) -> Html {
         //     <Switch<RouteGetStarted> render={Switch::render(switch_get_started)} />
         // },
         Route::IntroductionToIAM => html! {
-            <GetStartedMain topic={ String::from("Identity Fundamentals") } sub_topic={ String::from("Introduction To IAM") } />
+            <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::IntroductionToIAM } />
         },
         Route::GetStartedIdentityFundamentals => html! {
-            <GetStartedMain topic={ String::from("Identity Fundamentals") } sub_topic={ String::from("Home") } />
+            <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::Home } />
         },
         Route::GetStartedHome => html! {
-            <GetStartedMain topic={ String::from("Home") } sub_topic={ String::from("Home") } />
+            <GetStartedMain topic={ Topic::Home } sub_topic={ SubTopic::Home } />
         },
         Route::Secure => html! {
             <div>{"SECURE"}</div>
@@ -38,20 +42,3 @@ pub fn switch(routes: &Route) -> Html {
         },
     }
 }
-
-
-
-
-// pub fn switch_get_started(routes: &RouteGetStarted) -> Html {
-//     match routes {
-//         RouteGetStarted::Home => html! {
-//             <GetStartedMain topic={ String::from("Home") } sub_topic={ String::from("Home") } />
-//         },
-//         RouteGetStarted::NotFound => {
-//             log::info!("not found from get started router");
-//             html! {
-//                 <Redirect<Route> to={Route::NotFound} />
-//             }
-//         }
-//     }
-// }

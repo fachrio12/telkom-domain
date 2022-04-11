@@ -11,3 +11,4 @@ yew-router = "0.16"
 log = "0.4.6"
 route = { path = "../../../../router/route" }
 sidebar-main-menu = { path = "../../sidebar-main-menu" }
+get-started-topics = { path = "../get-started-topics" }
