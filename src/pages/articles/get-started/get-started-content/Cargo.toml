@@ -11,3 +11,4 @@ get-started-topics = { path = "../get-started-topics" }
 get-started-home = { path = "../get-started-home" }
 identity-fundamentals-home = { path = "../identity-fundamentals/identity-fundamentals-home" }
 introduction-to-iam = { path = "../identity-fundamentals/introduction-to-iam" }
+authentication-vs-authorization = { path = "../identity-fundamentals/authentication-vs-authorization" }

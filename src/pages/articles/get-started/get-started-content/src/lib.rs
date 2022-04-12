@@ -6,6 +6,7 @@ use get_started_topics::{
 use get_started_home::GetStartedHome;
 use identity_fundamentals_home::IdentityFundamentalsHome;
 use introduction_to_iam::IntroductionToIAM;
+use authentication_vs_authorization::AuthenticationVsAuthorization;
 
 
 
@@ -78,10 +79,9 @@ impl Component for GetStartedContent {
                             <IntroductionToIAM/>
                         }
                     }
-                    _ => {
-                        // CHANGE TO REDIRECT TO HOME
+                    SubTopic::AuthenticationVsAuthorization => {
                         html! {
-                            <div>{ "PAGE NOT FOUND" }</div>
+                            <AuthenticationVsAuthorization/>
                         }
                     }
                 }

@@ -20,6 +20,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "authentication-vs-authorization"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -95,6 +102,7 @@ checksum = "0c09fd04b7e4073ac7156a9539b57a484a8ea920f79c7c675d05d289ab6110d3"
 name = "get-started-content"
 version = "0.1.0"
 dependencies = [
+ "authentication-vs-authorization",
  "get-started-home",
  "get-started-topics",
  "identity-fundamentals-home",

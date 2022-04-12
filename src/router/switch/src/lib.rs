@@ -27,6 +27,9 @@ pub fn switch(routes: &Route) -> Html {
         Route::IntroductionToIAM => html! {
             <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::IntroductionToIAM } />
         },
+        Route::AuthenticationVsAuthorization => html! {
+            <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::AuthenticationVsAuthorization } />
+        },
         Route::GetStartedIdentityFundamentals => html! {
             <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::Home } />
         },

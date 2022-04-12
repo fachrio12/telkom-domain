@@ -46,4 +46,5 @@ members = [
 
     "src/pages/articles/get-started/identity-fundamentals/identity-fundamentals-home",
     "src/pages/articles/get-started/identity-fundamentals/introduction-to-iam",
+    "src/pages/articles/get-started/identity-fundamentals/authentication-vs-authorization",
 ]

@@ -229,7 +229,7 @@ impl SidebarGetStarted {
                                                 class="uk-margin-left td-sidebar-subtopic"
                                             >
                                                 <Link<Route>
-                                                    to={Route::GetStartedIdentityFundamentals}
+                                                    to={Route::AuthenticationVsAuthorization}
                                                     classes="uk-text-muted"
                                                     >
                                                     <span>
