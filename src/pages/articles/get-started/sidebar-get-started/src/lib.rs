@@ -47,7 +47,7 @@ impl Component for SidebarGetStarted {
     type Properties = SidebarGetStartedProps;
 
     fn create(ctx: &Context<Self>) -> Self {
-        let data_test = ctx.props();
+        // let data_test = ctx.props();
         // log::info!("sidebar state ====== {:?}", data_test);
 
         SidebarGetStarted {
@@ -136,7 +136,7 @@ impl Component for SidebarGetStarted {
 impl SidebarGetStarted {
     fn view_get_started_menu (&self) -> Html {
         let topic = self.topic.to_owned();
-        let sub_topic = self.sub_topic.to_owned();
+        // let sub_topic = self.sub_topic.to_owned();
         html! {
             <>
                 <ul

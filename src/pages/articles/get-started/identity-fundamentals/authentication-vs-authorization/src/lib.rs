@@ -24,7 +24,7 @@ impl Component for AuthenticationVsAuthorization {
         html! {
             <>
 
-                <h1 class="uk-heading-small uk-margin-large-bottom">{ "Authentication vs. Authorization" }</h1>
+                <h1 class="uk-heading-small uk-margin-bottom">{ "Authentication vs. Authorization" }</h1>
                     
                 <div class="uk-margin-large-bottom">
                     <p>

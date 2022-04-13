@@ -86,11 +86,6 @@ impl Component for GetStartedContent {
                     }
                 }
             }
-            _ => {
-                html! {
-                    <GetStartedHome/>
-                }
-            }
         }
     }
 }
