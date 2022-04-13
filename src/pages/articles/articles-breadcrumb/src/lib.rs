@@ -3,6 +3,10 @@ use get_started_topics::{
     Topic,
     SubTopic,
 };
+use yew_router::prelude::*;
+use route::{
+    Route,
+};
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -49,41 +53,98 @@ impl Component for ArticlesBreadcrumb {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        match self.topic {
-            Topic::Home => html! {
-                <ul class="uk-breadcrumb">
-                    <li><a href="#">{ "Docs" }</a></li>
-                    <li><span>{ "Get Started" }</span></li>
-                </ul>
-            },
-            Topic::IdentityFundamentals => html! {
-                match self.sub_topic {
-                    SubTopic::Home => html! {
-                        <ul class="uk-breadcrumb">
-                            <li><a href="#">{ "Docs" }</a></li>
-                            <li><span>{ "Get Started" }</span></li>
-                            <li><span>{ "Identity Fundamentals" }</span></li>
-                        </ul>
-                    },
-                    SubTopic::IntroductionToIAM => html! {
-                        <ul class="uk-breadcrumb">
-                            <li><a href="#">{ "Docs" }</a></li>
-                            <li><span>{ "Get Started" }</span></li>
-                            <li><span>{ "Identity Fundamentals" }</span></li>
-                            <li><span>{ "Introduction to Identity and Access Management (IAM)" }</span></li>
-                        </ul>
-                    },
-                    SubTopic::AuthenticationVsAuthorization => html! {
-                        <ul class="uk-breadcrumb">
-                            <li><a href="#">{ "Docs" }</a></li>
-                            <li><span>{ "Get Started" }</span></li>
-                            <li><span>{ "Identity Fundamentals" }</span></li>
-                            <li><span>{ "Authentication vs. Authorization" }</span></li>
-                        </ul>
+
+        html! {
+            <ul class="uk-breadcrumb">
+                <li>
+                    <Link<Route>
+                        to={Route::Home}
+                    >
+                        { "Docs" }
+                    </Link<Route>>
+                </li>
+                <li>
+                    <Link<Route>
+                        to={Route::Home}
+                    >
+                        { "Get Started" }
+                    </Link<Route>>
+                </li>
+                {
+                    match self.topic {
+                        Topic::Home => html! {},
+                        Topic::IdentityFundamentals => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::GetStartedIdentityFundamentals}
+                                >
+                                    { "Identity Fundamentals" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
-            },
-            _ => html! {}
+                {
+                    match self.sub_topic {
+                        SubTopic::Home => html! {},
+                        SubTopic::IntroductionToIAM => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::IntroductionToIAM}
+                                >
+                                    { "Introduction to Identity and Access Management (IAM)" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::AuthenticationVsAuthorization => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::AuthenticationVsAuthorization}
+                                >
+                                    { "Authentication vs. Authorization" }
+                                </Link<Route>>
+                            </li>
+                        },
+                    }
+                }
+            </ul>
         }
+
+        // match self.topic {
+        //     Topic::Home => html! {
+        //         <ul class="uk-breadcrumb">
+        //             <li><a href="#">{ "Docs" }</a></li>
+        //             <li><span>{ "Get Started" }</span></li>
+        //         </ul>
+        //     },
+        //     Topic::IdentityFundamentals => html! {
+        //         match self.sub_topic {
+        //             SubTopic::Home => html! {
+        //                 <ul class="uk-breadcrumb">
+        //                     <li><a href="#">{ "Docs" }</a></li>
+        //                     <li><span>{ "Get Started" }</span></li>
+        //                     <li><span>{ "Identity Fundamentals" }</span></li>
+        //                 </ul>
+        //             },
+        //             SubTopic::IntroductionToIAM => html! {
+        //                 <ul class="uk-breadcrumb">
+        //                     <li><a href="#">{ "Docs" }</a></li>
+        //                     <li><span>{ "Get Started" }</span></li>
+        //                     <li><span>{ "Identity Fundamentals" }</span></li>
+        //                     <li><span>{ "Introduction to Identity and Access Management (IAM)" }</span></li>
+        //                 </ul>
+        //             },
+        //             SubTopic::AuthenticationVsAuthorization => html! {
+        //                 <ul class="uk-breadcrumb">
+        //                     <li><a href="#">{ "Docs" }</a></li>
+        //                     <li><span>{ "Get Started" }</span></li>
+        //                     <li><span>{ "Identity Fundamentals" }</span></li>
+        //                     <li><span>{ "Authentication vs. Authorization" }</span></li>
+        //                 </ul>
+        //             }
+        //         }
+        //     },
+        //     _ => html! {}
+        // }
     }
 }

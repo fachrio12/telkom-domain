@@ -114,14 +114,6 @@ impl GetStartedMain {
                     </>
                 }
             }
-            _ => {
-                html! {
-                    <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
-                        <GetStartedContent/>
-                    </>
-                }
-            }
         }
     }
 }

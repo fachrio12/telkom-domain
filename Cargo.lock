@@ -8,7 +8,9 @@ version = "0.1.0"
 dependencies = [
  "get-started-topics",
  "log",
+ "route",
  "yew",
+ "yew-router",
 ]
 
 [[package]]
@@ -114,7 +116,6 @@ dependencies = [
 name = "get-started-home"
 version = "0.1.0"
 dependencies = [
- "sidebar-get-started",
  "yew",
 ]
 
@@ -518,7 +519,6 @@ dependencies = [
  "log",
  "route",
  "yew",
- "yew-router",
 ]
 
 [[package]]

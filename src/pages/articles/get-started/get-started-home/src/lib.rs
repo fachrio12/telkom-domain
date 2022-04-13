@@ -1,5 +1,4 @@
 use yew::prelude::*;
-use sidebar_get_started::SidebarGetStarted;
 
 
 pub struct GetStartedHome {}
