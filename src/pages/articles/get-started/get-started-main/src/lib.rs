@@ -72,10 +72,11 @@ impl Component for GetStartedMain {
                 <div
                     class="uk-grid-collapse"
                     uk-grid="true"
+                    style="min-height: 500px;"
                 >
 
                     <div class="uk-width-1-4@m td-border-right-light">
-                        <div class="uk-position-fixed">
+                        <div class="uk-position-fixed uk-width-1-4@m">
                             <SidebarGetStarted topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
                         </div>
                     </div>
@@ -107,6 +108,14 @@ impl GetStartedMain {
                 }
             }
             Topic::IdentityFundamentals => {
+                html! {
+                    <>
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                    </>
+                }
+            }
+            Topic::DomainOverview => {
                 html! {
                     <>
                         <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />

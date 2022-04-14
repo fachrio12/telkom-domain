@@ -82,6 +82,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        Topic::DomainOverview => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::GetStartedDomainOverview}
+                                >
+                                    { "Telkom Domain Overview" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {
