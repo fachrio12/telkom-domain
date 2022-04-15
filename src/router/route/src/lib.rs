@@ -9,6 +9,7 @@ pub enum Route {
     Articles,
     // #[at("/get-started/:s")]
     // GetStarted,
+
     #[at("/get-started/identity-fundamentals/identity-and-access-management")]
     IntroductionToIAM,
     #[at("/get-started/identity-fundamentals/authentication-and-authorization")]
@@ -17,6 +18,9 @@ pub enum Route {
     GetStartedIdentityFundamentals,
     #[at("/get-started/")]
     GetStartedHome,
+
+    #[at("/get-started/domain-overview")]
+    GetStartedDomainOverview,
 
     #[at("/secure")]
     Secure,

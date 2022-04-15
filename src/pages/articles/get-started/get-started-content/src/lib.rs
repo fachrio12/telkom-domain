@@ -4,10 +4,12 @@ use get_started_topics::{
     SubTopic,
 };
 use get_started_home::GetStartedHome;
+
 use identity_fundamentals_home::IdentityFundamentalsHome;
 use introduction_to_iam::IntroductionToIAM;
 use authentication_vs_authorization::AuthenticationVsAuthorization;
 
+use telkom_domain_overview_home::TelkomDomainOverviewHome;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -84,6 +86,16 @@ impl Component for GetStartedContent {
                             <AuthenticationVsAuthorization/>
                         }
                     }
+                }
+            }
+            Topic::DomainOverview => {
+                match self.sub_topic {
+                    SubTopic::Home => {
+                        html! {
+                            <TelkomDomainOverviewHome/>
+                        }
+                    }
+                    _ => html! {}
                 }
             }
         }

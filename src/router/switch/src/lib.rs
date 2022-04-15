@@ -23,6 +23,7 @@ pub fn switch(routes: &Route) -> Html {
         // Route::GetStarted => html! {
         //     <Switch<RouteGetStarted> render={Switch::render(switch_get_started)} />
         // },
+
         Route::IntroductionToIAM => html! {
             <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::IntroductionToIAM } />
         },
@@ -32,6 +33,11 @@ pub fn switch(routes: &Route) -> Html {
         Route::GetStartedIdentityFundamentals => html! {
             <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::Home } />
         },
+
+        Route::GetStartedDomainOverview => html! {
+            <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::Home } />
+        },
+
         Route::GetStartedHome => html! {
             <GetStartedMain topic={ Topic::Home } sub_topic={ SubTopic::Home } />
         },

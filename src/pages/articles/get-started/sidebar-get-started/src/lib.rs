@@ -249,10 +249,60 @@ impl SidebarGetStarted {
                         class="uk-text-muted uk-margin-small-bottom"
                     >
                         <div>
-                            { "Telkom Domain Overview" }
-                            <span
-                                style="float: right; padding-top: 4px;"
-                                uk-icon="icon: chevron-right;  ratio: 0.85"></span>
+                            // <div>
+                            //     { "Telkom Domain Overview" }
+                            //     <span
+                            //         style="float: right; padding-top: 4px;"
+                            //         uk-icon="icon: chevron-right;  ratio: 0.85"></span>
+                            // </div>
+                            <Link<Route>
+                                to={Route::GetStartedDomainOverview}
+                                classes="uk-text-muted"
+                            >
+                                { "Telkom Domain Overview" }
+                                <span
+                                    style="float: right; padding-top: 4px;"
+                                    uk-icon="icon: chevron-right;  ratio: 0.85">
+                                </span>
+                            </Link<Route>>
+                            {
+                                if topic == Topic::DomainOverview {
+                                    html! {
+                                        <div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::IntroductionToIAM}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Telkom Domain Dashboard" }
+                                                    </span>
+                                                    <span
+                                                        style="float: right; padding-top: 4px;"
+                                                        uk-icon="icon: chevron-right;  ratio: 0.7">
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                            // <div
+                                            //     class="uk-margin-left td-sidebar-subtopic"
+                                            // >
+                                            //     <Link<Route>
+                                            //         to={Route::AuthenticationVsAuthorization}
+                                            //         classes="uk-text-muted"
+                                            //         >
+                                            //         <span>
+                                            //             { "Authentication vs. Authorization" }
+                                            //         </span>
+                                            //     </Link<Route>>
+                                            // </div>
+                                        </div>
+                                    }
+                                } else {
+                                    html! {}
+                                }
+                            }
                         </div>
                     </div>
                 </div>

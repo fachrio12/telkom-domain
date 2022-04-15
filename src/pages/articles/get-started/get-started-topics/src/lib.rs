@@ -2,7 +2,7 @@
 pub enum Topic {
     Home,
     IdentityFundamentals,
-    // TelkomDomainOverview,
+    DomainOverview,
 }
 
 #[derive(Clone, PartialEq, Debug)]
