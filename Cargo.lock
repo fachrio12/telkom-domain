@@ -109,6 +109,7 @@ dependencies = [
  "get-started-topics",
  "identity-fundamentals-home",
  "introduction-to-iam",
+ "log",
  "telkom-domain-dashboard",
  "telkom-domain-overview-home",
  "yew",
@@ -538,7 +539,9 @@ dependencies = [
 name = "telkom-domain-dashboard"
 version = "0.1.0"
 dependencies = [
+ "route",
  "yew",
+ "yew-router",
 ]
 
 [[package]]

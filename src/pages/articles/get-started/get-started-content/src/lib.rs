@@ -64,6 +64,8 @@ impl Component for GetStartedContent {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
+        log::info!("get started content, topic ====== {:?}", self.topic);
+        log::info!("get started content, sub topic ====== {:?}", self.sub_topic);
         match self.topic {
             Topic::Home => {
                 html! {

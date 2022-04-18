@@ -25,15 +25,19 @@
 }
 
 .td-text-weight-bold {
-    font-weight: 600;
+    font-weight: 600!important;
 }
 
 .td-text-weight-400 {
-    font-weight: 400;
+    font-weight: 400!important;
 }
 
 .td-text-weight-500 {
-    font-weight: 400;
+    font-weight: 400!important;
+}
+
+.td-text-weight-600 {
+    font-weight: 600!important;
 }
 
 
