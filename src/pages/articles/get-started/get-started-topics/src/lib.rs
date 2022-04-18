@@ -8,6 +8,9 @@ pub enum Topic {
 #[derive(Clone, PartialEq, Debug)]
 pub enum SubTopic {
     Home,
+    
     IntroductionToIAM,
     AuthenticationVsAuthorization,
+
+    DomainDashboard,
 }

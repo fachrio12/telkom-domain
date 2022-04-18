@@ -10,14 +10,13 @@ use introduction_to_iam::IntroductionToIAM;
 use authentication_vs_authorization::AuthenticationVsAuthorization;
 
 use telkom_domain_overview_home::TelkomDomainOverviewHome;
+use telkom_domain_dashboard::TelkomDomainDashboard;
 
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
-    // #[prop_or_else(create_default_state_topic)]
     #[prop_or(Topic::Home)]
     pub topic: Topic,
-    // #[prop_or_else(create_default_state_subtopic)]
     #[prop_or(SubTopic::Home)]
     pub sub_topic: SubTopic,
 }
@@ -51,10 +50,8 @@ impl Component for GetStartedContent {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
             self.topic = ctx.props().topic.to_owned();
-            true
-        } else if self.sub_topic != ctx.props().sub_topic {
             self.sub_topic = ctx.props().sub_topic.to_owned();
             true
         } else {
@@ -86,6 +83,7 @@ impl Component for GetStartedContent {
                             <AuthenticationVsAuthorization/>
                         }
                     }
+                    _ => html! {}
                 }
             }
             Topic::DomainOverview => {
@@ -93,6 +91,11 @@ impl Component for GetStartedContent {
                     SubTopic::Home => {
                         html! {
                             <TelkomDomainOverviewHome/>
+                        }
+                    }
+                    SubTopic::DomainDashboard => {
+                        html! {
+                            <TelkomDomainDashboard/>
                         }
                     }
                     _ => html! {}

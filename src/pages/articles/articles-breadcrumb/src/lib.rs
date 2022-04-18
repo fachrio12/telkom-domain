@@ -41,10 +41,8 @@ impl Component for ArticlesBreadcrumb {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
             self.topic = ctx.props().topic.to_owned();
-            true
-        } else if self.sub_topic != ctx.props().sub_topic {
             self.sub_topic = ctx.props().sub_topic.to_owned();
             true
         } else {
@@ -111,6 +109,15 @@ impl Component for ArticlesBreadcrumb {
                                     to={Route::AuthenticationVsAuthorization}
                                 >
                                     { "Authentication vs. Authorization" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::DomainDashboard => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::DomainDashboard}
+                                >
+                                    { "Telkom Domain Dashboard" }
                                 </Link<Route>>
                             </li>
                         },
