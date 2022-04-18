@@ -273,7 +273,7 @@ impl SidebarGetStarted {
                                                 class="uk-margin-left td-sidebar-subtopic"
                                             >
                                                 <Link<Route>
-                                                    to={Route::IntroductionToIAM}
+                                                    to={Route::DomainDashboard}
                                                     classes="uk-text-muted"
                                                 >
                                                     <span>

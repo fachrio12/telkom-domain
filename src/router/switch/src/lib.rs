@@ -34,6 +34,9 @@ pub fn switch(routes: &Route) -> Html {
             <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::Home } />
         },
 
+        Route::DomainDashboard => html! {
+            <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::DomainDashboard } />
+        },
         Route::GetStartedDomainOverview => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::Home } />
         },

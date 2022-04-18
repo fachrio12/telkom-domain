@@ -114,6 +114,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::DomainDashboard => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::DomainDashboard}
+                                >
+                                    { "Telkom Domain Dashboard" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
             </ul>

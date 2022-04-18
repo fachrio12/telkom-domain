@@ -10,6 +10,7 @@ use introduction_to_iam::IntroductionToIAM;
 use authentication_vs_authorization::AuthenticationVsAuthorization;
 
 use telkom_domain_overview_home::TelkomDomainOverviewHome;
+use telkom_domain_dashboard::TelkomDomainDashboard;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -86,6 +87,7 @@ impl Component for GetStartedContent {
                             <AuthenticationVsAuthorization/>
                         }
                     }
+                    _ => html! {}
                 }
             }
             Topic::DomainOverview => {
@@ -93,6 +95,11 @@ impl Component for GetStartedContent {
                     SubTopic::Home => {
                         html! {
                             <TelkomDomainOverviewHome/>
+                        }
+                    }
+                    SubTopic::DomainDashboard => {
+                        html! {
+                            <TelkomDomainDashboard/>
                         }
                     }
                     _ => html! {}
