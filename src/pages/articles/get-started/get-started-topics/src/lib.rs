@@ -14,3 +14,9 @@ pub enum SubTopic {
 
     DomainDashboard,
 }
+
+#[derive(Clone, PartialEq, Debug)]
+pub enum SubTopic2 {
+    Home,
+    ActivityAbout,
+}

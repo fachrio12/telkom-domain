@@ -2,6 +2,7 @@ use yew::prelude::*;
 use get_started_topics::{
     Topic,
     SubTopic,
+    SubTopic2,
 };
 use get_started_home::GetStartedHome;
 
@@ -19,12 +20,15 @@ pub struct GetStartedContentProps {
     pub topic: Topic,
     #[prop_or(SubTopic::Home)]
     pub sub_topic: SubTopic,
+    #[prop_or(SubTopic2::Home)]
+    pub sub_topic_2: SubTopic2,
 }
 
 
 pub struct GetStartedContent {
     topic: Topic,
     sub_topic: SubTopic,
+    sub_topic_2: SubTopic2,
 }
 
 pub enum Msg {}
@@ -37,11 +41,13 @@ impl Component for GetStartedContent {
         let GetStartedContentProps {
             topic,
             sub_topic,
+            sub_topic_2,
         } = ctx.props();
 
         GetStartedContent {
             topic: topic.to_owned(),
             sub_topic: sub_topic.to_owned(),
+            sub_topic_2: sub_topic_2.to_owned(),
         }
     }
 
@@ -53,6 +59,7 @@ impl Component for GetStartedContent {
         if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
             self.topic = ctx.props().topic.to_owned();
             self.sub_topic = ctx.props().sub_topic.to_owned();
+            self.sub_topic_2 = ctx.props().sub_topic_2.to_owned();
             true
         } else {
             false
