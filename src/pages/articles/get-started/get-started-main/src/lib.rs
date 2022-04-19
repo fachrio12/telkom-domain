@@ -61,7 +61,7 @@ impl Component for GetStartedMain {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic || self.sub_topic_2 != ctx.props().sub_topic_2 {
             self.topic = ctx.props().topic.to_owned();
             self.sub_topic = ctx.props().sub_topic.to_owned();
             self.sub_topic_2 = ctx.props().sub_topic_2.to_owned();
@@ -102,7 +102,7 @@ impl Component for GetStartedMain {
 
 impl GetStartedMain {
     fn view_content (&self) -> Html {
-        log::info!("get started main, sub topic ====== {:?}", self.sub_topic);
+        // log::info!("get started main, sub topic 2 ====== {:?}", self.sub_topic_2);
         match self.topic {
             Topic::Home => {
                 html! {

@@ -19,6 +19,9 @@ pub enum Route {
     #[at("/get-started/")]
     GetStartedHome,
 
+
+    #[at("/get-started/domain-overview/dashboard/activity")]
+    ActivityAbout,
     #[at("/get-started/domain-overview/dashboard")]
     DomainDashboard,
     #[at("/get-started/domain-overview")]

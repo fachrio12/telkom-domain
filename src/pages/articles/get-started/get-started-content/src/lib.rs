@@ -12,6 +12,7 @@ use authentication_vs_authorization::AuthenticationVsAuthorization;
 
 use telkom_domain_overview_home::TelkomDomainOverviewHome;
 use telkom_domain_dashboard::TelkomDomainDashboard;
+use activity_about::ActivityAbout;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -56,7 +57,7 @@ impl Component for GetStartedContent {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic || self.sub_topic_2 != ctx.props().sub_topic_2 {
             self.topic = ctx.props().topic.to_owned();
             self.sub_topic = ctx.props().sub_topic.to_owned();
             self.sub_topic_2 = ctx.props().sub_topic_2.to_owned();
@@ -94,6 +95,7 @@ impl Component for GetStartedContent {
                 }
             }
             Topic::DomainOverview => {
+                log::info!("get started content, sub topic 2 ====== {:?}", self.sub_topic_2);
                 match self.sub_topic {
                     SubTopic::Home => {
                         html! {
@@ -101,8 +103,17 @@ impl Component for GetStartedContent {
                         }
                     }
                     SubTopic::DomainDashboard => {
-                        html! {
-                            <TelkomDomainDashboard/>
+                        match self.sub_topic_2 {
+                            SubTopic2::Home => {
+                                html! {
+                                    <TelkomDomainDashboard/>
+                                }
+                            }
+                            SubTopic2::ActivityAbout => {
+                                html! {
+                                    <ActivityAbout/>
+                                }
+                            }
                         }
                     }
                     _ => html! {}

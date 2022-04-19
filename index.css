@@ -41,6 +41,25 @@
 }
 
 
+.td-label-code {
+    display: inline-block;
+    border-radius: 3px;
+    vertical-align: middle;
+    background-color: #eff0f2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 1px 6px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+.td-margin-text {
+    margin: 0 5px;
+}
+
+
 
 
 

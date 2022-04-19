@@ -46,9 +46,10 @@ impl Component for ArticlesBreadcrumb {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic || self.sub_topic_2 != ctx.props().sub_topic_2 {
             self.topic = ctx.props().topic.to_owned();
             self.sub_topic = ctx.props().sub_topic.to_owned();
+            self.sub_topic_2 = ctx.props().sub_topic_2.to_owned();
             true
         } else {
             false
