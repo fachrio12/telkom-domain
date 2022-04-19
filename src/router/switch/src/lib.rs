@@ -9,6 +9,7 @@ use get_started_main::GetStartedMain;
 use get_started_topics::{
     Topic,
     SubTopic,
+    SubTopic2,
 };
 
 
@@ -34,6 +35,9 @@ pub fn switch(routes: &Route) -> Html {
             <GetStartedMain topic={ Topic::IdentityFundamentals } sub_topic={ SubTopic::Home } />
         },
 
+        Route::ActivityAbout => html! {
+            <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::DomainDashboard } sub_topic_2={ SubTopic2::ActivityAbout } />
+        },
         Route::DomainDashboard => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::DomainDashboard } />
         },

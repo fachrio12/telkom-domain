@@ -50,4 +50,5 @@ members = [
 
     "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-overview-home",
     "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-dashboard",
+    "src/pages/articles/get-started/telkom-domain-overview/activity-about",
 ]

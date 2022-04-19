@@ -16,3 +16,4 @@ authentication-vs-authorization = { path = "../identity-fundamentals/authenticat
 
 telkom-domain-overview-home = { path = "../telkom-domain-overview/telkom-domain-overview-home" }
 telkom-domain-dashboard = { path = "../telkom-domain-overview/telkom-domain-dashboard" }
+activity-about = { path = "../telkom-domain-overview/activity-about" }

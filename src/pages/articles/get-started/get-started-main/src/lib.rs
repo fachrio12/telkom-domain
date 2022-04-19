@@ -2,6 +2,7 @@ use yew::prelude::*;
 use get_started_topics::{
     Topic,
     SubTopic,
+    SubTopic2,
 };
 use sidebar_get_started::SidebarGetStarted;
 
@@ -24,12 +25,15 @@ pub struct GetStartedMainProps {
     pub topic: Topic,
     #[prop_or_else(create_default_state_subtopic)]
     pub sub_topic: SubTopic,
+    #[prop_or(SubTopic2::Home)]
+    pub sub_topic_2: SubTopic2,
 }
 
 
 pub struct GetStartedMain {
     topic: Topic,
     sub_topic: SubTopic,
+    sub_topic_2: SubTopic2,
 }
 
 pub enum Msg {}
@@ -42,11 +46,13 @@ impl Component for GetStartedMain {
         let GetStartedMainProps {
             topic,
             sub_topic,
+            sub_topic_2,
         } = ctx.props();
 
         GetStartedMain {
             topic: topic.to_owned(),
             sub_topic: sub_topic.to_owned(),
+            sub_topic_2: sub_topic_2.to_owned(),
         }
     }
 
@@ -55,9 +61,10 @@ impl Component for GetStartedMain {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic || self.sub_topic_2 != ctx.props().sub_topic_2 {
             self.topic = ctx.props().topic.to_owned();
             self.sub_topic = ctx.props().sub_topic.to_owned();
+            self.sub_topic_2 = ctx.props().sub_topic_2.to_owned();
             true
         } else {
             false
@@ -75,7 +82,7 @@ impl Component for GetStartedMain {
 
                     <div class="uk-width-1-4@m td-border-right-light">
                         <div class="uk-position-fixed uk-width-1-4@m">
-                            <SidebarGetStarted topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                            <SidebarGetStarted topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
                         </div>
                     </div>
 
@@ -95,12 +102,12 @@ impl Component for GetStartedMain {
 
 impl GetStartedMain {
     fn view_content (&self) -> Html {
-        log::info!("get started main, sub topic ====== {:?}", self.sub_topic);
+        // log::info!("get started main, sub topic 2 ====== {:?}", self.sub_topic_2);
         match self.topic {
             Topic::Home => {
                 html! {
                     <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
                         <GetStartedContent/>
                     </>
                 }
@@ -108,16 +115,16 @@ impl GetStartedMain {
             Topic::IdentityFundamentals => {
                 html! {
                     <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
-                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
                     </>
                 }
             }
             Topic::DomainOverview => {
                 html! {
                     <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
-                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } />
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
                     </>
                 }
             }

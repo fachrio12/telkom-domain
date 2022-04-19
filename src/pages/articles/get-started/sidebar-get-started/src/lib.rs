@@ -7,6 +7,7 @@ use route::{
 use get_started_topics::{
     Topic,
     SubTopic,
+    SubTopic2,
 };
 
 #[derive(Clone, PartialEq, Debug)]
@@ -24,18 +25,19 @@ fn create_default_state() -> SidebarGetStartedState {
 pub struct SidebarGetStartedProps {
     #[prop_or_else(create_default_state)]
     state: SidebarGetStartedState,
-    // #[prop_or_else(create_default_state_topic)]
     #[prop_or(Topic::Home)]
     pub topic: Topic,
-    // #[prop_or_else(create_default_state_subtopic)]
     #[prop_or(SubTopic::Home)]
     pub sub_topic: SubTopic,
+    #[prop_or(SubTopic2::Home)]
+    pub sub_topic_2: SubTopic2,
 }
 
 pub struct SidebarGetStarted {
     state: SidebarGetStartedState,
     topic: Topic,
     sub_topic: SubTopic,
+    sub_topic_2: SubTopic2,
 }
 
 pub enum Msg {
@@ -54,6 +56,7 @@ impl Component for SidebarGetStarted {
             state: ctx.props().state.to_owned(),
             topic: ctx.props().topic.to_owned(),
             sub_topic: ctx.props().sub_topic.to_owned(),
+            sub_topic_2: ctx.props().sub_topic_2.to_owned(),
         }
     }
 
@@ -67,9 +70,10 @@ impl Component for SidebarGetStarted {
     }
 
     fn changed(&mut self, ctx: &Context<Self>) -> bool {
-        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic {
+        if self.topic != ctx.props().topic || self.sub_topic != ctx.props().sub_topic || self.sub_topic_2 != ctx.props().sub_topic_2 {
             self.topic = ctx.props().topic.to_owned();
             self.sub_topic = ctx.props().sub_topic.to_owned();
+            self.sub_topic_2 = ctx.props().sub_topic_2.to_owned();
             true
         } else {
             false
@@ -134,7 +138,7 @@ impl Component for SidebarGetStarted {
 impl SidebarGetStarted {
     fn view_get_started_menu (&self) -> Html {
         let topic = self.topic.to_owned();
-        // let sub_topic = self.sub_topic.to_owned();
+        let sub_topic = self.sub_topic.to_owned();
         html! {
             <>
                 <ul
@@ -282,19 +286,25 @@ impl SidebarGetStarted {
                                                         uk-icon="icon: chevron-right;  ratio: 0.7">
                                                     </span>
                                                 </Link<Route>>
+                                                {
+                                                    if sub_topic == SubTopic::DomainDashboard {
+                                                        html! {
+                                                            <div class="uk-margin-left td-sidebar-subtopic">
+                                                                <Link<Route>
+                                                                    to={Route::ActivityAbout}
+                                                                    classes="uk-text-muted"
+                                                                >
+                                                                    <span>
+                                                                        { "About The Activity Page" }
+                                                                    </span>
+                                                                </Link<Route>>
+                                                            </div>
+                                                        }
+                                                    } else {
+                                                        html! {}
+                                                    }
+                                                }
                                             </div>
-                                            // <div
-                                            //     class="uk-margin-left td-sidebar-subtopic"
-                                            // >
-                                            //     <Link<Route>
-                                            //         to={Route::AuthenticationVsAuthorization}
-                                            //         classes="uk-text-muted"
-                                            //         >
-                                            //         <span>
-                                            //             { "Authentication vs. Authorization" }
-                                            //         </span>
-                                            //     </Link<Route>>
-                                            // </div>
                                         </div>
                                     }
                                 } else {
