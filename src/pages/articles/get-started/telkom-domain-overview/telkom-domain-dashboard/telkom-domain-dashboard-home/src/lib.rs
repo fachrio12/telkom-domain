@@ -4,16 +4,16 @@ use route::{
     Route,
 };
 
-pub struct TelkomDomainDashboard {}
+pub struct TelkomDomainDashboardHome {}
 
 pub enum Msg {}
 
-impl Component for TelkomDomainDashboard {
+impl Component for TelkomDomainDashboardHome {
     type Message = Msg;
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        TelkomDomainDashboard {}
+        TelkomDomainDashboardHome {}
     }
 
     fn update(&mut self, _ctx: &Context<Self>, _msg: Self::Message) -> bool {

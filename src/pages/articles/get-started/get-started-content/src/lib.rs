@@ -11,7 +11,7 @@ use introduction_to_iam::IntroductionToIAM;
 use authentication_vs_authorization::AuthenticationVsAuthorization;
 
 use telkom_domain_overview_home::TelkomDomainOverviewHome;
-use telkom_domain_dashboard::TelkomDomainDashboard;
+use telkom_domain_dashboard_home::TelkomDomainDashboardHome;
 use activity_about::ActivityAbout;
 
 
@@ -106,7 +106,7 @@ impl Component for GetStartedContent {
                         match self.sub_topic_2 {
                             SubTopic2::Home => {
                                 html! {
-                                    <TelkomDomainDashboard/>
+                                    <TelkomDomainDashboardHome/>
                                 }
                             }
                             SubTopic2::ActivityAbout => {
@@ -114,6 +114,17 @@ impl Component for GetStartedContent {
                                     <ActivityAbout/>
                                 }
                             }
+                            _ => html! {}
+                        }
+                    }
+                    SubTopic::CreateTenants => {
+                        match self.sub_topic_2 {
+                            SubTopic2::Home => {
+                                html! {
+                                    <div>{ "CREATE TENANTS" }</div>
+                                }
+                            }
+                            _ => html! {}
                         }
                     }
                     _ => html! {}

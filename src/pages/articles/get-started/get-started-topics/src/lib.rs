@@ -13,6 +13,7 @@ pub enum SubTopic {
     AuthenticationVsAuthorization,
 
     DomainDashboard,
+    CreateTenants,
 }
 
 #[derive(Clone, PartialEq, Debug)]

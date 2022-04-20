@@ -127,6 +127,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::CreateTenants => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::CreateTenants}
+                                >
+                                    { "Create Tenants" }
+                                </Link<Route>>
+                            </li>
+                        }
                     }
                 }
             </ul>

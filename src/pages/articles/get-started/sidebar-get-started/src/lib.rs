@@ -305,6 +305,22 @@ impl SidebarGetStarted {
                                                     }
                                                 }
                                             </div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::CreateTenants}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Create Tenants" }
+                                                    </span>
+                                                    <span
+                                                        style="float: right; padding-top: 4px;"
+                                                        uk-icon="icon: chevron-right;  ratio: 0.7">
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
                                         </div>
                                     }
                                 } else {
