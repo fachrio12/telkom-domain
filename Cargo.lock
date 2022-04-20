@@ -70,6 +70,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "create-tenants-home"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "fnv"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -113,12 +120,13 @@ version = "0.1.0"
 dependencies = [
  "activity-about",
  "authentication-vs-authorization",
+ "create-tenants-home",
  "get-started-home",
  "get-started-topics",
  "identity-fundamentals-home",
  "introduction-to-iam",
  "log",
- "telkom-domain-dashboard",
+ "telkom-domain-dashboard-home",
  "telkom-domain-overview-home",
  "yew",
 ]
@@ -544,7 +552,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "telkom-domain-dashboard"
+name = "telkom-domain-dashboard-home"
 version = "0.1.0"
 dependencies = [
  "route",

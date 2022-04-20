@@ -41,6 +41,11 @@ pub fn switch(routes: &Route) -> Html {
         Route::DomainDashboard => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::DomainDashboard } />
         },
+
+        Route::CreateTenants => html! {
+            <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } />
+        },
+
         Route::GetStartedDomainOverview => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::Home } />
         },

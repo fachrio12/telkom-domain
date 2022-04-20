@@ -24,6 +24,10 @@ pub enum Route {
     ActivityAbout,
     #[at("/get-started/domain-overview/dashboard")]
     DomainDashboard,
+
+    #[at("/get-started/domain-overview/create-tenants")]
+    CreateTenants,
+
     #[at("/get-started/domain-overview")]
     GetStartedDomainOverview,
 

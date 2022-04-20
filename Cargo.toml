@@ -48,7 +48,11 @@ members = [
     "src/pages/articles/get-started/identity-fundamentals/introduction-to-iam",
     "src/pages/articles/get-started/identity-fundamentals/authentication-vs-authorization",
 
+
     "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-overview-home",
-    "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-dashboard",
-    "src/pages/articles/get-started/telkom-domain-overview/activity-about",
+
+    "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-dashboard/telkom-domain-dashboard-home",
+    "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-dashboard/activity-about",
+    
+    "src/pages/articles/get-started/telkom-domain-overview/create-tenants/create-tenants-home",
 ]

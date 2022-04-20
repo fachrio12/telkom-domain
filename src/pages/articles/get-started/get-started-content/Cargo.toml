@@ -15,5 +15,6 @@ introduction-to-iam = { path = "../identity-fundamentals/introduction-to-iam" }
 authentication-vs-authorization = { path = "../identity-fundamentals/authentication-vs-authorization" }
 
 telkom-domain-overview-home = { path = "../telkom-domain-overview/telkom-domain-overview-home" }
-telkom-domain-dashboard = { path = "../telkom-domain-overview/telkom-domain-dashboard" }
-activity-about = { path = "../telkom-domain-overview/activity-about" }
+telkom-domain-dashboard-home = { path = "../telkom-domain-overview/telkom-domain-dashboard/telkom-domain-dashboard-home" }
+activity-about = { path = "../telkom-domain-overview/telkom-domain-dashboard/activity-about" }
+create-tenants-home = { path = "../telkom-domain-overview/create-tenants/create-tenants-home" }
