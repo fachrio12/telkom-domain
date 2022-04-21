@@ -127,6 +127,9 @@ impl Component for GetStartedContent {
                             SubTopic2::CreateMultipleTenants => html! {
                                 <CreateMultipleTenants/>
                             },
+                            SubTopic2::MultipleTenantsToSingleSubscription => html! {
+                                <>{ "MULTIPLE TENANTS TO A SINGLE SUBSCRIPTION" }</>
+                            },
                             _ => html! {}
                         }
                     }
