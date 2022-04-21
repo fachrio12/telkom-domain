@@ -320,6 +320,24 @@ impl SidebarGetStarted {
                                                         uk-icon="icon: chevron-right;  ratio: 0.7">
                                                     </span>
                                                 </Link<Route>>
+                                                {
+                                                    if sub_topic == SubTopic::CreateTenants {
+                                                        html! {
+                                                            <div class="uk-margin-left td-sidebar-subtopic">
+                                                                <Link<Route>
+                                                                    to={Route::CreateMultipleTenants}
+                                                                    classes="uk-text-muted"
+                                                                >
+                                                                    <span>
+                                                                        { "Create Multiple Tenants" }
+                                                                    </span>
+                                                                </Link<Route>>
+                                                            </div>
+                                                        }
+                                                    } else {
+                                                        html! {}
+                                                    }
+                                                }
                                             </div>
                                         </div>
                                     }

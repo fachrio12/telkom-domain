@@ -55,4 +55,5 @@ members = [
     "src/pages/articles/get-started/telkom-domain-overview/telkom-domain-dashboard/activity-about",
     
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/create-tenants-home",
+    "src/pages/articles/get-started/telkom-domain-overview/create-tenants/create-multiple-tenants",
 ]
