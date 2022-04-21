@@ -14,6 +14,7 @@ use telkom_domain_overview_home::TelkomDomainOverviewHome;
 use telkom_domain_dashboard_home::TelkomDomainDashboardHome;
 use activity_about::ActivityAbout;
 use create_tenants_home::CreateTenantsHome;
+use create_multiple_tenants::CreateMultipleTenants;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -120,11 +121,12 @@ impl Component for GetStartedContent {
                     }
                     SubTopic::CreateTenants => {
                         match self.sub_topic_2 {
-                            SubTopic2::Home => {
-                                html! {
-                                    <CreateTenantsHome/>
-                                }
-                            }
+                            SubTopic2::Home => html! {
+                                <CreateTenantsHome/>
+                            },
+                            SubTopic2::CreateMultipleTenants => html! {
+                                <CreateMultipleTenants/>
+                            },
                             _ => html! {}
                         }
                     }

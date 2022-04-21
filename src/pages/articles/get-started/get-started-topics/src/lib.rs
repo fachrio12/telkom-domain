@@ -20,4 +20,6 @@ pub enum SubTopic {
 pub enum SubTopic2 {
     Home,
     ActivityAbout,
+
+    CreateMultipleTenants,
 }

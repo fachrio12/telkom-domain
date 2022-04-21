@@ -70,6 +70,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "create-multiple-tenants"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "create-tenants-home"
 version = "0.1.0"
 dependencies = [
@@ -120,6 +127,7 @@ version = "0.1.0"
 dependencies = [
  "activity-about",
  "authentication-vs-authorization",
+ "create-multiple-tenants",
  "create-tenants-home",
  "get-started-home",
  "get-started-topics",

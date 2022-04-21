@@ -25,6 +25,8 @@ pub enum Route {
     #[at("/get-started/domain-overview/dashboard")]
     DomainDashboard,
 
+    #[at("/get-started/domain-overview/create-tenants/create-multiple-tenants")]
+    CreateMultipleTenants,
     #[at("/get-started/domain-overview/create-tenants")]
     CreateTenants,
 
