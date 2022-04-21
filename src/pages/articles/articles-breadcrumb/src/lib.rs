@@ -138,6 +138,38 @@ impl Component for ArticlesBreadcrumb {
                         }
                     }
                 }
+                {
+                    match self.sub_topic_2 {
+                        SubTopic2::Home => html! {},
+                        SubTopic2::ActivityAbout => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::ActivityAbout}
+                                >
+                                    { "About The Activity Page" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic2::CreateMultipleTenants => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::CreateMultipleTenants}
+                                >
+                                    { "Create Multiple Tenants" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic2::MultipleTenantsToSingleSubscription => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::MultipleTenantsToSingleSubscription}
+                                >
+                                    { "Link Multiple Tenants to a Single Subscription" }
+                                </Link<Route>>
+                            </li>
+                        },
+                    }
+                }
             </ul>
         }
 

@@ -323,16 +323,28 @@ impl SidebarGetStarted {
                                                 {
                                                     if sub_topic == SubTopic::CreateTenants {
                                                         html! {
-                                                            <div class="uk-margin-left td-sidebar-subtopic">
-                                                                <Link<Route>
-                                                                    to={Route::CreateMultipleTenants}
-                                                                    classes="uk-text-muted"
-                                                                >
-                                                                    <span>
-                                                                        { "Create Multiple Tenants" }
-                                                                    </span>
-                                                                </Link<Route>>
-                                                            </div>
+                                                            <>
+                                                                <div class="uk-margin-left td-sidebar-subtopic">
+                                                                    <Link<Route>
+                                                                        to={Route::CreateMultipleTenants}
+                                                                        classes="uk-text-muted"
+                                                                    >
+                                                                        <span>
+                                                                            { "Create Multiple Tenants" }
+                                                                        </span>
+                                                                    </Link<Route>>
+                                                                </div>
+                                                                <div class="uk-margin-left td-sidebar-subtopic">
+                                                                    <Link<Route>
+                                                                        to={Route::MultipleTenantsToSingleSubscription}
+                                                                        classes="uk-text-muted"
+                                                                    >
+                                                                        <span>
+                                                                            { "Link Multiple Tenants to a Single Subscription" }
+                                                                        </span>
+                                                                    </Link<Route>>
+                                                                </div>
+                                                            </>
                                                         }
                                                     } else {
                                                         html! {}

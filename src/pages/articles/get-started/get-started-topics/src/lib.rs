@@ -22,4 +22,5 @@ pub enum SubTopic2 {
     ActivityAbout,
 
     CreateMultipleTenants,
+    MultipleTenantsToSingleSubscription,
 }
