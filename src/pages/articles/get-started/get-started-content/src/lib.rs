@@ -15,6 +15,7 @@ use telkom_domain_dashboard_home::TelkomDomainDashboardHome;
 use activity_about::ActivityAbout;
 use create_tenants_home::CreateTenantsHome;
 use create_multiple_tenants::CreateMultipleTenants;
+use multiple_tenants_to_single_subscription::MultipleTenantsToSingleSubscription;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -128,7 +129,7 @@ impl Component for GetStartedContent {
                                 <CreateMultipleTenants/>
                             },
                             SubTopic2::MultipleTenantsToSingleSubscription => html! {
-                                <>{ "MULTIPLE TENANTS TO A SINGLE SUBSCRIPTION" }</>
+                                <MultipleTenantsToSingleSubscription/>
                             },
                             _ => html! {}
                         }

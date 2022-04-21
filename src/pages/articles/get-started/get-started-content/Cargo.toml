@@ -19,3 +19,4 @@ telkom-domain-dashboard-home = { path = "../telkom-domain-overview/telkom-domain
 activity-about = { path = "../telkom-domain-overview/telkom-domain-dashboard/activity-about" }
 create-tenants-home = { path = "../telkom-domain-overview/create-tenants/create-tenants-home" }
 create-multiple-tenants = { path = "../telkom-domain-overview/create-tenants/create-multiple-tenants" }
+multiple-tenants-to-single-subscription = { path = "../telkom-domain-overview/create-tenants/multiple-tenants-to-single-subscription" }

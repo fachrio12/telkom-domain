@@ -26,13 +26,13 @@ impl Component for CreateMultipleTenants {
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Create Multiple Tenants" }</h1>
                 <p class="uk-margin-medium-bottom">
-                    { "You can configure multiple tenants to create different environments in the Auth0 Dashboard to allow for complex configurations. For example, you could have two separate domains (one internal and one public-facing), or you may want users to log in differently for different applications. The way to accomplish this is to create more than one Auth0 tenant to allow you to have separate sets of applications, connections, and users for the applications and groups of users that you need to support." }
+                    { "You can configure multiple tenants to create different environments in the Telkom Domain Dashboard to allow for complex configurations. For example, you could have two separate domains (one internal and one public-facing), or you may want users to log in differently for different applications. The way to accomplish this is to create more than one Telkom Domain tenant to allow you to have separate sets of applications, connections, and users for the applications and groups of users that you need to support." }
                 </p>
 
                 <div class="uk-margin-medium-bottom">
                     <ul class="uk-list uk-list-decimal">
                         <li>
-                            <p>{ "Go to the Auth0 Dashboard, select your tenant name, and select Create Tenant." }</p>
+                            <p>{ "Go to the Telkom Domain Dashboard, select your tenant name, and select Create Tenant." }</p>
                             <img
                                 class="uk-margin-top uk-margin-bottom"
                                 src="/assets/create-multiple-tenants/dashboard-tenant-drop-down-menu.png"
