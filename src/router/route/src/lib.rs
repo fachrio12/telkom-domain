@@ -29,6 +29,8 @@ pub enum Route {
     CreateMultipleTenants,
     #[at("/get-started/domain-overview/create-tenants/child-tenants")]
     MultipleTenantsToSingleSubscription,
+    #[at("/get-started/domain-overview/create-tenants/set-up-multiple-environments")]
+    SetUpMultipleEnvironments,
     #[at("/get-started/domain-overview/create-tenants")]
     CreateTenants,
 

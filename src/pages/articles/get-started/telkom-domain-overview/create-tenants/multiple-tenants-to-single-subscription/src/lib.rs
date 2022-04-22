@@ -25,7 +25,7 @@ impl Component for MultipleTenantsToSingleSubscription {
             <>
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Link Multiple Tenants to a Single Subscription" }</h1>
-                <p class="uk-margin-medium-bottom">
+                <p class="uk-margin-large-bottom">
                     { "Telkom Domain offers the ability for customers with an Enterprise subscription to link multiple tenants under a single Telkom Domain subscription (these linked tenants can also be referred to as child tenants)." }
                 </p>
                 <p>{ "This feature can be useful under the following situations:" }</p>
@@ -34,7 +34,7 @@ impl Component for MultipleTenantsToSingleSubscription {
                     <li>{ "Own more than one production tenant under a single Enterprise subscription" }</li>
                 </ul>
 
-                <div class="uk-margin-medium-bottom">
+                <div class="uk-margin-large-bottom">
                     <h1 class="td-text-size-large">{ "Linking tenants" }</h1>
                     <p>
                         { "Enterprise subscription automatically allows for users to link tenants under an existing Telkom Domain subscription by selection" }
@@ -48,13 +48,13 @@ impl Component for MultipleTenantsToSingleSubscription {
                     <p>{ "If you need to link previously created tenants that are not currently part of your Enterprise subscription, contact your designated Technical Account Manager or reach out to Telkom Domain Support." }</p>
                 </div>
 
-                <div class="uk-margin-medium-bottom">
+                <div class="uk-margin-large-bottom">
                     <h1 class="td-text-size-large">{ "Usage consolidation" }</h1>
                     <p>{ "Usage from linked tenants count toward the Enterprise subscription limits and are aggregated under applicable usage and quota reports." }</p>
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">

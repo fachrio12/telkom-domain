@@ -31,7 +31,7 @@ impl Component for TelkomDomainDashboardHome {
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Telkom Domain Dashboard" }</h1>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <p>
                         { "The Auth0 Dashboard is where you manage all aspects of your Auth0 subscription and configuration." }
@@ -46,7 +46,7 @@ impl Component for TelkomDomainDashboardHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Configure implementation" }</h1>
                     <p>
@@ -333,7 +333,7 @@ impl Component for TelkomDomainDashboardHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Manage account settings" }</h1>
                     <p>
@@ -384,7 +384,7 @@ impl Component for TelkomDomainDashboardHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">

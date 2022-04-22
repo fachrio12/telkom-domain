@@ -16,6 +16,7 @@ use activity_about::ActivityAbout;
 use create_tenants_home::CreateTenantsHome;
 use create_multiple_tenants::CreateMultipleTenants;
 use multiple_tenants_to_single_subscription::MultipleTenantsToSingleSubscription;
+use set_up_multiple_environments::SetUpMultipleEnvironments;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -130,6 +131,9 @@ impl Component for GetStartedContent {
                             },
                             SubTopic2::MultipleTenantsToSingleSubscription => html! {
                                 <MultipleTenantsToSingleSubscription/>
+                            },
+                            SubTopic2::SetUpMultipleEnvironments => html! {
+                                <SetUpMultipleEnvironments/>
                             },
                             _ => html! {}
                         }

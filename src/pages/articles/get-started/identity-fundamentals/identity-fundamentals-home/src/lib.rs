@@ -25,12 +25,12 @@ impl Component for IdentityFundamentalsHome {
             <>
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Identity Fundamentals" }</h1>
-                <p>
+                <p class="uk-margin-large-bottom">
                     { "Explore topics related to the fundamentals of identity and access management." }
                 </p>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Learn the Basics" }</h1>
                     <table class="uk-table uk-table-divider">
