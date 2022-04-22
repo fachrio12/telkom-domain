@@ -168,6 +168,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic2::SetUpMultipleEnvironments => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::SetUpMultipleEnvironments}
+                                >
+                                    { "Set Up Multiple Environments" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
             </ul>

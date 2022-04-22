@@ -29,13 +29,13 @@ impl Component for CreateTenantsHome {
                     { "We will walk through the initial steps of getting started using Telkom Domain to familiarize you with the key concepts of the Telkom Domain service. We will use the company Example-Co to help describe some of the steps involved." }
                 </p>
 
-                <div class="uk-margin-medium-bottom">
+                <div class="uk-margin-large-bottom">
                     <h1 class="td-text-size-large">{ "Set up an Telkom Domain account" }</h1>
                     <p>{ "If you haven't already signed up for an Telkom Domain account, do so (it's free). You can either use username and password or log in with a social provider (such as Facebook, Google, or Apple)." }</p>
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Create a tenant and domain" }</h1>
                     <p>{ "Once you create your account you will be asked to create a tenant. Everything starts with an Telkom Domain tenant. This is where you configure your use of Telkom Domain, and the where Telkom Domain assets - such as applications, connections, and user profiles are defined, managed and stored. You access an Telkom Domain tenant via the Telkom Domain Dashboard, where you can also create additional, associated tenants. You can create more than one Telkom Domain tenant so that you can structure your tenants in a way that will isolate different domains of users and also support your Software Development Life Cycle (SDLC)." }</p>
@@ -77,7 +77,7 @@ impl Component for CreateTenantsHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Custom domains" }</h1>
                     <p>
@@ -94,7 +94,7 @@ impl Component for CreateTenantsHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "What's next" }</h1>
                     <ul class="uk-list uk-list-disc">
@@ -104,7 +104,7 @@ impl Component for CreateTenantsHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Extend Telkom Domain's functionality" }</h1>
                     <p>{"Telkom Domain offers several ways to extend the platform's functionality:"}</p>
@@ -133,7 +133,7 @@ impl Component for CreateTenantsHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">

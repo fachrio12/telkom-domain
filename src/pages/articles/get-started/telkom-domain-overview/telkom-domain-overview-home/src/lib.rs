@@ -31,7 +31,7 @@ impl Component for TelkomDomainOverviewHome {
                 </p>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <p>
                         { "Take a look at just a few of Telkom Domain's use cases:" }
@@ -89,7 +89,7 @@ impl Component for TelkomDomainOverviewHome {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">

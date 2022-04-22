@@ -25,12 +25,12 @@ impl Component for ActivityAbout {
             <>
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "About The Activity Page" }</h1>
-                <p>
+                <p class="uk-margin-large-bottom">
                     { "The Activity page provides a summary of key data about your Auth0 tenant, including information on active users, failed logins, and more." }
                 </p>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Things to know" }</h1>
                     <p>
@@ -61,14 +61,14 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Metrics" }</h1>
                     <p>{ "Here’s what you will see on your tenant's Activity page." }</p>
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Totals" }</h1>
                     <p>{ "At the top of the page you'll see the total number of users, applications, APIs, and connections for your tenant." }</p>
@@ -79,7 +79,7 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Active Users" }</h1>
                     <p>{ "The number of daily unique users with successful authentication or authorization activity. You can see the number of unique users for each day by hovering your mouse over a point in the graph." }</p>
@@ -90,7 +90,7 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "User Retention" }</h1>
                     <p>{ "The percentage of users that were active during the given time frame, calculated from the number of active users out of the total number of users on the tenant." }</p>
@@ -101,7 +101,7 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Signups" }</h1>
                     <p>{ "The number of successful user signups." }</p>
@@ -112,7 +112,7 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Failed Logins" }</h1>
                     <p>
@@ -129,7 +129,7 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Compare to last period" }</h1>
                     <p>
@@ -152,7 +152,7 @@ impl Component for ActivityAbout {
                 </div>
 
                 <div
-                    class="uk-margin-medium-bottom"
+                    class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "View data by time frame" }</h1>
                     <p>

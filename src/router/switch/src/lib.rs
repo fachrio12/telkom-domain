@@ -48,6 +48,9 @@ pub fn switch(routes: &Route) -> Html {
         Route::MultipleTenantsToSingleSubscription => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } sub_topic_2={ SubTopic2::MultipleTenantsToSingleSubscription } />
         },
+        Route::SetUpMultipleEnvironments => html! {
+            <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } sub_topic_2={ SubTopic2::SetUpMultipleEnvironments } />
+        },
         Route::CreateTenants => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } />
         },

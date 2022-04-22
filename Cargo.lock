@@ -135,6 +135,7 @@ dependencies = [
  "introduction-to-iam",
  "log",
  "multiple-tenants-to-single-subscription",
+ "set-up-multiple-environments",
  "telkom-domain-dashboard-home",
  "telkom-domain-overview-home",
  "yew",
@@ -502,6 +503,13 @@ dependencies = [
  "itoa",
  "ryu",
  "serde",
+]
+
+[[package]]
+name = "set-up-multiple-environments"
+version = "0.1.0"
+dependencies = [
+ "yew",
 ]
 
 [[package]]

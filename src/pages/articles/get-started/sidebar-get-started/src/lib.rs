@@ -344,6 +344,16 @@ impl SidebarGetStarted {
                                                                         </span>
                                                                     </Link<Route>>
                                                                 </div>
+                                                                <div class="uk-margin-left td-sidebar-subtopic">
+                                                                    <Link<Route>
+                                                                        to={Route::SetUpMultipleEnvironments}
+                                                                        classes="uk-text-muted"
+                                                                    >
+                                                                        <span>
+                                                                            { "Set Up Multiple Environments" }
+                                                                        </span>
+                                                                    </Link<Route>>
+                                                                </div>
                                                             </>
                                                         }
                                                     } else {

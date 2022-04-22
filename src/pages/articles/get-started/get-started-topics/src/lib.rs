@@ -21,6 +21,8 @@ pub enum SubTopic2 {
     Home,
     ActivityAbout,
 
+    // CREATE TENANTS
     CreateMultipleTenants,
     MultipleTenantsToSingleSubscription,
+    SetUpMultipleEnvironments,
 }
