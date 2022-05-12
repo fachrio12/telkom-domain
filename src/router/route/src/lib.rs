@@ -12,6 +12,8 @@ pub enum Route {
 
     #[at("/get-started/identity-fundamentals/identity-and-access-management")]
     IntroductionToIAM,
+    #[at("/get-started/identity-fundamentals/introduction-to-domain")]
+    IntroductionToDomain,
     #[at("/get-started/identity-fundamentals/authentication-and-authorization")]
     AuthenticationVsAuthorization,
     #[at("/get-started/identity-fundamentals")]
