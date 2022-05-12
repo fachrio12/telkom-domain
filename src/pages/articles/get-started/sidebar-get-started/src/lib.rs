@@ -231,6 +231,18 @@ impl SidebarGetStarted {
                                                 class="uk-margin-left td-sidebar-subtopic"
                                             >
                                                 <Link<Route>
+                                                    to={Route::IntroductionToDomain}
+                                                    classes="uk-text-muted"
+                                                    >
+                                                    <span>
+                                                        { "Introduction to Domain" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
                                                     to={Route::AuthenticationVsAuthorization}
                                                     classes="uk-text-muted"
                                                     >

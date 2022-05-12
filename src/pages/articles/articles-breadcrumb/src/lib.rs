@@ -109,6 +109,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::IntroductionToDomain => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::IntroductionToDomain}
+                                >
+                                    { "Introduction to Domain" }
+                                </Link<Route>>
+                            </li>
+                        },
                         SubTopic::AuthenticationVsAuthorization => html! {
                             <li>
                                 <Link<Route>

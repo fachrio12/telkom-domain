@@ -8,6 +8,7 @@ use get_started_home::GetStartedHome;
 
 use identity_fundamentals_home::IdentityFundamentalsHome;
 use introduction_to_iam::IntroductionToIAM;
+use introduction_to_domain::IntroductionToDomain;
 use authentication_vs_authorization::AuthenticationVsAuthorization;
 
 use telkom_domain_overview_home::TelkomDomainOverviewHome;
@@ -88,6 +89,11 @@ impl Component for GetStartedContent {
                     SubTopic::IntroductionToIAM => {
                         html! {
                             <IntroductionToIAM/>
+                        }
+                    }
+                    SubTopic::IntroductionToDomain => {
+                        html! {
+                            <IntroductionToDomain/>
                         }
                     }
                     SubTopic::AuthenticationVsAuthorization => {

@@ -10,6 +10,7 @@ pub enum SubTopic {
     Home,
     
     IntroductionToIAM,
+    IntroductionToDomain,
     AuthenticationVsAuthorization,
 
     DomainDashboard,
