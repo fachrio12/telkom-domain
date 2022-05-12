@@ -23,6 +23,9 @@
 .td-text-size-large {
     font-size: 33px;
 }
+.td-text-size-huge {
+    font-size: 39px;
+}
 
 .td-text-weight-bold {
     font-weight: 600!important;
