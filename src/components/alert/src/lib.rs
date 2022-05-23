@@ -36,17 +36,13 @@ impl Component for Alert {
         html! {
             <div
                 class="uk-alert"
-                style="border-radius: 5px; position: relative; overflow: hidden;"
+                style="border-radius: 5px; position: relative; overflow: hidden; margin-bottom: 16px;"
             >
                 <div uk-grid="true">
                     <div class="uk-width-auto" style="padding-left: 45px;">
-                        // <i
-                        //     class="fa-solid fa-memo uk-text-default"
-                        // >
-                        // </i>
                         <span uk-icon="icon: file-text; ratio: 1.5;"></span>
                     </div>
-                    <div class="uk-width-expand">
+                    <div class="uk-width-expand" style="padding-left: 25px;">
                         { self.message.to_owned() }
                     </div>
                 </div>
