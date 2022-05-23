@@ -29,8 +29,9 @@ members = [
     "src/components/navtop",
     "src/components/logo",
     "src/components/logo-icon",
-    "src/pages/home",
     "src/components/footer",
+    "src/components/alert",
+    "src/pages/home",
 
     "src/pages/articles/articles-home",
     "src/pages/articles/sidebar-main-menu",
@@ -59,5 +60,6 @@ members = [
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/create-multiple-tenants",
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/multiple-tenants-to-single-subscription",
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/set-up-multiple-environments",
+    "src/pages/articles/get-started/telkom-domain-overview/create-tenants/multi-tenant-apps-best-practices",
 
 ]

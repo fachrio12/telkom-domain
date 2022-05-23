@@ -366,6 +366,16 @@ impl SidebarGetStarted {
                                                                         </span>
                                                                     </Link<Route>>
                                                                 </div>
+                                                                <div class="uk-margin-left td-sidebar-subtopic">
+                                                                    <Link<Route>
+                                                                        to={Route::MultiTenantBestPractices}
+                                                                        classes="uk-text-muted"
+                                                                    >
+                                                                        <span>
+                                                                            { "Multi-Tenant Applications Best Practices" }
+                                                                        </span>
+                                                                    </Link<Route>>
+                                                                </div>
                                                             </>
                                                         }
                                                     } else {

@@ -33,6 +33,8 @@ pub enum Route {
     MultipleTenantsToSingleSubscription,
     #[at("/get-started/domain-overview/create-tenants/set-up-multiple-environments")]
     SetUpMultipleEnvironments,
+    #[at("/get-started/domain-overview/create-tenants/multi-tenant-apps-best-practices")]
+    MultiTenantBestPractices,
     #[at("/get-started/domain-overview/create-tenants")]
     CreateTenants,
 
