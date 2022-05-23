@@ -1,4 +1,5 @@
 use yew::prelude::*;
+use alert::Alert;
 
 pub struct MultiTenantBestPractices {}
 
@@ -26,8 +27,21 @@ impl Component for MultiTenantBestPractices {
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Multi-Tenant Applications Best Practices" }</h1>
                 <p class="uk-margin-large-bottom">
-                    { "You can configure multiple tenants to create different environments in the Telkom Domain Dashboard to allow for complex configurations. For example, you could have two separate domains (one internal and one public-facing), or you may want users to log in differently for different applications. The way to accomplish this is to create more than one Telkom Domain tenant to allow you to have separate sets of applications, connections, and users for the applications and groups of users that you need to support." }
+                    { "Multi-tenancy is when a single instance of software runs on a server that is accessible to multiple groups of users. Auth0's Public Cloud is an example of a multi-tenant application. Your applications, settings, and connections are a single tenant, which shares resources with other tenants in the Public Cloud. To learn more about tenants, read Create Tenants. To learn more about Auth0's Public Cloud, read Deploy Auth0." }
                 </p>
+                <p>
+                    { "Please note that this article is not about using multiple Auth0 tenants. It is about using Auth0 to secure your own multi-tenant application." }
+                </p>
+                <p>
+                    { "There are several ways you can secure multi-tenant applications with Auth0. You can handle your multi-tenancy needs with one of the following approaches:" }
+                </p>
+                <ul class="uk-list uk-list-disc">
+                    <li>{ "Use multiple connections" }</li>
+                    <li>{ "Identify different tenants by application" }</li>
+                    <li>{ "Store tenant details in app_metadata" }</li>
+                    <li>{ "Use separate Auth0 tenants" }</li>
+                </ul>
+                <Alert message={String::from("Entity limits may apply. To learn more, read Entity Limit Policy. If you have an Enterprise subscription, you will not be constrained due to entity limits, but you may be constrained by a connection that already has thousands of enabled clients.")}/>
 
                 <div class="uk-margin-large-bottom">
                     <ul class="uk-list uk-list-decimal">

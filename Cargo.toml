@@ -29,8 +29,9 @@ members = [
     "src/components/navtop",
     "src/components/logo",
     "src/components/logo-icon",
-    "src/pages/home",
     "src/components/footer",
+    "src/components/alert",
+    "src/pages/home",
 
     "src/pages/articles/articles-home",
     "src/pages/articles/sidebar-main-menu",
