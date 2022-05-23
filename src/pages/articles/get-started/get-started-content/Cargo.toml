@@ -22,3 +22,4 @@ create-tenants-home = { path = "../telkom-domain-overview/create-tenants/create-
 create-multiple-tenants = { path = "../telkom-domain-overview/create-tenants/create-multiple-tenants" }
 multiple-tenants-to-single-subscription = { path = "../telkom-domain-overview/create-tenants/multiple-tenants-to-single-subscription" }
 set-up-multiple-environments = { path = "../telkom-domain-overview/create-tenants/set-up-multiple-environments" }
+multi-tenant-apps-best-practices = { path = "../telkom-domain-overview/create-tenants/multi-tenant-apps-best-practices" }

@@ -18,6 +18,7 @@ use create_tenants_home::CreateTenantsHome;
 use create_multiple_tenants::CreateMultipleTenants;
 use multiple_tenants_to_single_subscription::MultipleTenantsToSingleSubscription;
 use set_up_multiple_environments::SetUpMultipleEnvironments;
+use multi_tenant_apps_best_practices::MultiTenantBestPractices;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -140,6 +141,9 @@ impl Component for GetStartedContent {
                             },
                             SubTopic2::SetUpMultipleEnvironments => html! {
                                 <SetUpMultipleEnvironments/>
+                            },
+                            SubTopic2::MultiTenantBestPractices => html! {
+                                <MultiTenantBestPractices/>
                             },
                             _ => html! {}
                         }

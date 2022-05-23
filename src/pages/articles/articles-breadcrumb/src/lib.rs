@@ -186,6 +186,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic2::MultiTenantBestPractices => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::MultiTenantBestPractices}
+                                >
+                                    { "Multi-Tenant Applications Best Practices" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
             </ul>

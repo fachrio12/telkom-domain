@@ -135,6 +135,7 @@ dependencies = [
  "introduction-to-domain",
  "introduction-to-iam",
  "log",
+ "multi-tenant-apps-best-practices",
  "multiple-tenants-to-single-subscription",
  "set-up-multiple-environments",
  "telkom-domain-dashboard-home",
@@ -367,6 +368,13 @@ name = "matches"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a3e378b66a060d48947b590737b30a1be76706c8dd7b8ba0f2fe3989c68a853f"
+
+[[package]]
+name = "multi-tenant-apps-best-practices"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
 
 [[package]]
 name = "multiple-tenants-to-single-subscription"

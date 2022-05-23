@@ -54,6 +54,9 @@ pub fn switch(routes: &Route) -> Html {
         Route::SetUpMultipleEnvironments => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } sub_topic_2={ SubTopic2::SetUpMultipleEnvironments } />
         },
+        Route::MultiTenantBestPractices => html! {
+            <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } sub_topic_2={ SubTopic2::MultiTenantBestPractices } />
+        },
         Route::CreateTenants => html! {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::CreateTenants } />
         },

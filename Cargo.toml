@@ -59,5 +59,6 @@ members = [
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/create-multiple-tenants",
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/multiple-tenants-to-single-subscription",
     "src/pages/articles/get-started/telkom-domain-overview/create-tenants/set-up-multiple-environments",
+    "src/pages/articles/get-started/telkom-domain-overview/create-tenants/multi-tenant-apps-best-practices",
 
 ]

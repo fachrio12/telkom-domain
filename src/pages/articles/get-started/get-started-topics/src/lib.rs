@@ -26,4 +26,5 @@ pub enum SubTopic2 {
     CreateMultipleTenants,
     MultipleTenantsToSingleSubscription,
     SetUpMultipleEnvironments,
+    MultiTenantBestPractices,
 }
