@@ -383,6 +383,18 @@ impl SidebarGetStarted {
                                                     }
                                                 }
                                             </div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::RegisterApis}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Register APIs" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
                                         </div>
                                     }
                                 } else {

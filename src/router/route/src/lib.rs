@@ -38,6 +38,9 @@ pub enum Route {
     #[at("/get-started/domain-overview/create-tenants")]
     CreateTenants,
 
+    #[at("/get-started/domain-overview/set-up-apis")]
+    RegisterApis,
+
     #[at("/get-started/domain-overview")]
     GetStartedDomainOverview,
 
