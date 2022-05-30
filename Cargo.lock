@@ -144,6 +144,7 @@ dependencies = [
  "log",
  "multi-tenant-apps-best-practices",
  "multiple-tenants-to-single-subscription",
+ "register-apis",
  "set-up-multiple-environments",
  "telkom-domain-dashboard-home",
  "telkom-domain-overview-home",
@@ -447,6 +448,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "864d3e96a899863136fc6e99f3d7cae289dafe43bf2c5ac19b70df7210c0a145"
 dependencies = [
  "proc-macro2",
+]
+
+[[package]]
+name = "register-apis"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
 ]
 
 [[package]]

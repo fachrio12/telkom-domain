@@ -19,6 +19,7 @@ use create_multiple_tenants::CreateMultipleTenants;
 use multiple_tenants_to_single_subscription::MultipleTenantsToSingleSubscription;
 use set_up_multiple_environments::SetUpMultipleEnvironments;
 use multi_tenant_apps_best_practices::MultiTenantBestPractices;
+use register_apis::RegisterApis;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -146,6 +147,11 @@ impl Component for GetStartedContent {
                                 <MultiTenantBestPractices/>
                             },
                             _ => html! {}
+                        }
+                    }
+                    SubTopic::RegisterApis => {
+                        html! {
+                            <RegisterApis/>
                         }
                     }
                     _ => html! {}

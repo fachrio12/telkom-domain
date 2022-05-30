@@ -144,7 +144,16 @@ impl Component for ArticlesBreadcrumb {
                                     { "Create Tenants" }
                                 </Link<Route>>
                             </li>
-                        }
+                        },
+                        SubTopic::RegisterApis => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::RegisterApis}
+                                >
+                                    { "Register APIs" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {
