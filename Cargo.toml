@@ -64,4 +64,6 @@ members = [
 
     "src/pages/articles/get-started/telkom-domain-overview/register-apis",
 
+    "src/pages/articles/get-started/tenant-settings/tenant-settings-home",
+
 ]

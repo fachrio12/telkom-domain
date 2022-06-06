@@ -3,6 +3,7 @@ pub enum Topic {
     Home,
     IdentityFundamentals,
     DomainOverview,
+    TenantSettings,
 }
 
 #[derive(Clone, PartialEq, Debug)]

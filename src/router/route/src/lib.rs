@@ -18,6 +18,8 @@ pub enum Route {
     AuthenticationVsAuthorization,
     #[at("/get-started/identity-fundamentals")]
     GetStartedIdentityFundamentals,
+
+
     #[at("/get-started/")]
     GetStartedHome,
 
@@ -43,6 +45,11 @@ pub enum Route {
 
     #[at("/get-started/domain-overview")]
     GetStartedDomainOverview,
+
+
+    #[at("/get-started/tenant-settings")]
+    GetStartedTenantSettings,
+
 
     #[at("/secure")]
     Secure,

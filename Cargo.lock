@@ -148,6 +148,7 @@ dependencies = [
  "set-up-multiple-environments",
  "telkom-domain-dashboard-home",
  "telkom-domain-overview-home",
+ "tenant-settings-home",
  "yew",
 ]
 
@@ -636,6 +637,14 @@ dependencies = [
 name = "telkom-domain-overview-home"
 version = "0.1.0"
 dependencies = [
+ "yew",
+]
+
+[[package]]
+name = "tenant-settings-home"
+version = "0.1.0"
+dependencies = [
+ "alert",
  "yew",
 ]
 

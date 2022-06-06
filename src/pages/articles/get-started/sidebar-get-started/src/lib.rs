@@ -404,6 +404,33 @@ impl SidebarGetStarted {
                         </div>
                     </div>
                 </div>
+
+                <div
+                    class="uk-margin-medium-bottom uk-text-small td-text-weight-500"
+                >
+                    <div
+                        class="uk-margin-small-bottom"
+                        style="text-transform: uppercase;"
+                    >
+                        { "Configure Telkom Domain" }
+                    </div>
+                    <div
+                        class="uk-text-muted uk-margin-small-bottom"
+                    >
+                        <div>
+                            <Link<Route>
+                                to={Route::GetStartedTenantSettings}
+                                classes="uk-text-muted"
+                            >
+                                { "Tenant Settings" }
+                                <span
+                                    style="float: right; padding-top: 4px;"
+                                    uk-icon="icon: chevron-right;  ratio: 0.85">
+                                </span>
+                            </Link<Route>>
+                        </div>
+                    </div>
+                </div>
             </>
         }
     }

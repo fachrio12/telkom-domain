@@ -95,6 +95,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        Topic::TenantSettings => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::GetStartedTenantSettings}
+                                >
+                                    { "Tenant Settings" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {
