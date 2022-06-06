@@ -644,6 +644,7 @@ dependencies = [
 name = "tenant-settings-home"
 version = "0.1.0"
 dependencies = [
+ "alert",
  "yew",
 ]
 
