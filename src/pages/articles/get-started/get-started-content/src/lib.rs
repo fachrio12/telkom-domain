@@ -21,6 +21,8 @@ use set_up_multiple_environments::SetUpMultipleEnvironments;
 use multi_tenant_apps_best_practices::MultiTenantBestPractices;
 use register_apis::RegisterApis;
 
+use tenant_settings_home::TenantSettingsHome;
+
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
@@ -152,6 +154,16 @@ impl Component for GetStartedContent {
                     SubTopic::RegisterApis => {
                         html! {
                             <RegisterApis/>
+                        }
+                    }
+                    _ => html! {}
+                }
+            }
+            Topic::TenantSettings => {
+                match self.sub_topic {
+                    SubTopic::Home => {
+                        html! {
+                            <TenantSettingsHome/>
                         }
                     }
                     _ => html! {}

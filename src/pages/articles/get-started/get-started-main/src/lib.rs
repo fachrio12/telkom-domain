@@ -128,6 +128,14 @@ impl GetStartedMain {
                     </>
                 }
             }
+            Topic::TenantSettings => {
+                html! {
+                    <>
+                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+                    </>
+                }
+            }
         }
     }
 }
