@@ -24,4 +24,6 @@ multiple-tenants-to-single-subscription = { path = "../telkom-domain-overview/cr
 set-up-multiple-environments = { path = "../telkom-domain-overview/create-tenants/set-up-multiple-environments" }
 multi-tenant-apps-best-practices = { path = "../telkom-domain-overview/create-tenants/multi-tenant-apps-best-practices" }
 register-apis = { path = "../telkom-domain-overview/register-apis" }
+
 tenant-settings-home = { path = "../tenant-settings/tenant-settings-home" }
+signing-keys-home = { path = "../tenant-settings/signing-keys/signing-keys-home" }

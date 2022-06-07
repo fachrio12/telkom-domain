@@ -428,6 +428,50 @@ impl SidebarGetStarted {
                                     uk-icon="icon: chevron-right;  ratio: 0.85">
                                 </span>
                             </Link<Route>>
+                            {
+                                if topic == Topic::TenantSettings {
+                                    html! {
+                                        <div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::SigningKeys}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Signing Keys" }
+                                                    </span>
+                                                    <span
+                                                        style="float: right; padding-top: 4px;"
+                                                        uk-icon="icon: chevron-right;  ratio: 0.7">
+                                                    </span>
+                                                </Link<Route>>
+                                                // {
+                                                //     if sub_topic == SubTopic::DomainDashboard {
+                                                //         html! {
+                                                //             <div class="uk-margin-left td-sidebar-subtopic">
+                                                //                 <Link<Route>
+                                                //                     to={Route::ActivityAbout}
+                                                //                     classes="uk-text-muted"
+                                                //                 >
+                                                //                     <span>
+                                                //                         { "About The Activity Page" }
+                                                //                     </span>
+                                                //                 </Link<Route>>
+                                                //             </div>
+                                                //         }
+                                                //     } else {
+                                                //         html! {}
+                                                //     }
+                                                // }
+                                            </div>
+                                        </div>
+                                    }
+                                } else {
+                                    html! {}
+                                }
+                            }
                         </div>
                     </div>
                 </div>

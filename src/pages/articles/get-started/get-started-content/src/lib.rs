@@ -22,6 +22,7 @@ use multi_tenant_apps_best_practices::MultiTenantBestPractices;
 use register_apis::RegisterApis;
 
 use tenant_settings_home::TenantSettingsHome;
+use signing_keys_home::SigningKeysHome;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -164,6 +165,16 @@ impl Component for GetStartedContent {
                     SubTopic::Home => {
                         html! {
                             <TenantSettingsHome/>
+                        }
+                    }
+                    SubTopic::SigningKeys => {
+                        match self.sub_topic_2 {
+                            SubTopic2::Home => {
+                                html! {
+                                    <SigningKeysHome/>
+                                }
+                            }
+                            _ => html! {}
                         }
                     }
                     _ => html! {}
