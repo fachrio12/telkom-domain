@@ -17,6 +17,8 @@ pub enum SubTopic {
     DomainDashboard,
     CreateTenants,
     RegisterApis,
+
+    SigningKeys,
 }
 
 #[derive(Clone, PartialEq, Debug)]

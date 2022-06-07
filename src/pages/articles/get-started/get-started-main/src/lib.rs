@@ -89,6 +89,7 @@ impl Component for GetStartedMain {
                     <div class="uk-width-expand@m">
                         <div
                             class="uk-padding-large"
+                            style="max-width: 776px;"
                         >
                             { self.view_content() }
                         </div>

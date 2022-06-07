@@ -146,6 +146,7 @@ dependencies = [
  "multiple-tenants-to-single-subscription",
  "register-apis",
  "set-up-multiple-environments",
+ "signing-keys-home",
  "telkom-domain-dashboard-home",
  "telkom-domain-overview-home",
  "tenant-settings-home",
@@ -577,6 +578,14 @@ dependencies = [
  "route",
  "yew",
  "yew-router",
+]
+
+[[package]]
+name = "signing-keys-home"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
 ]
 
 [[package]]

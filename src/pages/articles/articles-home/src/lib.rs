@@ -37,7 +37,9 @@ impl Component for ArticlesHome {
                         </div>
                     </div>
 
-                    <div class="uk-width-expand@m">
+                    <div
+                        class="uk-width-expand@m"
+                    >
                         <div
                             class="uk-padding-large"
                         >

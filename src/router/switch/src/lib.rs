@@ -69,6 +69,11 @@ pub fn switch(routes: &Route) -> Html {
             <GetStartedMain topic={ Topic::DomainOverview } sub_topic={ SubTopic::Home } />
         },
 
+
+        Route::SigningKeys => html! {
+            <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } />
+        },
+
         Route::GetStartedTenantSettings => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::Home } />
         },

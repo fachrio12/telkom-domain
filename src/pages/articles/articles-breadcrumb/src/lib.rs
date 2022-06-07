@@ -163,6 +163,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::SigningKeys => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::SigningKeys}
+                                >
+                                    { "Signing Keys" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {
