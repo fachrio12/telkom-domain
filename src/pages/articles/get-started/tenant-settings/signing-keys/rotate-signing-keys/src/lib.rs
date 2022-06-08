@@ -38,54 +38,89 @@ impl Component for RotateSigningKeys {
                     { "You can rotate your tenant's application signing key using the Auth0 Dashboard or the Auth0 Management API." }
                 </p>
 
-
-
-
-
-                
-
                 <div
                     class="uk-margin-large-bottom"
                 >
-                    <h1 class="td-text-size-large">{ "How it works" }</h1>
-                    <p>{ "When a user signs in to your application, we create a token that contains information about the user and sign the token using its private key before we send it back to your application. Auth0 secures the private key, which is unique per tenant." }</p>
-                    <p>{ "To verify that the token is valid and originated from Auth0, your application validates the token’s signature using the public key. We provide other application security key management capabilities through both our Dashboard and Management API." }</p>
-                    <p>{ "Auth0 will notify you periodically if you haven't rotated your key in more than 365 days. Auth0 recommends that you rotate keys regularly to ensure that in case of a security breach you will be ready to take the actions needed." }</p>
-                    <p>{ "Additional application signing certificates links are as follows:" }</p>
-                    <ul class="uk-list uk-list-disc">
-                        <li>{ "CER" }</li>
-                        <li>{ "PEM" }</li>
-                        <li>{ "raw PEM" }</li>
-                        <li>{ "PB7" }</li>
-                        <li>{ "Fingerprint" }</li>
-                    </ul>
-                    <Alert message={ String::from("We use the application signing key to sign assertions that are sent to applications. These assertions may include ID tokens, access tokens, SAML assertions, and WS-Fed assertions. Note that these keys are different from those used to sign interactions with connections, including signing SAML requests to Identity Providers (IdPs) and encrypting responses from IdPs.
-
-                    By default, SAML assertions for IdP connections are signed, which we recommend. To get public keys you can use to configure the IdP, see SAML Identity Provider Configuration: Signed Assertions.") }/>
-                    <p>{ "The rotation and revocation process supports your personal preferences and promotes a graceful transition for your application. If you prefer to update your application first, then rotate and revoke your key, you may do that. Alternatively, if you prefer to rotate your key, and then update your application and revoke your old key, you may also do that." }</p>
-                    <p>{ "Available keys include:" }</p>
-                    <ul class="uk-list uk-list-disc">
+                    <h1 class="td-text-size-large">{ "Use the Dashboard" }</h1>
+                    <ul class="uk-list uk-list-decimal">
                         <li>
-                            <b>{ "Currently used:" }</b>
-                            <span class="td-margin-text">{ "Key that is currently being used to sign all new assertions." }</span>
+                            { "Go to Dashboard > Settings > Signing Keys." }
+                            <img
+                                class="uk-margin-top uk-margin-bottom"
+                                src="/assets/rotate-signing-keys/dashboard-tenant-settings-signing-keys.png"
+                            />
                         </li>
+                        <li>{ "Under Rotation Settings, locate Rotate Signing Key, and select Rotate Key." }</li>
                         <li>
-                            <b>{ "Previously used:" }</b>
-                            <span class="td-margin-text">{ "Key that was previously used, but has been rotated out. Assertions that were generated with this key will still work." }</span>
-                        </li>
-                        <li>
-                            <b>{ "Next in queue:" }</b>
-                            <span class="td-margin-text">{ "Key that is queued and will replace the current key when the application signing key is next rotated." }</span>
+                            <p>{ "Click Rotate to confirm." }</p>
+                            <img
+                                class="uk-margin-top uk-margin-bottom"
+                                src="/assets/rotate-signing-keys/dashboard-tenant-settings-signing-keys-rotation-confirm.png"
+                            />
                         </li>
                     </ul>
-                    <Alert message={ String::from("Always test signing key rotation on a development tenant before rotating application signing keys in production.") } />
                 </div>
 
                 <div
                     class="uk-margin-large-bottom"
                 >
-                    <h1 class="td-text-size-large">{ "Limitations" }</h1>
-                    <p>{ "Rotating your signing key will be subject to a smaller rate limit than other API endpoints. To learn more, read Management API Rate Limits." }</p>
+                    <h1 class="td-text-size-large">{ "Use the Management API" }</h1>
+                    <ul class="uk-list uk-list-decimal">
+                        <li>
+                            { "To get a list of the signing keys, make a" }
+                            <span class="td-label-code td-margin-text">{ "GET" }</span>
+                            { "call to the Get all Application Signing Keys endpoint." }
+                        </li>
+                        <li>
+                            <p>
+                                { "To rotate the signing key, make a" }
+                                <span class="td-label-code td-margin-text">{ "POST" }</span>
+                                { "call to the Rotate the Application Signing Key endpoint. Be sure to replace the" }
+                                <span class="td-label-code td-margin-text">{ "MGMT_API_ACCESS_TOKEN" }</span>
+                                { "placeholder value with your Management API access token." }
+                            </p>
+                            <p style="color: red;">{ "TASK: CREATE CODE BOX NODE JS" }</p>
+                            <table class="uk-table uk-table-divider">
+                                <thead>
+                                    <tr>
+                                        <th class="uk-text-emphasis">{ "Value" }</th>
+                                        <th class="uk-text-emphasis">{ "Description" }</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="td-label-code td-margin-text">{ "MGMT_API_ACCESS_TOKEN" }</span>
+                                        </td>
+                                        <td>
+                                            { "Access Token for the Management API with the scopes" }
+                                            <span class="td-label-code td-margin-text">{ "create:signing_keys" }</span>
+                                            { "and" }
+                                            <span class="td-label-code td-margin-text">{ "update:signing_keys" }</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="uk-margin-large-bottom"
+                >
+                    <h1 class="td-text-size-large">{ "Key rotation impact" }</h1>
+                    <h1 class="td-text-size-big">{ "APIs and API gateways accepting access tokens" }</h1>
+                    <p class="uk-margin-large-bottom">
+                        { "Most middleware and API gateways leverage the JSON web key set (JWKS) endpoint to retrieve the current and future signing keys at a certain interval. If your middleware and/or API gateways" }
+                        <b>{ "do not" }</b>
+                        { "support this endpoint and require you to manually configure a" }
+                        <span class="td-label-code td-margin-text">{ "*.cer" }</span>
+                        { "file, you will need to coordinate the signing key rotation in Auth0 with the reconfiguration of your middleware and gateways." }
+                    </p>
+                    <h1 class="td-text-size-big">{ "Regular web applications" }</h1>
+                    <p>
+                        { "When rotating the signing key in Auth0, you will need to coordinate the reconfiguration of your applications which leverage WS-Fed or SAML. This typically happens when you upload the new public certificate or reconfigure the application by entering the WS-Fed/SAML metadata URL. This will change the JWKS key, which is used by applications to validate tokens, make sure your implementation does not assume JWKS keys don’t change." }
+                    </p>
                 </div>
 
                 <div
@@ -93,10 +128,10 @@ impl Component for RotateSigningKeys {
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">
-                        <li>{ "Rotate Signing Keys" }</li>
                         <li>{ "Revoke Signing Keys" }</li>
-                        <li>{ "View Signing Certificates" }</li>
+                        <li>{ "Locate JSON Web Key Sets" }</li>
                         <li>{ "Change Application Signing Algorithms" }</li>
+                        <li>{ "View Signing Certificates" }</li>
                     </ul>
                 </div>
                 
