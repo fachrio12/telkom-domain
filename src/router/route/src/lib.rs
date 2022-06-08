@@ -47,6 +47,8 @@ pub enum Route {
     GetStartedDomainOverview,
 
 
+    #[at("/get-started/tenant-settings/rotate-signing-keys")]
+    RotateSigningKeys,
     #[at("/get-started/tenant-settings/signing-keys")]
     SigningKeys,
 

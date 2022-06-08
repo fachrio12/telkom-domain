@@ -145,6 +145,7 @@ dependencies = [
  "multi-tenant-apps-best-practices",
  "multiple-tenants-to-single-subscription",
  "register-apis",
+ "rotate-signing-keys",
  "set-up-multiple-environments",
  "signing-keys-home",
  "telkom-domain-dashboard-home",
@@ -454,6 +455,14 @@ dependencies = [
 
 [[package]]
 name = "register-apis"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
+]
+
+[[package]]
+name = "rotate-signing-keys"
 version = "0.1.0"
 dependencies = [
  "alert",
