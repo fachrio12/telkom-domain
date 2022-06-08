@@ -222,6 +222,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic2::RotateSigningKeys => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::RotateSigningKeys}
+                                >
+                                    { "Rotate Signing Keys" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
             </ul>

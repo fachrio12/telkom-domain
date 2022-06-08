@@ -27,3 +27,4 @@ register-apis = { path = "../telkom-domain-overview/register-apis" }
 
 tenant-settings-home = { path = "../tenant-settings/tenant-settings-home" }
 signing-keys-home = { path = "../tenant-settings/signing-keys/signing-keys-home" }
+rotate-signing-keys= { path = "../tenant-settings/signing-keys/rotate-signing-keys" }

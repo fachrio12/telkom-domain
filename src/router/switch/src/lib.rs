@@ -70,6 +70,9 @@ pub fn switch(routes: &Route) -> Html {
         },
 
 
+        Route::RotateSigningKeys => html! {
+            <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } sub_topic_2={ SubTopic2::RotateSigningKeys } />
+        },
         Route::SigningKeys => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } />
         },
@@ -77,6 +80,7 @@ pub fn switch(routes: &Route) -> Html {
         Route::GetStartedTenantSettings => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::Home } />
         },
+        
 
         Route::GetStartedHome => html! {
             <GetStartedMain topic={ Topic::Home } sub_topic={ SubTopic::Home } />

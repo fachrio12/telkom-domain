@@ -66,5 +66,6 @@ members = [
 
     "src/pages/articles/get-started/tenant-settings/tenant-settings-home",
     "src/pages/articles/get-started/tenant-settings/signing-keys/signing-keys-home",
+    "src/pages/articles/get-started/tenant-settings/signing-keys/rotate-signing-keys",
 
 ]

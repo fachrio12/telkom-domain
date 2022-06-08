@@ -447,24 +447,24 @@ impl SidebarGetStarted {
                                                         uk-icon="icon: chevron-right;  ratio: 0.7">
                                                     </span>
                                                 </Link<Route>>
-                                                // {
-                                                //     if sub_topic == SubTopic::DomainDashboard {
-                                                //         html! {
-                                                //             <div class="uk-margin-left td-sidebar-subtopic">
-                                                //                 <Link<Route>
-                                                //                     to={Route::ActivityAbout}
-                                                //                     classes="uk-text-muted"
-                                                //                 >
-                                                //                     <span>
-                                                //                         { "About The Activity Page" }
-                                                //                     </span>
-                                                //                 </Link<Route>>
-                                                //             </div>
-                                                //         }
-                                                //     } else {
-                                                //         html! {}
-                                                //     }
-                                                // }
+                                                {
+                                                    if sub_topic == SubTopic::SigningKeys {
+                                                        html! {
+                                                            <div class="uk-margin-left td-sidebar-subtopic">
+                                                                <Link<Route>
+                                                                    to={Route::RotateSigningKeys}
+                                                                    classes="uk-text-muted"
+                                                                >
+                                                                    <span>
+                                                                        { "Rotate Signing Keys" }
+                                                                    </span>
+                                                                </Link<Route>>
+                                                            </div>
+                                                        }
+                                                    } else {
+                                                        html! {}
+                                                    }
+                                                }
                                             </div>
                                         </div>
                                     }

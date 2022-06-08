@@ -31,4 +31,7 @@ pub enum SubTopic2 {
     MultipleTenantsToSingleSubscription,
     SetUpMultipleEnvironments,
     MultiTenantBestPractices,
+
+    // Signing Keys
+    RotateSigningKeys,
 }
