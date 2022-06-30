@@ -145,6 +145,7 @@ dependencies = [
  "multi-tenant-apps-best-practices",
  "multiple-tenants-to-single-subscription",
  "register-apis",
+ "revoke-signing-keys",
  "rotate-signing-keys",
  "set-up-multiple-environments",
  "signing-keys-home",
@@ -455,6 +456,14 @@ dependencies = [
 
 [[package]]
 name = "register-apis"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
+]
+
+[[package]]
+name = "revoke-signing-keys"
 version = "0.1.0"
 dependencies = [
  "alert",
