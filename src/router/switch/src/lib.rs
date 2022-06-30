@@ -73,6 +73,9 @@ pub fn switch(routes: &Route) -> Html {
         Route::RotateSigningKeys => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } sub_topic_2={ SubTopic2::RotateSigningKeys } />
         },
+        Route::RevokeSigningKeys => html! {
+            <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } sub_topic_2={ SubTopic2::RevokeSigningKeys } />
+        },
         Route::SigningKeys => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } />
         },

@@ -231,46 +231,19 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic2::RevokeSigningKeys => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::RevokeSigningKeys}
+                                >
+                                    { "Revoke Signing Keys" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
             </ul>
         }
 
-        // match self.topic {
-        //     Topic::Home => html! {
-        //         <ul class="uk-breadcrumb">
-        //             <li><a href="#">{ "Docs" }</a></li>
-        //             <li><span>{ "Get Started" }</span></li>
-        //         </ul>
-        //     },
-        //     Topic::IdentityFundamentals => html! {
-        //         match self.sub_topic {
-        //             SubTopic::Home => html! {
-        //                 <ul class="uk-breadcrumb">
-        //                     <li><a href="#">{ "Docs" }</a></li>
-        //                     <li><span>{ "Get Started" }</span></li>
-        //                     <li><span>{ "Identity Fundamentals" }</span></li>
-        //                 </ul>
-        //             },
-        //             SubTopic::IntroductionToIAM => html! {
-        //                 <ul class="uk-breadcrumb">
-        //                     <li><a href="#">{ "Docs" }</a></li>
-        //                     <li><span>{ "Get Started" }</span></li>
-        //                     <li><span>{ "Identity Fundamentals" }</span></li>
-        //                     <li><span>{ "Introduction to Identity and Access Management (IAM)" }</span></li>
-        //                 </ul>
-        //             },
-        //             SubTopic::AuthenticationVsAuthorization => html! {
-        //                 <ul class="uk-breadcrumb">
-        //                     <li><a href="#">{ "Docs" }</a></li>
-        //                     <li><span>{ "Get Started" }</span></li>
-        //                     <li><span>{ "Identity Fundamentals" }</span></li>
-        //                     <li><span>{ "Authentication vs. Authorization" }</span></li>
-        //                 </ul>
-        //             }
-        //         }
-        //     },
-        //     _ => html! {}
-        // }
     }
 }

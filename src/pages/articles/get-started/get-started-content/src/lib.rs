@@ -24,6 +24,7 @@ use register_apis::RegisterApis;
 use tenant_settings_home::TenantSettingsHome;
 use signing_keys_home::SigningKeysHome;
 use rotate_signing_keys::RotateSigningKeys;
+use revoke_signing_keys::RevokeSigningKeys;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -178,6 +179,11 @@ impl Component for GetStartedContent {
                             SubTopic2::RotateSigningKeys => {
                                 html! {
                                     <RotateSigningKeys/>
+                                }
+                            }
+                            SubTopic2::RevokeSigningKeys => {
+                                html! {
+                                    <RevokeSigningKeys/>
                                 }
                             }
                             _ => html! {}
