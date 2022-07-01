@@ -59,7 +59,6 @@ impl Component for RevokeSigningKeys {
                     <h1 class="td-text-size-large">{ "Revoke previously used signing key" }</h1>
                     <ul
                         class="uk-list uk-list-decimal"
-                        style="display: inline-block;"
                     >
                         <li>
                             { "Go to" }

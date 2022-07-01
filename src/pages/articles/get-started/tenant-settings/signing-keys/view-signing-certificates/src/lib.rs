@@ -26,57 +26,53 @@ impl Component for ViewSigningCertificates {
             <>
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "View Signing Certificates" }</h1>
-                <p>
-                    { "You can revoke your tenant's application or API signing key using the Auth0 Dashboard or the Management API. The signing key is used to sign ID tokens, access tokens, SAML assertions, and WS-Fed assertions sent to your application or API. To learn more, read Signing Keys." }
-                </p>
-
-                <div
+                <p
                     class="uk-margin-large-bottom"
                 >
-                    <h1 class="td-text-size-large">{ "Prerequisites" }</h1>
-                    <ul class="uk-list uk-list-disc">
-                        <li>
-                            { "Before you can revoke a previously-used signing key, you must first have rotated the key. To learn more, read Rotate Signing Keys, or see the" }
-                            <b class="td-margin-text">{ "Rotate and revoke signing key" }</b>
-                            { "section below." }
-                        </li>
-                        <li>
-                            { "Make sure you have updated your application or API with the new key before you revoke the previous key." }
-                        </li>
-                    </ul>
-                    <Alert message={String::from("You cannot reuse a signing key after revocation, so be sure that you want to revoke it.")} />
-                </div>
-
+                    { "You can view your tenant's application client secrets and signing keys using the Auth0 Dashboard or the Management API. The application signing key is used to sign ID tokens, access tokens, SAML assertions, and WS-Fed assertions sent to your application. These keys are different from those used to sign interactions with connections, including signing SAML requests to identity providers (IdPs) and encrypting responses from IdPs. By default, SAML assertions for IdP connections are signed, which we recommend. To learn more, read SAML Identity Provider Configuration Settings." }
+                </p>
+                
                 <div
                     class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Use the Dashboard" }</h1>
-                </div>
-
-                <div
-                    class="uk-margin-large-bottom"
-                >
-                    <h1 class="td-text-size-large">{ "Revoke previously used signing key" }</h1>
+                    <h1 class="td-text-size-large">{ "Tenant settings" }</h1>
                     <ul
                         class="uk-list uk-list-decimal"
-                        style="display: inline-block;"
                     >
                         <li>
-                            { "Go to" }
-                            <ul
-                                class="uk-breadcrumb uk-margin-remove-top td-margin-text"
-                                style="display: inline-block;"
-                            >
-                                <li>{ "Dashboard" }</li>
-                                <li>{ "Settings" }</li>
-                                <li>{ "Signing Keys" }</li>
+                            <p>
+                                { "Go to" }
+                                <ul
+                                    class="uk-breadcrumb uk-margin-remove-top td-margin-text"
+                                    style="display: inline-block;"
+                                >
+                                    <li>{ "Dashboard" }</li>
+                                    <li>{ "Settings" }</li>
+                                    <li>{ "Signing Keys" }</li>
+                                </ul>
+                            </p>
+                            <img
+                                class="uk-margin-top uk-margin-bottom"
+                                src="/assets/view-signing-certificates/dashboard-tenant-settings-signing-keys.png"
+                            />
+                        </li>
+                        <li>
+                            <p>
+                                { "In the Rotation Settings section, locate List of Valid Keys and List of Revoked Keys." }
+                            </p>
+                            <ul class="uk-list uk-list-square">
+                                <li>
+                                    { "The" }
+                                    <b class="td-margin-text">{ "List of Valid Keys" }</b>
+                                    { "section lists the current signing key being used by your tenant, plus the next signing key that will be assigned should you choose to rotate your signing keys. If you have previously rotated signing keys, this section also lists the previously-used keys." }
+                                </li>
+                                <li>
+                                    { "The" }
+                                    <b class="td-margin-text">{ "List of Revoked Keys" }</b>
+                                    { "section lists the last three revoked keys for your tenant." }
+                                </li>
                             </ul>
-                        </li>
-                        <li>
-                             { "In the List of Valid Keys section, locate the Previously Used key, select the more options (...) menu, and select Revoke Key. The List of Valid Keys section lists the current signing key being used by your tenant, plus the next signing key that will be assigned should you choose to rotate your signing keys. If you have previously rotated signing keys, this section also lists the previously-used keys. The List of Revoked Keys section lists the last three revoked keys for your tenant." }
-                        </li>
-                        <li>
-                            { "Select Revoke to confirm." }
                         </li>
                     </ul>
                 </div>
@@ -84,7 +80,9 @@ impl Component for ViewSigningCertificates {
                 <div
                     class="uk-margin-large-bottom"
                 >
-                    <h1 class="td-text-size-large">{ "Rotate and revoke signing key" }</h1>
+                    <h1 class="td-text-size-large">{ "Application settings" }</h1>
+                    <p>{ "You can also view an application's signing key and/or client secret depending on the type of signing algorithm you are using." }</p>
+                    <h1 class="td-text-size-large">{ "If using the RS256 signing algorithm" }</h1>
                     <ul
                         class="uk-list uk-list-decimal"
                     >
@@ -95,15 +93,58 @@ impl Component for ViewSigningCertificates {
                                 style="display: inline-block;"
                             >
                                 <li>{ "Dashboard" }</li>
-                                <li>{ "Settings" }</li>
-                                <li>{ "Signing Keys" }</li>
+                                <li>{ "Applications" }</li>
                             </ul>
+                            { ", and select the name of the application to view." }
                         </li>
                         <li>
-                             { "In the Rotation Settings section, locate the Rotate & Revoke Signing Key section, and select Rotate & Revoke Key." }
+                            { "Scroll to the bottom of the" }
+                            <b class="td-margin-text">{ "Settings" }</b>
+                            { "tab, and select" }
+                            <b class="td-margin-text">{ "Advanced Settings" }</b>
                         </li>
                         <li>
-                            { "Select Rotate & Revoke to confirm." }
+                            <p>
+                                { "Go to the" }
+                                <b class="td-margin-text">{ "Certificates" }</b>
+                                { "tab and locate the" }
+                                <b class="td-margin-text">{ "Signing Certificates" }</b>
+                                { "field." }
+                            </p>
+                            <img
+                                class="uk-margin-top uk-margin-bottom"
+                                src="/assets/view-signing-certificates/dashboard-applications-applications-settings-advanced-certificates.png"
+                            />
+                        </li>
+                    </ul>
+
+                    <h1 class="td-text-size-large">{ "If using the HS256 signing algorithm" }</h1>
+                    <ul
+                        class="uk-list uk-list-decimal"
+                    >
+                        <li>
+                            { "Go to" }
+                            <ul
+                                class="uk-breadcrumb uk-margin-remove-top td-margin-text"
+                                style="display: inline-block;"
+                            >
+                                <li>{ "Dashboard" }</li>
+                                <li>{ "Applications" }</li>
+                            </ul>
+                            { ", and select the name of the application to view." }
+                        </li>
+                        <li>
+                            <p>
+                                { "Under Basic Information, locate the Client Secret field for the client secret." }
+                                <b class="td-margin-text">{ "Basic Information" }</b>
+                                { ", locate the" }
+                                <b class="td-margin-text">{ "Client Secret" }</b>
+                                { "field for the client secret." }
+                            </p>
+                            <img
+                                class="uk-margin-top uk-margin-bottom"
+                                src="/assets/view-signing-certificates/dashboard-applications-applications-settings-basic-information.png"
+                            />
                         </li>
                     </ul>
                 </div>
@@ -112,24 +153,51 @@ impl Component for ViewSigningCertificates {
                     class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Use the Management API" }</h1>
-                    <Alert message={String::from("You can only revoke the previously used signing key.")}/>
-                    <ul
-                        class="uk-list uk-list-decimal"
-                    >
-                        <li>
-                            { "To get a list of the signing keys, make a GET call to the Get all Application Signing Keys endpoint." }
-                        </li>
-                        <li>
-                            { "Make a" }
-                            <span class="td-label-code td-margin-text">{ "PUT" }</span>
-                            { "call to the Revoke an Application Signing Key by its Key ID endpoint. Be sure to replace the" }
-                            <span class="td-label-code td-margin-text">{ "YOUR_KEY_ID" }</span>
-                            { "and" }
-                            <span class="td-label-code td-margin-text">{ "MGMT_API_ACCESS_TOKEN" }</span>
-                            { "placeholder values with your signing key's ID and Management API access token, respectively." }
-                        </li>
-                    </ul>
-                    <p style="color: red;">{ "TASK: CREATE CODE BOX NODE JS" }</p>
+                    <h1 class="td-text-size-large">{ "Get all signing keys" }</h1>
+                    <p>
+                        { "Make a" }
+                        <span class="td-label-code td-margin-text">{ "GET" }</span>
+                        { "call to the" }
+                        <span class="td-label-code td-margin-text">{ "/signing_keys/get_signing_keys" }</span>
+                        { "endpoint. Be sure to replace the" }
+                        <span class="td-label-code td-margin-text">{ "MGMT_API_ACCESS_TOKEN" }</span>
+                        { "placeholder value with your Management API Access Token." }
+                    </p>
+                    <p style="color: red;">{ "CODE BOX" }</p>
+                    <table class="uk-table uk-table-divider">
+                        <thead>
+                            <tr>
+                                <th class="uk-text-emphasis">{ "Value" }</th>
+                                <th class="uk-text-emphasis">{ "Description" }</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="td-label-code td-margin-text">{ "MGMT_API_ACCESS_TOKEN" }</span>
+                                </td>
+                                <td>
+                                    { "Access Token for the Management API with the scope" }
+                                    <span class="td-label-code td-margin-text">{ "read:signing_keys" }</span>
+                                    { "." }
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h1 class="td-text-size-large">{ "Get a single signing keys" }</h1>
+                    <p>
+                        { "Make a" }
+                        <span class="td-label-code td-margin-text">{ "GET" }</span>
+                        { "call to the" }
+                        <span class="td-label-code td-margin-text">{ "/signing_keys/get_signing_keys" }</span>
+                        { "endpoint. Be sure to replace the" }
+                        <span class="td-label-code td-margin-text">{ "YOUR_KEY_ID" }</span>
+                        { "and" }
+                        <span class="td-label-code td-margin-text">{ "MGMT_API_ACCESS_TOKEN" }</span>
+                        { "placeholder values with your signing key's ID and Management API Access Token, respectively." }
+                    </p>
+                    <p style="color: red;">{ "CODE BOX" }</p>
                     <table class="uk-table uk-table-divider">
                         <thead>
                             <tr>
@@ -143,7 +211,7 @@ impl Component for ViewSigningCertificates {
                                     <span class="td-label-code td-margin-text">{ "YOUR_KEY_ID" }</span>
                                 </td>
                                 <td>
-                                    { "ID of the signing key to be revoked. To learn how to find your signing key ID, see Locate JSON Web Key Sets." }
+                                    { "ID of the signing key to be viewed. To learn how to find your signing key ID, see Locate JSON Web Key Sets." }
                                 </td>
                             </tr>
                             <tr>
@@ -152,8 +220,7 @@ impl Component for ViewSigningCertificates {
                                 </td>
                                 <td>
                                     { "Access Token for the Management API with the scope" }
-                                    { "and" }
-                                    <span class="td-label-code td-margin-text">{ "update:signing_keys" }</span>
+                                    <span class="td-label-code td-margin-text">{ "read:signing_keys" }</span>
                                     { "." }
                                 </td>
                             </tr>
@@ -166,8 +233,9 @@ impl Component for ViewSigningCertificates {
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">
+                        <li>{ "Revoke Signing Keys" }</li>
                         <li>{ "Rotate Signing Keys" }</li>
-                        <li>{ "View Signing Certificates" }</li>
+                        <li>{ "Signing Alo" }</li>
                         <li>{ "Change Application Signing Algorithms" }</li>
                     </ul>
                 </div>
