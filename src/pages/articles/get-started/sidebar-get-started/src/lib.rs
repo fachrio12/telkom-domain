@@ -471,6 +471,16 @@ impl SidebarGetStarted {
                                                                         </span>
                                                                     </Link<Route>>
                                                                 </div>
+                                                                <div class="uk-margin-left td-sidebar-subtopic">
+                                                                    <Link<Route>
+                                                                        to={Route::ViewSigningCertificates}
+                                                                        classes="uk-text-muted"
+                                                                    >
+                                                                        <span>
+                                                                            { "View Signing Certificates" }
+                                                                        </span>
+                                                                    </Link<Route>>
+                                                                </div>
                                                             </>
                                                         }
                                                     } else {

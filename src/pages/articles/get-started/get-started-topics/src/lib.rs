@@ -35,4 +35,5 @@ pub enum SubTopic2 {
     // Signing Keys
     RotateSigningKeys,
     RevokeSigningKeys,
+    ViewSigningCertificates,
 }

@@ -51,6 +51,8 @@ pub enum Route {
     RotateSigningKeys,
     #[at("/get-started/tenant-settings/revoke-signing-keys")]
     RevokeSigningKeys,
+    #[at("/get-started/tenant-settings/view-signing-certificates")]
+    ViewSigningCertificates,
     #[at("/get-started/tenant-settings/signing-keys")]
     SigningKeys,
 

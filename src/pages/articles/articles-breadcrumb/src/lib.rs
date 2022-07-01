@@ -240,6 +240,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic2::ViewSigningCertificates => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::ViewSigningCertificates}
+                                >
+                                    { "Revoke Signing Keys" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
             </ul>
