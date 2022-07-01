@@ -76,6 +76,9 @@ pub fn switch(routes: &Route) -> Html {
         Route::RevokeSigningKeys => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } sub_topic_2={ SubTopic2::RevokeSigningKeys } />
         },
+        Route::ViewSigningCertificates => html! {
+            <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } sub_topic_2={ SubTopic2::ViewSigningCertificates } />
+        },
         Route::SigningKeys => html! {
             <GetStartedMain topic={ Topic::TenantSettings } sub_topic={ SubTopic::SigningKeys } />
         },

@@ -25,6 +25,7 @@ use tenant_settings_home::TenantSettingsHome;
 use signing_keys_home::SigningKeysHome;
 use rotate_signing_keys::RotateSigningKeys;
 use revoke_signing_keys::RevokeSigningKeys;
+use view_signing_certificates::ViewSigningCertificates;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -184,6 +185,11 @@ impl Component for GetStartedContent {
                             SubTopic2::RevokeSigningKeys => {
                                 html! {
                                     <RevokeSigningKeys/>
+                                }
+                            }
+                            SubTopic2::ViewSigningCertificates => {
+                                html! {
+                                    <ViewSigningCertificates/>
                                 }
                             }
                             _ => html! {}
