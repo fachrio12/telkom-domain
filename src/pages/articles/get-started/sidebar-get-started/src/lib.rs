@@ -496,6 +496,23 @@ impl SidebarGetStarted {
                             }
                         </div>
                     </div>
+
+                    <div
+                        class="uk-text-muted uk-margin-small-bottom"
+                    >
+                        <div>
+                            <Link<Route>
+                                to={Route::GetStartedApplicationsInDomain}
+                                classes="uk-text-muted"
+                            >
+                                { "Applications in Domain" }
+                                <span
+                                    style="float: right; padding-top: 4px;"
+                                    uk-icon="icon: chevron-right;  ratio: 0.85">
+                                </span>
+                            </Link<Route>>
+                        </div>
+                    </div>
                 </div>
             </>
         }

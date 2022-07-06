@@ -104,6 +104,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        Topic::ApplicationsInDomain => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::GetStartedApplicationsInDomain}
+                                >
+                                    { "Applications in Domain" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {

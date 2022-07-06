@@ -70,4 +70,6 @@ members = [
     "src/pages/articles/get-started/tenant-settings/signing-keys/revoke-signing-keys",
     "src/pages/articles/get-started/tenant-settings/signing-keys/view-signing-certificates",
 
+    "src/pages/articles/get-started/applications-in-domain/applications-in-domain-home",
+
 ]
