@@ -27,6 +27,8 @@ use rotate_signing_keys::RotateSigningKeys;
 use revoke_signing_keys::RevokeSigningKeys;
 use view_signing_certificates::ViewSigningCertificates;
 
+use applications_in_domain_home::ApplicationsInDomainHome;
+
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
@@ -193,6 +195,16 @@ impl Component for GetStartedContent {
                                 }
                             }
                             _ => html! {}
+                        }
+                    }
+                    _ => html! {}
+                }
+            }
+            Topic::ApplicationsInDomain => {
+                match self.sub_topic {
+                    SubTopic::Home => {
+                        html! {
+                            <ApplicationsInDomainHome/>
                         }
                     }
                     _ => html! {}

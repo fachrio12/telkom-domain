@@ -4,6 +4,7 @@ pub enum Topic {
     IdentityFundamentals,
     DomainOverview,
     TenantSettings,
+    ApplicationsInDomain,
 }
 
 #[derive(Clone, PartialEq, Debug)]
@@ -37,3 +38,4 @@ pub enum SubTopic2 {
     RevokeSigningKeys,
     ViewSigningCertificates,
 }
+

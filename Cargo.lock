@@ -17,6 +17,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "applications-in-domain-home"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "articles-breadcrumb"
 version = "0.1.0"
 dependencies = [
@@ -133,6 +140,7 @@ name = "get-started-content"
 version = "0.1.0"
 dependencies = [
  "activity-about",
+ "applications-in-domain-home",
  "authentication-vs-authorization",
  "create-multiple-tenants",
  "create-tenants-home",

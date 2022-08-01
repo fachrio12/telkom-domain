@@ -60,6 +60,10 @@ pub enum Route {
     GetStartedTenantSettings,
 
 
+    #[at("/get-started/applications-in-domain")]
+    GetStartedApplicationsInDomain,
+
+
     #[at("/secure")]
     Secure,
     #[not_found]
