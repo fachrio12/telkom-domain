@@ -32,3 +32,4 @@ revoke-signing-keys= { path = "../tenant-settings/signing-keys/revoke-signing-ke
 view-signing-certificates= { path = "../tenant-settings/signing-keys/view-signing-certificates" }
 
 applications-in-domain-home= { path = "../applications-in-domain/applications-in-domain-home" }
+application-settings = { path = "../applications-in-domain/application-settings" }

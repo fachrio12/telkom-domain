@@ -181,6 +181,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::ApplicationSettings => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::ApplicationSettings}
+                                >
+                                    { "Application Settings" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {

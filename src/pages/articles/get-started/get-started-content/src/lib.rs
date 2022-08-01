@@ -28,6 +28,7 @@ use revoke_signing_keys::RevokeSigningKeys;
 use view_signing_certificates::ViewSigningCertificates;
 
 use applications_in_domain_home::ApplicationsInDomainHome;
+use application_settings::ApplicationSettings;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -205,6 +206,11 @@ impl Component for GetStartedContent {
                     SubTopic::Home => {
                         html! {
                             <ApplicationsInDomainHome/>
+                        }
+                    }
+                    SubTopic::ApplicationSettings => {
+                        html! {
+                            <ApplicationSettings/>
                         }
                     }
                     _ => html! {}

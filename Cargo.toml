@@ -71,5 +71,6 @@ members = [
     "src/pages/articles/get-started/tenant-settings/signing-keys/view-signing-certificates",
 
     "src/pages/articles/get-started/applications-in-domain/applications-in-domain-home",
+    "src/pages/articles/get-started/applications-in-domain/application-settings",
 
 ]
