@@ -25,109 +25,160 @@ impl Component for ApplicationSettings {
         html! {
             <>
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Application Settings" }</h1>
-                <Alert message={String::from("Before you register any APIs in the Auth0 Dashboard, one API will already exist: the Auth0 Management API. To learn more about the features of the Management API and its available endpoints, see Management API.")}/>
 
-                <ul class="uk-list uk-list-decimal">
-                    <li>
-                        <p>
-                            { "Go to" }
-                            <a href="localhost:8080">{ "Dashboard > Applications > APIs" }</a>
-                            { ", and select + Create API." }
-                        </p>
-                        <img
-                            class="uk-margin-top uk-margin-bottom"
-                            src="/assets/register-apis/dashboard-applications-apis-create-api.png"
-                        />
-                    </li>
-                    <li>
-                        <p>
-                            { "Provide the following information for your API, and click" }
-                            <b class="td-margin-text">{ "Create:" }</b>
-                        </p>
-                        <table class="uk-table uk-table-divider">
-                            <thead>
-                                <tr>
-                                    <th class="uk-text-emphasis">{ "Field" }</th>
-                                    <th class="uk-text-emphasis">{ "Description" }</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        { "Name" }
-                                    </td>
-                                    <td>{ "A friendly name for the API. Does not affect any functionality." }</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        { "Identifier" }
-                                    </td>
-                                    <td>
-                                        { "A unique identifier for the API. Auth0 recommends using a URL. Auth0 does differentiate between URLs that include the last forward slash. For example," }
-                                        <span class="td-label-code td-margin-text">
-                                            { "https://example.com" }
-                                        </span>
-                                        { "and" }
-                                        <span class="td-label-code td-margin-text">
-                                            { "https://example.com/" }
-                                        </span>
-                                        { "are two different identifiers. The URL does not have to be a publicly available URL. Auth0 will not call your API. This value cannot be modified afterwards." }
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        { "Signing Algorithm" }
-                                    </td>
-                                    <td>{ "The algorithm to sign the tokens with. The available values are HS256 and RS256. When selecting RS256 the token will be signed with the tenant's private key." }</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <p>
-                            { "Make the implementation changes to your API that are described in the QuickStart. These changes consist of choosing a JWT library from a predefined list and configuring this library to validate the access tokens in your API." }
-                        </p>
-                        <img
-                            class="uk-margin-top uk-margin-bottom"
-                            src="/assets/register-apis/dashboard-apis-edit_view-quick-start.png"
-                        />
-                    </li>
-                </ul>
+                <p>{ "On the Applications page of the Dashboard, locate your application in the list, and click its name to view the available settings." }</p>
+                <img
+                    class="uk-margin-top uk-margin-bottom"
+                    src="/assets/application-settings/dashboard-applications-applications-list.png"
+                />
 
                 <div class="uk-margin-large-bottom">
+                    <h1 class="td-text-size-large">{ "Basic Settings" }</h1>
                     <p>
-                        { "The other available Dashboard views for your API are:" }
+                        { "When you edit an existing application's settings or create a new application, you enter information about the application in the Settings view." }
+                        <b class="td-margin-text">{ "Settings" }</b>
+                        { "view" }
                     </p>
+                </div>
+
+                <div class="uk-margin-large-bottom">
+                    <h1 class="td-text-size-large">{ "Basic Information" }</h1>
+                    <img
+                        class="uk-margin-top uk-margin-bottom"
+                        src="/assets/application-settings/dashboard-applications-applications-settings-basic-information.png"
+                    />
                     <ul class="uk-list uk-list-decimal">
                         <li>
-                            <b class="td-margin-text">{ "Settings: " }</b>
-                            { "Lists the settings for your API. Some are editable. Here you can change the token expiration time and enable offline access (this way Auth0 will allow your applications to ask for refresh tokens for this API)." }
+                            <b class="td-margin-text">
+                                { "Name:" }
+                            </b>
+                            { "The name of your application. Editable, and will be seen in the portal, emails, logs, and so on." }
                         </li>
                         <li>
-                            <b class="td-margin-text">{ "Scopes: " }</b>
-                            { "Define the scopes for this API by setting a name and a description." }
+                            <b class="td-margin-text">
+                                { "Domain:" }
+                            </b>
+                            { "Your Auth0 tenant name. You choose this when you create a new Auth0 tenant, and it cannot be changed. If you need a different domain, you must register for a new tenant by selecting" }
+                            <b class="td-margin-text">
+                                { "+ Create Tenant" }
+                            </b>
+                            { "in the top-right menu." }
                         </li>
                         <li>
-                            <b class="td-margin-text">{ "Machine to Machine Applications: " }</b>
-                            { "Lists all applications for which the " }
-                            <b class="td-margin-text">{ "Client Credentials" }</b>
-                            { " grant is enabled. By default, this grant is enabled for regular web applications and machine-to-machine applications. You can authorize any of these applications to request access tokens for your API. Optionally, you can select a subset of the defined scopes to limit your authorized application's access." }
+                            <b class="td-margin-text">
+                                { "Client ID:" }
+                            </b>
+                            { "The unique identifier for your application. You will use this when configuring authentication with Auth0. Generated by the system when you create a new application and cannot be modified." }
                         </li>
                         <li>
-                            <b class="td-margin-text">{ "Test: " }</b>
-                            { "Execute a sample client credentials flow with any of your authorized applications to check that everything is working as expected." }
+                            <b class="td-margin-text">
+                                { "Client Secret:" }
+                            </b>
+                            { "A string used to sign and validate ID Tokens for authentication flows and to gain access to select Auth0 API endpoints. By default, the value is hidden, so check the" }
+                            <b class="td-margin-text">
+                                { "Reveal Client Secret" }
+                            </b>
+                            { "box to see it. While the Client ID is considered public information, the Client Secret" }
+                            <b class="td-margin-text">
+                                { "must be kept confidential." }
+                            </b>
+                            { "If anyone can access your Client Secret, they can issue tokens and access resources they shouldn't be able to access." }
+                        </li>
+                        <li>
+                            <b class="td-margin-text">
+                                { "Description:" }
+                            </b>
+                            { "A free-text description of the Application's purpose. Maximum of 140 characters." }
                         </li>
                     </ul>
                 </div>
+
+                <div class="uk-margin-large-bottom">
+                    <h1 class="td-text-size-large">{ "Basic Information" }</h1>
+                    <img
+                        class="uk-margin-top uk-margin-bottom"
+                        src="/assets/application-settings/dashboard-applications-applications-settings-app-properties.png"
+                    />
+                    <ul class="uk-list uk-list-decimal">
+                        <li>
+                            <b class="td-margin-text">
+                                { "Application Logo:" }
+                            </b>
+                            { "The URL of a logo (recommended size: 150x150 pixels) to display for the application. Appears in several areas, including the list of applications in the Dashboard and customized consent forms. If none is set the default badge for this type of application will be shown." }
+                        </li>
+                        <li>
+                            <b class="td-margin-text">
+                                { "Application Type:" }
+                            </b>
+                            <p>
+                                { "The Telkom Domain application type determines which settings you can configure using the Dashboard. (Not editable for M2M apps. Sometimes disabled for other Telkom Domain application types if the selected grant types are only allowed for the currently selected application type.) Use the drop-down to select from the following types:" }
+                            </p>
+                            <ul class="uk-list uk-list-decimal">
+                                <li>
+                                    <span class="td-margin-text">
+                                        { "Machine to Machine:" }
+                                    </span>
+                                    { "Non-interactive applications, such as command-line tools, daemons, IoT devices, or services running on your backend. Typically, you use this option if you have a service that requires access to an API." }
+                                </li>
+                                <li>
+                                    <span class="td-margin-text">
+                                        { "Native App:" }
+                                    </span>
+                                    { "Mobile or Desktop applications that run natively in a device (such as iOS or Android)." }
+                                </li>
+                                <li>
+                                    <span class="td-margin-text">
+                                        { "Regular Web App:" }
+                                    </span>
+                                    { "Traditional web apps that perform most of their application logic on the server (such as Express.js or ASP.NET)." }
+                                </li>
+                                <li>
+                                    <span class="td-margin-text">
+                                        { "Single Page App:" }
+                                    </span>
+                                    { "JavaScript apps that perform most of their user interface logic in a web browser, communicating with a web server primarily using APIs (such as AngularJS + Node.js or React). " }
+                                </li>
+                            </ul>
+                        </li>
+
+                        // <li>
+                        //     <b class="td-margin-text">
+                        //         { "Token Endpoint Authentication Method:" }
+                        //     </b>
+                        //     { "Defines the requested authentication method for the /oauth/token endpoint. Choose one of these values:" }
+                        //     <ul class="uk-list uk-list-decimal">
+                        //         <li>
+                        //         </li>
+                        //     </ul>
+                        // </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="uk-margin-large-bottom">
+                    <h1 class="td-text-size-large">{ "ID Token" }</h1>
+                    <p>
+                        { "In the" }
+                        <b class="td-margin-text">{ "ID Token" }</b>
+                        { "section, enter the" }
+                        <b class="td-margin-text">{ "ID Token Expiration" }</b>
+                        { "(in seconds) which is the amount of time before the Auth0 id_token expires. The default value is 36000 seconds which is 10 hours." }
+                    </p>
+                    <Alert message={String::from("Use Auth0 instead of the IdP to do Single Sign-on: If enabled, this setting prevents Auth0 from redirecting authenticated users with valid sessions to the identity provider (such as Facebook or ADFS). Legacy tenants only.")}/>
+                    <img
+                        class="uk-margin-top uk-margin-bottom"
+                        src="/assets/application-settings/dashboard-applications-applications-settings-id-token.png"
+                    />
+                </div>
+
 
                 <div
                     class="uk-margin-large-bottom"
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">
-                        <li>{ "API Settings" }</li>
-                        <li>{ "Token Best Practices" }</li>
-                        <li>{ "Which OAuth 2.0 Flow Should I Use?" }</li>
+                        <li>{ "Create Applications" }</li>
+                        <li>{ "Remove Applications" }</li>
                     </ul>
                 </div>
                 
