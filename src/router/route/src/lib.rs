@@ -60,7 +60,10 @@ pub enum Route {
     GetStartedTenantSettings,
 
 
-    #[at("/get-started/applications-in-domain")]
+    #[at("/get-started/applications/application-settings")]
+    ApplicationSettings,
+
+    #[at("/get-started/applications")]
     GetStartedApplicationsInDomain,
 
 

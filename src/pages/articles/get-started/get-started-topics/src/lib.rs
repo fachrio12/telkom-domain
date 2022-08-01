@@ -20,6 +20,8 @@ pub enum SubTopic {
     RegisterApis,
 
     SigningKeys,
+
+    ApplicationSettings,
 }
 
 #[derive(Clone, PartialEq, Debug)]

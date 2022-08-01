@@ -511,6 +511,28 @@ impl SidebarGetStarted {
                                     uk-icon="icon: chevron-right;  ratio: 0.85">
                                 </span>
                             </Link<Route>>
+                            {
+                                if topic == Topic::ApplicationsInDomain {
+                                    html! {
+                                        <div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::ApplicationSettings}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Application Settings" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                        </div>
+                                    }
+                                } else {
+                                    html! {}
+                                }
+                            }
                         </div>
                     </div>
                 </div>
