@@ -190,6 +190,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::RemoveApplications => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::RemoveApplications}
+                                >
+                                    { "Remove Applications" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {

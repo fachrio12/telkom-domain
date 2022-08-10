@@ -60,6 +60,8 @@ pub enum Route {
     GetStartedTenantSettings,
 
 
+    #[at("/get-started/applications/remove-applications")]
+    RemoveApplications,
     #[at("/get-started/applications/application-settings")]
     ApplicationSettings,
 

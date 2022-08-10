@@ -88,6 +88,9 @@ pub fn switch(routes: &Route) -> Html {
         },
 
 
+        Route::RemoveApplications => html! {
+            <GetStartedMain topic={ Topic::ApplicationsInDomain } sub_topic={ SubTopic::RemoveApplications } />
+        },
         Route::ApplicationSettings => html! {
             <GetStartedMain topic={ Topic::ApplicationsInDomain } sub_topic={ SubTopic::ApplicationSettings } />
         },
