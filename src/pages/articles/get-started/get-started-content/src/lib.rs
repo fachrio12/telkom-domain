@@ -29,6 +29,7 @@ use view_signing_certificates::ViewSigningCertificates;
 
 use applications_in_domain_home::ApplicationsInDomainHome;
 use application_settings::ApplicationSettings;
+use remove_applications::RemoveApplications;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -211,6 +212,11 @@ impl Component for GetStartedContent {
                     SubTopic::ApplicationSettings => {
                         html! {
                             <ApplicationSettings/>
+                        }
+                    }
+                    SubTopic::RemoveApplications => {
+                        html! {
+                            <RemoveApplications/>
                         }
                     }
                     _ => html! {}

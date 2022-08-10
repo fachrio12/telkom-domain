@@ -33,3 +33,4 @@ view-signing-certificates= { path = "../tenant-settings/signing-keys/view-signin
 
 applications-in-domain-home= { path = "../applications-in-domain/applications-in-domain-home" }
 application-settings = { path = "../applications-in-domain/application-settings" }
+remove-applications = { path = "../applications-in-domain/remove-applications" }

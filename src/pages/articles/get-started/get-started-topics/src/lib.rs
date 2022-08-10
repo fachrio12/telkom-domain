@@ -22,6 +22,7 @@ pub enum SubTopic {
     SigningKeys,
 
     ApplicationSettings,
+    RemoveApplications,
 }
 
 #[derive(Clone, PartialEq, Debug)]

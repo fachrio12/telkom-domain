@@ -527,6 +527,18 @@ impl SidebarGetStarted {
                                                     </span>
                                                 </Link<Route>>
                                             </div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::RemoveApplications}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Remove Applications" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
                                         </div>
                                     }
                                 } else {
