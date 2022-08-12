@@ -113,6 +113,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        Topic::Apis => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::GetStartedApplicationsInDomain}
+                                >
+                                    { "APIs" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {

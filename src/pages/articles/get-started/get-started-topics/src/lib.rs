@@ -5,6 +5,7 @@ pub enum Topic {
     DomainOverview,
     TenantSettings,
     ApplicationsInDomain,
+    Apis,
 }
 
 #[derive(Clone, PartialEq, Debug)]

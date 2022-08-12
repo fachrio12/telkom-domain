@@ -103,48 +103,55 @@ impl Component for GetStartedMain {
 
 impl GetStartedMain {
     fn view_content (&self) -> Html {
-        // log::info!("get started main, sub topic 2 ====== {:?}", self.sub_topic_2);
-        match self.topic {
-            Topic::Home => {
-                html! {
-                    <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                        <GetStartedContent/>
-                    </>
-                }
-            }
-            Topic::IdentityFundamentals => {
-                html! {
-                    <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                    </>
-                }
-            }
-            Topic::DomainOverview => {
-                html! {
-                    <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                    </>
-                }
-            }
-            Topic::TenantSettings => {
-                html! {
-                    <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                    </>
-                }
-            }
-            Topic::ApplicationsInDomain => {
-                html! {
-                    <>
-                        <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                        <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
-                    </>
-                }
-            }
+        
+        html! {
+            <>
+                <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+                <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+            </>
         }
+
+        // match self.topic {
+        //     Topic::Home => {
+        //         html! {
+        //             <>
+        //                 <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //                 <GetStartedContent/>
+        //             </>
+        //         }
+        //     }
+        //     Topic::IdentityFundamentals => {
+        //         html! {
+        //             <>
+        //                 <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //                 <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //             </>
+        //         }
+        //     }
+        //     Topic::DomainOverview => {
+        //         html! {
+        //             <>
+        //                 <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //                 <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //             </>
+        //         }
+        //     }
+        //     Topic::TenantSettings => {
+        //         html! {
+        //             <>
+        //                 <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //                 <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //             </>
+        //         }
+        //     }
+        //     Topic::ApplicationsInDomain => {
+        //         html! {
+        //             <>
+        //                 <ArticlesBreadcrumb topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //                 <GetStartedContent topic={ self.topic.to_owned() } sub_topic={ self.sub_topic.to_owned() } sub_topic_2={ self.sub_topic_2.to_owned() } />
+        //             </>
+        //         }
+        //     }
+        // }
     }
 }

@@ -547,6 +547,56 @@ impl SidebarGetStarted {
                             }
                         </div>
                     </div>
+                    <div
+                        class="uk-text-muted uk-margin-small-bottom"
+                    >
+                        <div>
+                            <Link<Route>
+                                to={Route::GetStartedApis}
+                                classes="uk-text-muted"
+                            >
+                                { "APIs" }
+                                <span
+                                    style="float: right; padding-top: 4px;"
+                                    uk-icon="icon: chevron-right;  ratio: 0.85">
+                                </span>
+                            </Link<Route>>
+                            {
+                                if topic == Topic::ApplicationsInDomain {
+                                    html! {
+                                        <div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::ApplicationSettings}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Application Settings" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                            <div
+                                                class="uk-margin-left td-sidebar-subtopic"
+                                            >
+                                                <Link<Route>
+                                                    to={Route::RemoveApplications}
+                                                    classes="uk-text-muted"
+                                                >
+                                                    <span>
+                                                        { "Remove Applications" }
+                                                    </span>
+                                                </Link<Route>>
+                                            </div>
+                                        </div>
+                                    }
+                                } else {
+                                    html! {}
+                                }
+                            }
+                        </div>
+                    </div>
                 </div>
             </>
         }

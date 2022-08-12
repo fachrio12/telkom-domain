@@ -17,6 +17,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "apis-home"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "application-settings"
 version = "0.1.0"
 dependencies = [
@@ -148,6 +155,7 @@ name = "get-started-content"
 version = "0.1.0"
 dependencies = [
  "activity-about",
+ "apis-home",
  "application-settings",
  "applications-in-domain-home",
  "authentication-vs-authorization",

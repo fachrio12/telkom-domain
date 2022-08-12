@@ -74,4 +74,6 @@ members = [
     "src/pages/articles/get-started/applications-in-domain/application-settings",
     "src/pages/articles/get-started/applications-in-domain/remove-applications",
 
+    "src/pages/articles/get-started/apis/apis-home",
+
 ]
