@@ -1,4 +1,5 @@
 use yew::prelude::*;
+use alert::Alert;
 
 
 pub struct ApisHome {}
@@ -27,98 +28,38 @@ impl Component for ApisHome {
 
                 <h1 class="uk-heading-small uk-margin-medium-bottom">{ "APIs" }</h1>
                 <p>
-                    { "The term application or app in Auth0 does not imply any particular implementation characteristics. For example, it could be a native app that executes on a mobile device, a single-page application that executes on a browser, or a regular web application that executes on a server." }
+                    { "An API is an entity that represents an external resource, capable of accepting and responding to protected resource requests made by applications. In the OAuth2 specification, an API maps to the Resource Server." }
                 </p>
                 <p>
-                    { "Auth0 categorizes apps based on these characteristics:" }
+                    { "At some point, your custom APIs will need to allow limited access to their protected resources on behalf of users. Authorization refers to the process of verifying what a user has access to. While often used interchangeably with authentication, authorization represents a fundamentally different function. To learn more, read Authentication and Authorization." }
+                </p>
+                <p>
+                    { "In authorization, a user or application is granted access to an API after the API determines the extent of the permissions that it should assign. Usually, authorization occurs after identity is successfully validated through authentication so that the API has some idea of what sort of access it should grant." }
+                </p>
+                <p>
+                    { "Authorization can be determined through the use of policies and rules, which can be used with role-based access control (RBAC). Regardless of whether RBAC is used, requested access is transmitted to the API via scopes and granted access is returned in issued Access Tokens." }
+                </p>
+                <p class="uk-margin-medium-bottom">
+                    { "The application can then use the Access Toke to access the API's protected resources. The same Access Token can be used to access the API's resources without having to authenticate again until it expires." }
                 </p>
 
-                <ul class="uk-list uk-list-disc uk-margin-medium-bottom">
-                    <li>
-                        <p>
-                            <b style="margin-right: 5px;">{ "Application type:" }</b>
-                            { "To add authentication to your application, you must register it in the Auth0 Dashboard and select from one of the following application types:" }
-                        </p>
-                        <ul class="uk-list uk-list-disc uk-margin-medium-bottom">
-                            <li>
-                                <b style="margin-right: 5px;">{ "Regular web application:" }</b>
-                                { "Traditional web apps that perform most of their application logic on the server (such as Express.js or ASP.NET). To learn how to set up a regular web application, read Register Regular Web Applications." }
-                            </li>
-                            <li>
-                                <b style="margin-right: 5px;">{ "Single page web application (SPA):" }</b>
-                                { "JavaScript apps that perform most of their user interface logic in a web browser, communicating with a web server primarily using APIs (such as AngularJS + Node.js or React). To learn how to set up a Single-page web application, read Register Single-Page Web Applications." }
-                            </li>
-                            <li>
-                                <b style="margin-right: 5px;">{ "Native application:" }</b>
-                                { "Mobile or Desktop applications that run natively on a device (such as iOS or Android). To learn how to set up a native application, read Register Native Applications." }
-                            </li>
-                            <li>
-                                <b style="margin-right: 5px;">{ "Machine to machine (M2M) application:" }</b>
-                                { "Non-interactive applications, such as command-line tools, daemons, IoT devices, or services running on your backend. Typically, you use this option if you have a service that requires access to an API. To learn how to set up a native application, read Register Machine-to-Machine Applications." }
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <b style="margin-right: 5px;">{ "Credential security:" }</b>
-                        { "Credential security: According to the OAuth 2.0 spec, apps can be classified as either public or confidential; confidential apps can hold credentials securely, while public apps cannot. To learn more, read Confidential and Public Applications." }
-                    </li>
-                    <li>
-                        <b style="margin-right: 5px;">{ "Ownership:" }</b>
-                        { "Whether an app is classified as first- or third-party depends on app ownership and control. First-party apps are controlled by the same organization or person that owns the Auth0 domain. Third-party apps enable external parties or partners to securely access protected resources behind your API. To learn more, read First-Party and Third-Party Applications." }
-                    </li>
-                </ul>
 
 
                 <div
                     class="uk-margin-medium-bottom"
                 >
-                    <h1 class="td-text-size-large">{ "Manage applications settings" }</h1>
-                    <p>{ "You register applications in Dashboard > Applications > Applications. In addition to setting up applications in the Dashboard, you can also set up applications programmatically as described in the OpenID Connect (OIDC) Dynamic Client Registration 1.0 specification." }</p>
-                    <p>
-                        { "You can set up a more complex configuration that allows users to log in differently for different apps. To learn more, read Multi-Tenant Application Best Practices and Create Multiple Tenants." }
-                    </p>
-                    <p>
-                        { "By default, Auth0 enables all connections associated with your tenant when you create a new application. To change this, update application connections in the Application Settings in the Dashboard." }
-                    </p>
+                    <h1 class="td-text-size-large">{ "API permissions" }</h1>
+                    <p>{ "Since only the API can know all of the possible actions that it can handle, it should have its own internal access control system in which it defines its own permissions. To determine a calling application's effective permissions, an API should combine incoming scopes with the permissions assigned within its own internal access control system and make access control decisions accordingly." }</p>
                 </div>
 
                 <div
                     class="uk-margin-medium-bottom"
                 >
-                    <h1 class="td-text-size-large">{ "Monitor applications" }</h1>
+                    <h1 class="td-text-size-large">{ "Configure an API" }</h1>
                     <p>
-                        { "You can monitor apps and perform end-to-end testing using your own tests. Auth0 stores log data including Dashboard administrator actions, successful and failed user authentications, and password change requests. You can use Auth0 Extensions to export your log data and use tools like Sumo Logic, Splunk, or Loggly to analyze and store your log data." }
+                        { "To protect an API, you must register an API using the Auth0 Dashboard. To learn more, see Register APIs." }
                     </p>
-                </div>
-
-                <div
-                    class="uk-margin-medium-bottom"
-                >
-                    <h1 class="td-text-size-large">{ "Remove applications" }</h1>
-                    <p>
-                        { "You can remove an application using the Dashboard or the Management API." }
-                    </p>
-                </div>
-
-                <div
-                    class="uk-margin-medium-bottom"
-                >
-                    <h1 class="td-text-size-large">{ "Manage client secrets" }</h1>
-                    <p>
-                        { "A client secret is a secret known only to your application and the authorization server. It protects your resources by only granting tokens to authorized requestors." }
-                    </p>
-                    <p>
-                        { "Protect your client secrets and never include them in mobile or browser-based apps. If your client secret is ever compromised, you should rotate to a new one and update all authorized apps with the new client secret." }
-                    </p>
-                </div>
-
-                <div
-                    class="uk-margin-medium-bottom"
-                >
-                    <h1 class="td-text-size-large">{ "Grant types" }</h1>
-                    <p>
-                        { "Auth0 provides many different authentication and authorization grant types or flows and allows you to indicate which grant types are appropriate based on the grant_types property of your Auth0-registered app. To learn more, read Application Grant Types." }
-                    </p>
+                    <Alert message={String::from("Before you register any APIs in the Dashboard, one API will already exist: the Management API. To learn more about the features of the Management API and its available endpoints, see Management API.")} />
                 </div>
 
                 <div
@@ -126,12 +67,10 @@ impl Component for ApisHome {
                 >
                     <h1 class="td-text-size-large">{ "Learn more" }</h1>
                     <ul class="uk-list uk-list-disc">
-                        <li>{ "Application Settings" }</li>
-                        <li>{ "Confidential and Public Applications" }</li>
-                        <li>{ "First-Party and Third-Party Applications" }</li>
-                        <li>{ "Application Grant Types" }</li>
-                        <li>{ "Subdomain URL Placehorders" }</li>
-                        <li>{ "Dynamic Application Registration" }</li>
+                        <li>{ "API Scopes" }</li>
+                        <li>{ "Tokens" }</li>
+                        <li>{ "Register APIs" }</li>
+                        <li>{ "API Settings" }</li>
                     </ul>
                 </div>
 
