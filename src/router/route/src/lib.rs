@@ -69,6 +69,10 @@ pub enum Route {
     GetStartedApplicationsInDomain,
 
 
+    #[at("/get-started/apis")]
+    GetStartedApis,
+
+
     #[at("/secure")]
     Secure,
     #[not_found]

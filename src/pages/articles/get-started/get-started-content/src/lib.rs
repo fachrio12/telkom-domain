@@ -31,6 +31,8 @@ use applications_in_domain_home::ApplicationsInDomainHome;
 use application_settings::ApplicationSettings;
 use remove_applications::RemoveApplications;
 
+use apis_home::ApisHome;
+
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
@@ -217,6 +219,16 @@ impl Component for GetStartedContent {
                     SubTopic::RemoveApplications => {
                         html! {
                             <RemoveApplications/>
+                        }
+                    }
+                    _ => html! {}
+                }
+            }
+            Topic::Apis => {
+                match self.sub_topic {
+                    SubTopic::Home => {
+                        html! {
+                            <ApisHome/>
                         }
                     }
                     _ => html! {}

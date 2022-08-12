@@ -98,6 +98,11 @@ pub fn switch(routes: &Route) -> Html {
         Route::GetStartedApplicationsInDomain => html! {
             <GetStartedMain topic={ Topic::ApplicationsInDomain } sub_topic={ SubTopic::Home } />
         },
+
+
+        Route::GetStartedApis => html! {
+            <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::Home } />
+        },
         
 
         Route::GetStartedHome => html! {
