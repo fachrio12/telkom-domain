@@ -116,7 +116,7 @@ impl Component for ArticlesBreadcrumb {
                         Topic::Apis => html! {
                             <li>
                                 <Link<Route>
-                                    to={Route::GetStartedApplicationsInDomain}
+                                    to={Route:: GetStartedApis}
                                 >
                                     { "APIs" }
                                 </Link<Route>>
@@ -205,6 +205,42 @@ impl Component for ArticlesBreadcrumb {
                                     to={Route::RemoveApplications}
                                 >
                                     { "Remove Applications" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::ApisSettings => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::ApisSettings}
+                                >
+                                    { "API Settings" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::AddApiPermissions => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::AddApiPermissions}
+                                >
+                                    { "Add API Permissions" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::DeleteApiPermissions => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::DeleteApiPermissions}
+                                >
+                                    { "Delete API Permissions" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::Scopes => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::Scopes}
+                                >
+                                    { "Scopes" }
                                 </Link<Route>>
                             </li>
                         },

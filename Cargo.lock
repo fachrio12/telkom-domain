@@ -10,6 +10,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "add-api-permissions"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "alert2",
+ "yew",
+]
+
+[[package]]
 name = "alert"
 version = "0.1.0"
 dependencies = [
@@ -17,7 +26,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "alert2"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "apis-home"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
+]
+
+[[package]]
+name = "apis-settings"
 version = "0.1.0"
 dependencies = [
  "alert",
@@ -114,6 +138,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "delete-api-permissions"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "fnv"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -156,12 +187,15 @@ name = "get-started-content"
 version = "0.1.0"
 dependencies = [
  "activity-about",
+ "add-api-permissions",
  "apis-home",
+ "apis-settings",
  "application-settings",
  "applications-in-domain-home",
  "authentication-vs-authorization",
  "create-multiple-tenants",
  "create-tenants-home",
+ "delete-api-permissions",
  "get-started-home",
  "get-started-topics",
  "identity-fundamentals-home",
@@ -174,6 +208,7 @@ dependencies = [
  "remove-applications",
  "revoke-signing-keys",
  "rotate-signing-keys",
+ "scopes",
  "set-up-multiple-environments",
  "signing-keys-home",
  "telkom-domain-dashboard-home",
@@ -537,6 +572,13 @@ name = "scoped-tls-hkt"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2e9d7eaddb227e8fbaaa71136ae0e1e913ca159b86c7da82f3e8f0044ad3a63"
+
+[[package]]
+name = "scopes"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
 
 [[package]]
 name = "serde"

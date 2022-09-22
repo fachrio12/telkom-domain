@@ -36,3 +36,7 @@ application-settings = { path = "../applications-in-domain/application-settings"
 remove-applications = { path = "../applications-in-domain/remove-applications" }
 
 apis-home= { path = "../apis/apis-home" }
+apis-settings= { path = "../apis/apis-settings" }
+add-api-permissions= { path = "../apis/add-api-permissions" }
+delete-api-permissions= { path = "../apis/delete-api-permissions" }
+scopes= { path = "../apis/scopes" }

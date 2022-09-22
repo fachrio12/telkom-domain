@@ -32,6 +32,10 @@ use application_settings::ApplicationSettings;
 use remove_applications::RemoveApplications;
 
 use apis_home::ApisHome;
+use apis_settings::ApisSettings;
+use add_api_permissions::AddApiPermissions;
+use delete_api_permissions::DeleteApiPermissions;
+use scopes::Scopes;
 
 
 #[derive(Properties, PartialEq, Debug)]
@@ -229,6 +233,26 @@ impl Component for GetStartedContent {
                     SubTopic::Home => {
                         html! {
                             <ApisHome/>
+                        }
+                    }
+                    SubTopic::ApisSettings => {
+                        html! {
+                            <ApisSettings/>
+                        }
+                    }
+                    SubTopic::AddApiPermissions => {
+                        html! {
+                            <AddApiPermissions/>
+                        }
+                    }
+                    SubTopic::DeleteApiPermissions => {
+                        html! {
+                            <DeleteApiPermissions/>
+                        }
+                    }
+                    SubTopic::Scopes => {
+                        html! {
+                            <Scopes/>
                         }
                     }
                     _ => html! {}

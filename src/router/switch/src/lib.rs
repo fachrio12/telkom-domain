@@ -99,7 +99,23 @@ pub fn switch(routes: &Route) -> Html {
             <GetStartedMain topic={ Topic::ApplicationsInDomain } sub_topic={ SubTopic::Home } />
         },
 
+          
+        Route::Scopes => html! {
+            <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::Scopes } />
+        },
+        
+        Route::DeleteApiPermissions => html! {
+            <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::DeleteApiPermissions } />
+        },
 
+        Route::AddApiPermissions => html! {
+            <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::AddApiPermissions } />
+        },
+
+        Route::ApisSettings => html! {
+            <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::ApisSettings } />
+        },
+        
         Route::GetStartedApis => html! {
             <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::Home } />
         },

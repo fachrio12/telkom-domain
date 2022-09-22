@@ -31,6 +31,7 @@ members = [
     "src/components/logo-icon",
     "src/components/footer",
     "src/components/alert",
+    "src/components/alert2",
     "src/pages/home",
 
     "src/pages/articles/articles-home",
@@ -75,5 +76,8 @@ members = [
     "src/pages/articles/get-started/applications-in-domain/remove-applications",
 
     "src/pages/articles/get-started/apis/apis-home",
-
+    "src/pages/articles/get-started/apis/apis-settings",
+    "src/pages/articles/get-started/apis/add-api-permissions",
+    "src/pages/articles/get-started/apis/delete-api-permissions",
+    "src/pages/articles/get-started/apis/scopes",
 ]

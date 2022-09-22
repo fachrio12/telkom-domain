@@ -24,6 +24,11 @@ pub enum SubTopic {
 
     ApplicationSettings,
     RemoveApplications,
+
+    ApisSettings,
+    AddApiPermissions,
+    DeleteApiPermissions,
+    Scopes
 }
 
 #[derive(Clone, PartialEq, Debug)]

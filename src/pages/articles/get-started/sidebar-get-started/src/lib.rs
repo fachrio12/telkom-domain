@@ -141,9 +141,12 @@ impl SidebarGetStarted {
         let sub_topic = self.sub_topic.to_owned();
         html! {
             <>
+
+              <div style="overflow-y:scroll;">
                 <ul
                     class="uk-nav uk-nav-default uk-margin-medium-top uk-margin-medium-bottom"
                     style="opacity: .8;"
+                   
                 >
                     
                     <li>
@@ -549,6 +552,7 @@ impl SidebarGetStarted {
                     </div>
                     <div
                         class="uk-text-muted uk-margin-small-bottom"
+                        style="overflow-y:scroll;"
                     >
                         <div>
                             <Link<Route>
@@ -562,34 +566,61 @@ impl SidebarGetStarted {
                                 </span>
                             </Link<Route>>
                             {
-                                if topic == Topic::ApplicationsInDomain {
+                                if topic == Topic::Apis {
                                     html! {
                                         <div>
                                             <div
                                                 class="uk-margin-left td-sidebar-subtopic"
                                             >
                                                 <Link<Route>
-                                                    to={Route::ApplicationSettings}
+                                                    to={Route::ApisSettings}
                                                     classes="uk-text-muted"
                                                 >
                                                     <span>
-                                                        { "Application Settings" }
+                                                        { "API Settings" }
                                                     </span>
                                                 </Link<Route>>
                                             </div>
                                             <div
-                                                class="uk-margin-left td-sidebar-subtopic"
+                                            class="uk-margin-left td-sidebar-subtopic"
+                                        >
+                                            <Link<Route>
+                                                to={Route::AddApiPermissions}
+                                                classes="uk-text-muted"
                                             >
-                                                <Link<Route>
-                                                    to={Route::RemoveApplications}
-                                                    classes="uk-text-muted"
-                                                >
-                                                    <span>
-                                                        { "Remove Applications" }
-                                                    </span>
-                                                </Link<Route>>
-                                            </div>
+                                                <span>
+                                                    { "Add API Permissions" }
+                                                </span>
+                                            </Link<Route>>
                                         </div>
+
+                                        <div
+                                            class="uk-margin-left td-sidebar-subtopic"
+                                        >
+                                            <Link<Route>
+                                                to={Route::DeleteApiPermissions}
+                                                classes="uk-text-muted"
+                                            >
+                                                <span>
+                                                    { " Delete API Permissions" }
+                                                </span>
+                                            </Link<Route>>
+                                        </div>  
+                                        
+                                        <div
+                                        class="uk-margin-left td-sidebar-subtopic"
+                                    >
+                                        <Link<Route>
+                                            to={Route::Scopes}
+                                            classes="uk-text-muted"
+                                        >
+                                            <span>
+                                                { "Scopes" }
+                                            </span>
+                                        </Link<Route>>
+                                    </div>   
+
+                              </div>
                                     }
                                 } else {
                                     html! {}
@@ -597,6 +628,8 @@ impl SidebarGetStarted {
                             }
                         </div>
                     </div>
+                </div>
+
                 </div>
             </>
         }

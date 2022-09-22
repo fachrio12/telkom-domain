@@ -68,7 +68,16 @@ pub enum Route {
     #[at("/get-started/applications")]
     GetStartedApplicationsInDomain,
 
-
+     
+    #[at("/get-started/apis/scopes")]
+    Scopes,
+    #[at("/get-started/apis/delete-api-permissions")]
+    DeleteApiPermissions,
+    #[at("/get-started/apis/add-api-permissions")]
+    AddApiPermissions,
+    #[at("/get-started/apis/apis-settings")]
+    ApisSettings,
+   
     #[at("/get-started/apis")]
     GetStartedApis,
 
