@@ -142,7 +142,7 @@ impl SidebarGetStarted {
         html! {
             <>
 
-              <div style="overflow-y:scroll;">
+             
                 <ul
                     class="uk-nav uk-nav-default uk-margin-medium-top uk-margin-medium-bottom"
                     style="opacity: .8;"
@@ -552,7 +552,7 @@ impl SidebarGetStarted {
                     </div>
                     <div
                         class="uk-text-muted uk-margin-small-bottom"
-                        style="overflow-y:scroll;"
+                        
                     >
                         <div>
                             <Link<Route>
@@ -628,9 +628,99 @@ impl SidebarGetStarted {
                             }
                         </div>
                     </div>
+
+                 <div
+                    class="uk-text-muted uk-margin-small-bottom"
+                    
+                 >
+                    <div>
+                        <Link<Route>
+                            to={Route::GetStartedManageDashboardAccess}
+                            classes="uk-text-muted"
+                        >
+                            { "Manage Dashboard Access" }
+                            <span
+                                style="float: right; padding-top: 4px;"
+                                uk-icon="icon: chevron-right;  ratio: 0.85">
+                            </span>
+                        </Link<Route>>
+                        {
+                            if topic == Topic::ManageDashboardAccess {
+                                html! {
+                                    <div>
+                                        <div
+                                            class="uk-margin-left td-sidebar-subtopic"
+                                        >
+                                            <Link<Route>
+                                                to={Route::DashboardAccessByRole}
+                                                classes="uk-text-muted"
+                                            >
+                                                <span>
+                                                    { "Dashboard Access by Role" }
+                                                </span>
+                                            </Link<Route>>
+                                        </div>
+                                        
+                                     
+                                        
+                                        <div
+                                            class="uk-margin-left td-sidebar-subtopic"
+                                        >
+                                            <Link<Route>
+                                                to={Route::MultiFactorAuthenticationForDashboardUsers}
+                                                classes="uk-text-muted"
+                                            >
+                                                <span>
+                                                    { "Multi-Factor Authentication For Dashboard Users" }
+                                                </span>
+                                                <span
+                                                    style="float: right; padding-top: 4px;"
+                                                    uk-icon="icon: chevron-right;  ratio: 0.7">
+                                                </span>
+                                            </Link<Route>>
+                                            {
+                                                if sub_topic == SubTopic::MultiFactorAuthenticationForDashboardUsers {
+                                                    html! {
+                                                        <>
+                                                            <div class="uk-margin-left td-sidebar-subtopic">
+                                                                <Link<Route>
+                                                                    to={Route::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess}
+                                                                    classes="uk-text-muted"
+                                                                >
+                                                                    <span>
+                                                                        { "Add Multi-Factor Authentication For Telkom Domain Dashboard Access" }
+                                                                    </span>
+                                                                </Link<Route>>
+                                                            </div>
+                                                            <div class="uk-margin-left td-sidebar-subtopic">
+                                                                <Link<Route>
+                                                                    to={Route::RemoveOrChangeDashboardMultiFactorAuthentication}
+                                                                    classes="uk-text-muted"
+                                                                >
+                                                                    <span>
+                                                                        { "Remove Or Change Dashboard Multi Factor Authentication" }
+                                                                    </span>
+                                                                </Link<Route>>
+                                                            </div>
+                                                            
+                                                        </>
+                                                    }
+                                                } else {
+                                                    html! {}
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                            } else {
+                                html! {}
+                            }
+                        }
+                    </div>
+                </div>
                 </div>
 
-                </div>
+        
             </>
         }
     }

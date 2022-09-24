@@ -6,6 +6,7 @@ pub enum Topic {
     TenantSettings,
     ApplicationsInDomain,
     Apis,
+    ManageDashboardAccess,
 }
 
 #[derive(Clone, PartialEq, Debug)]
@@ -28,7 +29,11 @@ pub enum SubTopic {
     ApisSettings,
     AddApiPermissions,
     DeleteApiPermissions,
-    Scopes
+    Scopes,
+
+    DashboardAccessByRole,
+    MultiFactorAuthenticationForDashboardUsers,
+    
 }
 
 #[derive(Clone, PartialEq, Debug)]
@@ -46,5 +51,11 @@ pub enum SubTopic2 {
     RotateSigningKeys,
     RevokeSigningKeys,
     ViewSigningCertificates,
+
+
+    
+    AddMultiFactorAuthenticationForTelkomDomainDashboardAccess,
+    RemoveOrChangeDashboardMultiFactorAuthentication,
+
 }
 

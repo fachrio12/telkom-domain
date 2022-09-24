@@ -122,6 +122,15 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        Topic::ManageDashboardAccess=> html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route:: GetStartedManageDashboardAccess}
+                                >
+                                    { "Manage Dashboard Access" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {
@@ -244,6 +253,24 @@ impl Component for ArticlesBreadcrumb {
                                 </Link<Route>>
                             </li>
                         },
+                        SubTopic::DashboardAccessByRole => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::DashboardAccessByRole}
+                                >
+                                    { "Dashboard Access by Role" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic::MultiFactorAuthenticationForDashboardUsers => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::MultiFactorAuthenticationForDashboardUsers}
+                                >
+                                    { "Multi-Factor Authentication For Dashboard Users" }
+                                </Link<Route>>
+                            </li>
+                        },
                     }
                 }
                 {
@@ -318,6 +345,24 @@ impl Component for ArticlesBreadcrumb {
                                     to={Route::ViewSigningCertificates}
                                 >
                                     { "Revoke Signing Keys" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic2::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess}
+                                >
+                                    { "Add Multi-Factor Authentication For Telkom Domain Dashboard Access" }
+                                </Link<Route>>
+                            </li>
+                        },
+                        SubTopic2::RemoveOrChangeDashboardMultiFactorAuthentication => html! {
+                            <li>
+                                <Link<Route>
+                                    to={Route::RemoveOrChangeDashboardMultiFactorAuthentication}
+                                >
+                                    { "Remove Or Change Dashboard Multi Factor Authentication" }
                                 </Link<Route>>
                             </li>
                         },

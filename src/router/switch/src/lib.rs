@@ -119,6 +119,28 @@ pub fn switch(routes: &Route) -> Html {
         Route::GetStartedApis => html! {
             <GetStartedMain topic={ Topic::Apis } sub_topic={ SubTopic::Home } />
         },
+
+
+        
+        Route::RemoveOrChangeDashboardMultiFactorAuthentication => html! {
+            <GetStartedMain topic={ Topic::ManageDashboardAccess } sub_topic={ SubTopic::MultiFactorAuthenticationForDashboardUsers } sub_topic_2={ SubTopic2::RemoveOrChangeDashboardMultiFactorAuthentication }  />
+        },
+
+        Route::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess => html! {
+            <GetStartedMain topic={ Topic::ManageDashboardAccess } sub_topic={ SubTopic::MultiFactorAuthenticationForDashboardUsers } sub_topic_2={ SubTopic2::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess }  />
+        },
+        
+        Route::MultiFactorAuthenticationForDashboardUsers => html! {
+            <GetStartedMain topic={ Topic::ManageDashboardAccess } sub_topic={ SubTopic::MultiFactorAuthenticationForDashboardUsers } />
+        },
+        
+        Route::DashboardAccessByRole => html! {
+            <GetStartedMain topic={ Topic::ManageDashboardAccess } sub_topic={ SubTopic::DashboardAccessByRole } />
+        },
+
+        Route::GetStartedManageDashboardAccess => html! {
+            <GetStartedMain topic={ Topic::ManageDashboardAccess } sub_topic={ SubTopic::Home } />
+        },
         
 
         Route::GetStartedHome => html! {

@@ -19,6 +19,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "add-multi-factor-authentication-for-telkom-domain-dashboard-access"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
 name = "alert"
 version = "0.1.0"
 dependencies = [
@@ -138,6 +145,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "dashboard-access-by-role"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
+]
+
+[[package]]
 name = "delete-api-permissions"
 version = "0.1.0"
 dependencies = [
@@ -188,6 +203,7 @@ version = "0.1.0"
 dependencies = [
  "activity-about",
  "add-api-permissions",
+ "add-multi-factor-authentication-for-telkom-domain-dashboard-access",
  "apis-home",
  "apis-settings",
  "application-settings",
@@ -195,6 +211,7 @@ dependencies = [
  "authentication-vs-authorization",
  "create-multiple-tenants",
  "create-tenants-home",
+ "dashboard-access-by-role",
  "delete-api-permissions",
  "get-started-home",
  "get-started-topics",
@@ -202,10 +219,13 @@ dependencies = [
  "introduction-to-domain",
  "introduction-to-iam",
  "log",
+ "manage-dashboard-access-home",
+ "multi-factor-authentication-for-dashboard-users-home",
  "multi-tenant-apps-best-practices",
  "multiple-tenants-to-single-subscription",
  "register-apis",
  "remove-applications",
+ "remove-or-change-dashboard-multi-factor-authentication",
  "revoke-signing-keys",
  "rotate-signing-keys",
  "scopes",
@@ -439,10 +459,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "manage-dashboard-access-home"
+version = "0.1.0"
+dependencies = [
+ "alert",
+ "yew",
+]
+
+[[package]]
 name = "matches"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a3e378b66a060d48947b590737b30a1be76706c8dd7b8ba0f2fe3989c68a853f"
+
+[[package]]
+name = "multi-factor-authentication-for-dashboard-users-home"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
 
 [[package]]
 name = "multi-tenant-apps-best-practices"
@@ -527,6 +562,13 @@ dependencies = [
 
 [[package]]
 name = "remove-applications"
+version = "0.1.0"
+dependencies = [
+ "yew",
+]
+
+[[package]]
+name = "remove-or-change-dashboard-multi-factor-authentication"
 version = "0.1.0"
 dependencies = [
  "yew",

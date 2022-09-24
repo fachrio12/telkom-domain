@@ -40,3 +40,9 @@ apis-settings= { path = "../apis/apis-settings" }
 add-api-permissions= { path = "../apis/add-api-permissions" }
 delete-api-permissions= { path = "../apis/delete-api-permissions" }
 scopes= { path = "../apis/scopes" }
+
+manage-dashboard-access-home= { path = "../manage-dashboard-access/manage-dashboard-access-home" }
+dashboard-access-by-role= { path = "../manage-dashboard-access/dashboard-access-by-role" }
+multi-factor-authentication-for-dashboard-users-home= { path = "../manage-dashboard-access/multi-factor-authentication-for-dashboard-users/multi-factor-authentication-for-dashboard-users-home" }
+add-multi-factor-authentication-for-telkom-domain-dashboard-access= { path = "../manage-dashboard-access/multi-factor-authentication-for-dashboard-users/add-multi-factor-authentication-for-telkom-domain-dashboard-access" }
+remove-or-change-dashboard-multi-factor-authentication= { path = "../manage-dashboard-access/multi-factor-authentication-for-dashboard-users/remove-or-change-dashboard-multi-factor-authentication" }

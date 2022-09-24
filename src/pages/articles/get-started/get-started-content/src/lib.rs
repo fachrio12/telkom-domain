@@ -37,6 +37,11 @@ use add_api_permissions::AddApiPermissions;
 use delete_api_permissions::DeleteApiPermissions;
 use scopes::Scopes;
 
+use manage_dashboard_access_home::ManageDashboardAccessHome;
+use dashboard_access_by_role::DashboardAccessByRole;
+use multi_factor_authentication_for_dashboard_users_home::MultiFactorAuthenticationForDashboardUsersHome;
+use add_multi_factor_authentication_for_telkom_domain_dashboard_access::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess;
+use remove_or_change_dashboard_multi_factor_authentication::RemoveOrChangeDashboardMultiFactorAuthentication;
 
 #[derive(Properties, PartialEq, Debug)]
 pub struct GetStartedContentProps {
@@ -255,6 +260,44 @@ impl Component for GetStartedContent {
                             <Scopes/>
                         }
                     }
+                    _ => html! {}
+                }
+            }
+
+            Topic::ManageDashboardAccess => {
+                match self.sub_topic {
+                    SubTopic::Home => {
+                        html! {
+                            <ManageDashboardAccessHome/>
+                        }
+                    }
+                    SubTopic::DashboardAccessByRole => {
+                        html! {
+                            <DashboardAccessByRole/>
+                        }
+                    }
+                    SubTopic::MultiFactorAuthenticationForDashboardUsers => {
+                        match self.sub_topic_2 {
+                            SubTopic2::Home => {
+                                html! {
+                                    <MultiFactorAuthenticationForDashboardUsersHome/>
+                                }
+                            }
+                            SubTopic2::AddMultiFactorAuthenticationForTelkomDomainDashboardAccess => {
+                                html! {
+                                    <AddMultiFactorAuthenticationForTelkomDomainDashboardAccess/>
+                                }
+                            }
+                            SubTopic2::RemoveOrChangeDashboardMultiFactorAuthentication => {
+                                html! {
+                                    <RemoveOrChangeDashboardMultiFactorAuthentication/>
+                                }
+                            }
+                           
+                            _ => html! {}
+                        }
+                    }
+                   
                     _ => html! {}
                 }
             }

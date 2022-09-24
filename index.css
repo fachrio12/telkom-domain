@@ -63,7 +63,13 @@
 }
 
 
-
+.td-rounded-border {
+  border-radius: 25px;
+  border: 1px solid #a1a1a1;
+  padding: 20px; 
+  width: 700px;
+  height: 150px;  
+}
 
 
 

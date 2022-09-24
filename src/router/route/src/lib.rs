@@ -81,6 +81,21 @@ pub enum Route {
     #[at("/get-started/apis")]
     GetStartedApis,
 
+   
+    
+    #[at("/get-started/manage-dashboard-access/Remove-Or-Change-Dashboard-Multi-Factor-Authentication")]
+    RemoveOrChangeDashboardMultiFactorAuthentication,
+    #[at("/get-started/manage-dashboard-access/Add-Multi-Factor-Authentication-For-Telkom-Domain-Dashboard-Access")]
+    AddMultiFactorAuthenticationForTelkomDomainDashboardAccess,
+    #[at("/get-started/manage-dashboard-access/Multi-Factor-Authentication-For-Dashboard-Users")]
+    MultiFactorAuthenticationForDashboardUsers,
+    #[at("/get-started/manage-dashboard-access/dashboard-access-by-role")]
+    DashboardAccessByRole,
+
+    #[at("/get-started/manage-dashboard-access")]
+    GetStartedManageDashboardAccess,
+
+
 
     #[at("/secure")]
     Secure,

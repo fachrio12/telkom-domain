@@ -80,4 +80,10 @@ members = [
     "src/pages/articles/get-started/apis/add-api-permissions",
     "src/pages/articles/get-started/apis/delete-api-permissions",
     "src/pages/articles/get-started/apis/scopes",
+
+     "src/pages/articles/get-started/manage-dashboard-access/manage-dashboard-access-home",
+     "src/pages/articles/get-started/manage-dashboard-access/dashboard-access-by-role",
+     "src/pages/articles/get-started/manage-dashboard-access/multi-factor-authentication-for-dashboard-users/multi-factor-authentication-for-dashboard-users-home",
+     "src/pages/articles/get-started/manage-dashboard-access/multi-factor-authentication-for-dashboard-users/add-multi-factor-authentication-for-telkom-domain-dashboard-access",
+     "src/pages/articles/get-started/manage-dashboard-access/multi-factor-authentication-for-dashboard-users/remove-or-change-dashboard-multi-factor-authentication",
 ]
