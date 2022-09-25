@@ -1,5 +1,5 @@
 use yew::prelude::*;
-//  use alert::Alert;
+ use alert::Alert;
 // // use alert2::Alert2;
 
 
@@ -75,7 +75,7 @@ impl Component for MultiFactorAuthenticationForDashboardUsersHome {
                 {"To learn how to enroll in Dashboard MFA, read Add Multi-Factor Authentication for Auth0 Dashboard Access."}
                 </p>
 
-                // <Alert message={String::from("Auth0 recommends WebAuthn factors as the most secure and usable authentication methods. To learn more, read  FIDO Authentication with WebAuthn.")} />
+                <Alert message={String::from("Auth0 recommends WebAuthn factors as the most secure and usable authentication methods. To learn more, read FIDO Authentication with WebAuthn.")} />
                 //alert 2 message
             </div>
 

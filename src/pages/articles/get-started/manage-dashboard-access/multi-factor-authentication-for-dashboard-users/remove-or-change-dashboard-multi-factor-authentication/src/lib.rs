@@ -1,5 +1,5 @@
 use yew::prelude::*;
-// use alert::Alert;
+use alert::Alert;
 
 
 pub struct RemoveOrChangeDashboardMultiFactorAuthentication {}
@@ -31,14 +31,16 @@ impl Component for RemoveOrChangeDashboardMultiFactorAuthentication {
                     { "Dashboard users can remove or change multi-factor authentication (MFA) factors that are no longer available or wanted. To learn more about MFA for Dashboard users, read Multi-Factor Authentication for Dashboard Users." }
                 </p>
 
-                //tambahkan alert
+                <Alert message={String::from("Auth0 recommends WebAuthn factors as the most secure and usable authentication methods. To learn more, read FIDO Authentication with WebAuthn.")} />
                 //tambahkan alert 2
                 
                 <div
                 class="uk-margin-large-bottom"
               >
               <h1 class="uk-heading-small uk-margin-medium-bottom">{ "Remove or change an MFA factor from the Dashboard" }</h1>
-              //tambahkan alert
+
+              <Alert message={String::from("You can’t add a device biometrics factor (such as the MacBook Touch Bar, Windows Hello, iOS Touch ID or Face ID, or Android fingerprint or face recognition) from the Dashboard. To learn how to add a device biometrics authentication factor, read Add Multi-factor Authentication for Dashboard Users.")} />
+
               <p>{"Dashboard users who can log in with their current MFA factors can follow these steps:"}</p>
                 <ul class="uk-list uk-list-decimal">
                     <li>{ "In the top right corner of the Dashboard, click your user name and click Account Settings." }

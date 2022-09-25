@@ -1,5 +1,5 @@
 use yew::prelude::*;
-// use alert::Alert;
+use alert::Alert;
 
 
 pub struct AddMultiFactorAuthenticationForTelkomDomainDashboardAccess {}
@@ -31,7 +31,7 @@ impl Component for AddMultiFactorAuthenticationForTelkomDomainDashboardAccess {
                     { "Each Auth0 Dashboard user should self-enroll in multi-factor authentication (MFA). You can enroll in most factors in Account Settings. Device biometrics, however, require progressive enrollment." }
                 </p>
 
-                // <Alert message={String::from("Auth0 recommends WebAuthn factors as the most secure and usable authentication methods. To learn more, read  FIDO Authentication with WebAuthn.")} />
+                <Alert message={String::from("Auth0 recommends WebAuthn factors as the most secure and usable authentication methods. To learn more, read FIDO Authentication with WebAuthn.")} />
                 //tambahkan alert 2
 
                 

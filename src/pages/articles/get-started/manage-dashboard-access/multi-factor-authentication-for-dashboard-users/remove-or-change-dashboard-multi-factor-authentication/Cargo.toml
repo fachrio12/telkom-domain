@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19"
-# alert = { path = "../../../../../components/alert" }
+alert = { path = "../../../../../../components/alert" }

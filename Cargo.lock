@@ -22,6 +22,7 @@ dependencies = [
 name = "add-multi-factor-authentication-for-telkom-domain-dashboard-access"
 version = "0.1.0"
 dependencies = [
+ "alert",
  "yew",
 ]
 
@@ -476,6 +477,7 @@ checksum = "a3e378b66a060d48947b590737b30a1be76706c8dd7b8ba0f2fe3989c68a853f"
 name = "multi-factor-authentication-for-dashboard-users-home"
 version = "0.1.0"
 dependencies = [
+ "alert",
  "yew",
 ]
 
@@ -571,6 +573,7 @@ dependencies = [
 name = "remove-or-change-dashboard-multi-factor-authentication"
 version = "0.1.0"
 dependencies = [
+ "alert",
  "yew",
 ]
 
